@@ -1,0 +1,280 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D65BFBC414C348CA00B50263 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC314C348CA00B50263 /* UIKit.framework */; };
+		D65BFBC614C348CA00B50263 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC514C348CA00B50263 /* Foundation.framework */; };
+		D65BFBC814C348CA00B50263 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC714C348CA00B50263 /* CoreGraphics.framework */; };
+		D65BFBCE14C348CA00B50263 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D65BFBCC14C348CA00B50263 /* InfoPlist.strings */; };
+		D65BFBD014C348CA00B50263 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBCF14C348CA00B50263 /* main.m */; };
+		D65BFBD414C348CA00B50263 /* LJHWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBD314C348CA00B50263 /* LJHWAppDelegate.m */; };
+		D65BFBD714C348CA00B50263 /* LJHWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBD614C348CA00B50263 /* LJHWViewController.m */; };
+		D65BFBDA14C348CA00B50263 /* LJHWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BFBD814C348CA00B50263 /* LJHWViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D65BFBBF14C348CA00B50263 /* HEBTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HEBTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D65BFBC314C348CA00B50263 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D65BFBC514C348CA00B50263 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D65BFBC714C348CA00B50263 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D65BFBCB14C348CA00B50263 /* HEBTest-Info.plist */ = {isa = PBXFileReference; path = "HEBTest-Info.plist"; sourceTree = "<group>"; };
+		D65BFBCD14C348CA00B50263 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D65BFBCF14C348CA00B50263 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D65BFBD114C348CA00B50263 /* HEBTest-Prefix.pch */ = {isa = PBXFileReference; path = "HEBTest-Prefix.pch"; sourceTree = "<group>"; };
+		D65BFBD214C348CA00B50263 /* LJHWAppDelegate.h */ = {isa = PBXFileReference; path = LJHWAppDelegate.h; sourceTree = "<group>"; };
+		D65BFBD314C348CA00B50263 /* LJHWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJHWAppDelegate.m; sourceTree = "<group>"; };
+		D65BFBD514C348CA00B50263 /* LJHWViewController.h */ = {isa = PBXFileReference; path = LJHWViewController.h; sourceTree = "<group>"; };
+		D65BFBD614C348CA00B50263 /* LJHWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJHWViewController.m; sourceTree = "<group>"; };
+		D65BFBD914C348CA00B50263 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LJHWViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D65BFBBC14C348CA00B50263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D65BFBC414C348CA00B50263 /* UIKit.framework in Frameworks */,
+				D65BFBC614C348CA00B50263 /* Foundation.framework in Frameworks */,
+				D65BFBC814C348CA00B50263 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D65BFBB414C348CA00B50263 = {
+			isa = PBXGroup;
+			children = (
+				D65BFBC914C348CA00B50263 /* HEBTest */,
+				D65BFBC214C348CA00B50263 /* Frameworks */,
+				D65BFBC014C348CA00B50263 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D65BFBC014C348CA00B50263 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D65BFBBF14C348CA00B50263 /* HEBTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D65BFBC214C348CA00B50263 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D65BFBC314C348CA00B50263 /* UIKit.framework */,
+				D65BFBC514C348CA00B50263 /* Foundation.framework */,
+				D65BFBC714C348CA00B50263 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D65BFBC914C348CA00B50263 /* HEBTest */ = {
+			isa = PBXGroup;
+			children = (
+				D65BFBD214C348CA00B50263 /* LJHWAppDelegate.h */,
+				D65BFBD314C348CA00B50263 /* LJHWAppDelegate.m */,
+				D65BFBD514C348CA00B50263 /* LJHWViewController.h */,
+				D65BFBD614C348CA00B50263 /* LJHWViewController.m */,
+				D65BFBD814C348CA00B50263 /* LJHWViewController.xib */,
+				D65BFBCA14C348CA00B50263 /* Supporting Files */,
+			);
+			path = HEBTest;
+			sourceTree = "<group>";
+		};
+		D65BFBCA14C348CA00B50263 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D65BFBCB14C348CA00B50263 /* HEBTest-Info.plist */,
+				D65BFBCC14C348CA00B50263 /* InfoPlist.strings */,
+				D65BFBCF14C348CA00B50263 /* main.m */,
+				D65BFBD114C348CA00B50263 /* HEBTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D65BFBBE14C348CA00B50263 /* HEBTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D65BFBDD14C348CA00B50263 /* Build configuration list for PBXNativeTarget "HEBTest" */;
+			buildPhases = (
+				D65BFBBB14C348CA00B50263 /* Sources */,
+				D65BFBBC14C348CA00B50263 /* Frameworks */,
+				D65BFBBD14C348CA00B50263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HEBTest;
+			productName = HEBTest;
+			productReference = D65BFBBF14C348CA00B50263 /* HEBTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D65BFBB614C348CA00B50263 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Harvard University Extension School";
+			};
+			buildConfigurationList = D65BFBB914C348CA00B50263 /* Build configuration list for PBXProject "HEBTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D65BFBB414C348CA00B50263;
+			productRefGroup = D65BFBC014C348CA00B50263 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D65BFBBE14C348CA00B50263 /* HEBTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D65BFBBD14C348CA00B50263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D65BFBCE14C348CA00B50263 /* InfoPlist.strings in Resources */,
+				D65BFBDA14C348CA00B50263 /* LJHWViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D65BFBBB14C348CA00B50263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D65BFBD014C348CA00B50263 /* main.m in Sources */,
+				D65BFBD414C348CA00B50263 /* LJHWAppDelegate.m in Sources */,
+				D65BFBD714C348CA00B50263 /* LJHWViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D65BFBCC14C348CA00B50263 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D65BFBCD14C348CA00B50263 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D65BFBD814C348CA00B50263 /* LJHWViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D65BFBD914C348CA00B50263 /* en */,
+			);
+			name = LJHWViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D65BFBDB14C348CA00B50263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D65BFBDC14C348CA00B50263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D65BFBDE14C348CA00B50263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HEBTest/HEBTest-Prefix.pch";
+				INFOPLIST_FILE = "HEBTest/HEBTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D65BFBDF14C348CA00B50263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HEBTest/HEBTest-Prefix.pch";
+				INFOPLIST_FILE = "HEBTest/HEBTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D65BFBB914C348CA00B50263 /* Build configuration list for PBXProject "HEBTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D65BFBDB14C348CA00B50263 /* Debug */,
+				D65BFBDC14C348CA00B50263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D65BFBDD14C348CA00B50263 /* Build configuration list for PBXNativeTarget "HEBTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D65BFBDE14C348CA00B50263 /* Debug */,
+				D65BFBDF14C348CA00B50263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D65BFBB614C348CA00B50263 /* Project object */;
+}
