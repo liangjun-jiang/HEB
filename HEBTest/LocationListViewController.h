@@ -13,6 +13,7 @@
 
 @property (strong,nonatomic) NSMutableArray *locationList;
 @property (strong, nonatomic) NSIndexPath *selectedPath;
+@property (strong, nonatomic) NSMutableArray *placeMarkers;
 
 
 @end

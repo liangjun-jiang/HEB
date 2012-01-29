@@ -50,7 +50,6 @@
     CLLocationManager *_locationManger;
     CLLocationCoordinate2D _currentUserCoordinate;
     
-    UIActivityIndicatorView *_spinner;
     UIActivityIndicatorView *_currentLocationActivityIndicator;
     
     NSURLConnection *theConnection;
@@ -58,10 +57,8 @@
 }
 
 @property (readonly) CLLocationCoordinate2D currentUserCoordiante;
-@property (readonly) UIActivityIndicatorView *spinner;
-@property (readonly) UIActivityIndicatorView *currentLocationActivityIndicator;
 -(void)startUpdatingCurrentLocation;
--(IBAction)performCoordinateGeocode:(id)sender;
+//-(IBAction)performCoordinateGeocode:(id)sender;
 -(void)queryGooglePlace:(CLLocationCoordinate2D) coord;
 @end
 
@@ -69,7 +66,7 @@
 @synthesize locationList = _locationList;
 @synthesize selectedPath=_selectedPath;
 @synthesize currentUserCoordiante=_currentUserCoordiante;
-@synthesize spinner=_spinner, currentLocationActivityIndicator=_currentLocationActivityIndicator;
+@synthesize placeMarkers=_placeMarkers;
 
 
 -(void)fetchData:(NSData *)responseData
@@ -79,11 +76,14 @@
     
     NSArray *hebs =[json objectForKey:@"results"];
     self.locationList = [[NSMutableArray alloc] initWithCapacity:[hebs count]];
-    
-    for (NSDictionary *heb in hebs)
-    {
-        if ([[heb objectForKey:@"name"] isEqualToString:@"H-E-B"]) {
-            [self.locationList addObject:[heb objectForKey:@"vicinity"]];
+    self.placeMarkers = [[NSMutableArray alloc] initWithCapacity:[hebs count]];
+    if (hebs != nil && [hebs count] !=0) {
+        for (NSDictionary *heb in hebs)
+        {
+            if ([[heb objectForKey:@"name"] isEqualToString:@"H-E-B"]) {
+                [self.locationList addObject:[heb objectForKey:@"vicinity"]];
+                [self.placeMarkers addObject:[heb objectForKey:@"geometry"]];
+            }
         }
     }
     [self.tableView reloadData];
@@ -126,7 +126,7 @@
     self.clearsSelectionOnViewWillAppear = YES;
  
     self.navigationItem.title = @"Nearby H-E-Bs";
-    UIBarButtonItem *mapBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(displayPlacemarks:)];
+    UIBarButtonItem *mapBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(displayPlacemarks)];
     self.navigationItem.rightBarButtonItem = mapBarItem;
     [mapBarItem release];
     
@@ -142,9 +142,8 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    _spinner = nil;
-    _currentLocationActivityIndicator = nil;
     _locationList = nil;
+    _placeMarkers = nil;
 }
 
 - (void)dealloc
@@ -153,6 +152,8 @@
     _selectedPath = nil;
     [_selectedPath release];
     [_locationManger release];
+    _placeMarkers = nil;
+    [_placeMarkers release];
     [super release];
 }
 
@@ -174,16 +175,17 @@
     self.tableView.allowsSelection = YES;
     }
 
--(void)displayPlacemarks:(NSArray *)placeMarks
+-(void)displayPlacemarks
 {
-    
-    dispatch_async(dispatch_get_main_queue(),^ {
-        [self unlockUI];
-
-        PlacemarkViewController *plvc = [[PlacemarkViewController alloc] initWithPlacemarks:placeMarks];
-        [self.navigationController pushViewController:plvc animated:YES];
-        [plvc release];
-    });
+    if (self.placeMarkers!= nil && [self.placeMarkers count]!=0) {
+        dispatch_async(dispatch_get_main_queue(),^ {
+            [self unlockUI];
+                PlacemarkViewController *plvc = [[PlacemarkViewController alloc] initWithPlacemarks:self.placeMarkers];
+                [self.navigationController pushViewController:plvc animated:YES];
+                [plvc release];
+            
+            });
+    }
     
 }
 
@@ -256,7 +258,7 @@
     }
     
     else 
-       cell.textLabel.text = @"For some reason, we can't locate a H-E-B for you. Make sure you are living in Texas"; 
+       cell.textLabel.text = @"Are you living in Texas?"; 
     return cell;
 }
 
@@ -338,6 +340,7 @@
     
 }
 
+/*
 -(IBAction)performCoordinateGeocode:(id)sender
 {
     [self lockUI];
@@ -358,7 +361,7 @@
     
     
 }
-
+*/
 -(void)queryGooglePlace:(CLLocationCoordinate2D)coord
 {
     NSString *placeUrlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=6000&types=grocery_or_supermarket&name=heb&sensor=false&key=AIzaSyDI9oKyroNMwBTCSWEoSgVfrKtvQ10S3jw", coord.latitude, coord.longitude];

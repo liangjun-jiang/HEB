@@ -240,8 +240,9 @@
     
     detailViewController.product = [_selectedProducts objectAtIndex:indexPath.row];
     detailViewController.flag = 1;
-    
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    detailViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self.navigationController presentModalViewController:detailViewController animated:YES];
+    //[self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
      
 }

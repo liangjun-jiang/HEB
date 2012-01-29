@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface PlacemarkViewController : UIViewController <MKMapViewDelegate>
+@interface PlacemarkViewController : UIViewController
 {
     NSArray *_placemarks;
     MKMapView *_mapView;
@@ -22,4 +22,10 @@
 
 -(id)initWithPlacemarks:(NSArray *)placemarks;
  
+
+#pragma mark - MKAnnotation Protocol (for map pin)
+
+
 @end
+
+
