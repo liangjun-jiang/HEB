@@ -7,17 +7,18 @@
 //
 
 #import "LJHWAppDelegate.h"
-
 #import "LJHWViewController.h"
 
 @implementation LJHWAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
-
+@synthesize navController = _navController;
 - (void)dealloc
 {
+    
     [_window release];
+    [_navController release];
     [_viewController release];
     [super dealloc];
 }
@@ -25,10 +26,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
     self.viewController = [[[LJHWViewController alloc] initWithNibName:@"LJHWViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    
+    self.navController = [[[UINavigationController alloc] initWithRootViewController:self.viewController] autorelease];
+    self.navController.navigationBar.tintColor = [UIColor colorWithRed:0.988235294 green:0.0666666667 blue:0.0196078431 alpha:1.0];
+    
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+  	NSString *storePath = [basePath stringByAppendingPathComponent: @"Products.plist"];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	// If the expected file doesn't exist, copy the default file.
+	if (![fileManager fileExistsAtPath:storePath]) {
+		NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"Products" ofType:@"plist"];
+		if (defaultStorePath) {
+            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+		}
+	}
     return YES;
 }
 
@@ -64,11 +80,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    /*
-     Called when the application is about to terminate.
-     Save data if appropriate.
-     See also applicationDidEnterBackground:.
-     */
+   
 }
+
+
+
 
 @end

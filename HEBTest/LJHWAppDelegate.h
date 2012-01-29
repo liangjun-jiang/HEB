@@ -12,8 +12,12 @@
 
 @interface LJHWAppDelegate : UIResponder <UIApplicationDelegate>
 
+
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *navController;
 
 @property (strong, nonatomic) LJHWViewController *viewController;
+
+
 
 @end

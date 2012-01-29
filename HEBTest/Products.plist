@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>category</key>
+		<string>Dairy</string>
+		<key>name</key>
+		<string>Horizon Organic Milk</string>
+		<key>price</key>
+		<string>5 for $5</string>
+		<key>imgLink</key>
+		<string>http://heb.inserts2online.com/HEB01252012HEBWeeklyAd/items/small/S0125p04z17REV-16.jpg</string>
+		<key>desc</key>
+		<string>8 oz. assorted varieties</string>
+		<key>psDate</key>
+		<string>Wed, 25 Jan 2012 00:00:00 EST</string>
+		<key>eDate</key>
+		<string>Tue, 31 Jan 2012 23:59:59 ES</string>
+	</dict>
+</array>
+</plist>

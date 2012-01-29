@@ -6,9 +6,35 @@
 //  Copyright (c) 2012 Harvard University Extension School. All rights reserved.
 //
 
+
 #import "LJHWViewController.h"
+#import "LocationListViewController.h"
+#import "ShoppingListViewController.h"
+#import "AboutListViewController.h"
 
 @implementation LJHWViewController
+@synthesize adsButton=_adsButton, couponButton=_couponButton, shoppingListButton=_shoppingListButton, aboutButton=_aboutButton;
+
+-(IBAction)adsTapped:(id)sender{
+    LocationListViewController *locationListViewController = [[[LocationListViewController alloc] initWithNibName:@"LocationListViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:locationListViewController animated:YES];
+}
+
+-(IBAction)couponTapped:(id)sender
+{
+    
+}
+-(IBAction)listTapped:(id)sender
+{
+    ShoppingListViewController *shoppingListView = [[[ShoppingListViewController alloc] initWithNibName:@"ShoppingListViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:shoppingListView animated:YES];
+}
+
+-(IBAction)aboutTapped:(id)sender
+{
+    AboutListViewController *aboutView = [[[AboutListViewController alloc] initWithNibName:@"AboutListViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:aboutView animated:YES];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -21,15 +47,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.title = @"H-E-B Weekly Ads";
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    self.adsButton = nil;
+    self.aboutButton= nil;
+    self.shoppingListButton=nil;
+    self.couponButton = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -54,7 +85,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end
