@@ -29,6 +29,7 @@
     self.viewController = [[[LJHWViewController alloc] initWithNibName:@"LJHWViewController" bundle:nil] autorelease];
     
     self.navController = [[[UINavigationController alloc] initWithRootViewController:self.viewController] autorelease];
+    [self.navController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Chalkduster" size:18],UITextAttributeFont, nil]]; 
     self.navController.navigationBar.tintColor = [UIColor colorWithRed:0.988235294 green:0.0666666667 blue:0.0196078431 alpha:1.0];
     
     self.window.rootViewController = self.navController;

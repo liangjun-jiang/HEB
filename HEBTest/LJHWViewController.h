@@ -11,12 +11,10 @@
 @interface LJHWViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *adsButton;
-@property (strong, nonatomic) IBOutlet UIButton *couponButton;
 @property (strong, nonatomic) IBOutlet UIButton *shoppingListButton;
 @property (strong, nonatomic) IBOutlet UIButton *aboutButton;
 
 -(IBAction)adsTapped:(id)sender;
--(IBAction)couponTapped:(id)sender;
 -(IBAction)listTapped:(id)sender;
 -(IBAction)aboutTapped:(id)sender;
 
