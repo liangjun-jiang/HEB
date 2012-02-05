@@ -242,8 +242,9 @@
     detailViewController.flag = 1;
     detailViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     [self.navigationController presentModalViewController:detailViewController animated:YES];
-    //[self.navigationController pushViewController:detailViewController animated:YES];
+    
     [detailViewController release];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
      
 }
 
