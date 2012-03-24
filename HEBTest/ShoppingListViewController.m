@@ -46,7 +46,8 @@
                 if ([currDict isKindOfClass:[NSDictionary class]]) {
                     Product *product = [[Product alloc] initWithDictionary:currDict];
                     [_selectedProducts addObject:product];
-
+                    [product release];
+                    
                 }
             }
 

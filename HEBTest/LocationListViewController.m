@@ -20,7 +20,7 @@
 @implementation NSDictionary(JSONCategories)
 +(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString *)urlAddress
 {
-    NSData *data = [[NSData dataWithContentsOfURL:[NSURL URLWithString:urlAddress]] autorelease];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlAddress]];
     NSError *error = nil;
     
     id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
@@ -75,6 +75,12 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     
     NSArray *hebs =[json objectForKey:@"results"];
+    
+    if ([hebs count] == 0) {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    } else
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    
     self.locationList = [[NSMutableArray alloc] initWithCapacity:[hebs count]];
     self.placeMarkers = [[NSMutableArray alloc] initWithCapacity:[hebs count]];
     if (hebs != nil && [hebs count] !=0) {
@@ -118,6 +124,15 @@
 }
 
 #pragma mark - View lifecycle
+-(void)viewWillAppear:(BOOL)animated
+{
+    /*
+    if (self.navigationItem.rightBarButtonItem.enabled) {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }
+    */
+}
+
 
 - (void)viewDidLoad
 {
@@ -129,6 +144,8 @@
     UIBarButtonItem *mapBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(displayPlacemarks)];
     self.navigationItem.rightBarButtonItem = mapBarItem;
     [mapBarItem release];
+    
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     
     self.locationList = [NSArray arrayWithObjects:@"Wait a second ...",
                          nil];
@@ -148,11 +165,9 @@
 
 - (void)dealloc
 {
-    _locationManger.delegate = nil;
-    _selectedPath = nil;
+    //_locationManger.delegate = nil;
     [_selectedPath release];
     [_locationManger release];
-    _placeMarkers = nil;
     [_placeMarkers release];
     [super release];
 }
@@ -167,13 +182,12 @@
 
 -(void)lockUI
 {
-    // Prevent the user interaction with while we are processing the forward geocoding
     self.tableView.allowsSelection = NO;
 }
 -(void)unlockUI
 {
     self.tableView.allowsSelection = YES;
-    }
+}
 
 -(void)displayPlacemarks
 {
@@ -258,7 +272,7 @@
     }
     
     else 
-       cell.textLabel.text = @"Are you living in Texas?"; 
+       cell.textLabel.text = @"Didn't find any H-E-B, you can still test drive this app"; 
     return cell;
 }
 
@@ -267,11 +281,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.locationList count] == 0) {
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }
-    else if ([[self.locationList objectAtIndex:indexPath.row] isEqualToString:@""] ||
-        ([self.locationList objectAtIndex:indexPath.row]==nil)) {
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
+        productCategoryViewController.storeId = @"202";
+        [self.navigationController pushViewController:productCategoryViewController animated:YES];
+        [productCategoryViewController release];
+        
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+        
     }
     else 
     {
@@ -281,6 +297,8 @@
         [self.navigationController pushViewController:productCategoryViewController animated:YES];
         [productCategoryViewController release];
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
 

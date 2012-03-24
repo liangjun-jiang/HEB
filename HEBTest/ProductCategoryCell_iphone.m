@@ -22,7 +22,8 @@
     if ((self=[super initWithFrame:frame]))
     {
         self.productListTableView = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, kCellHeight, kTableLength)] autorelease];
-        self.productListTableView.showsVerticalScrollIndicator = NO;
+        self.productListTableView.showsVerticalScrollIndicator = YES;
+        self.productListTableView.indicatorStyle = UIScrollViewIndicatorStyleBlack;
         self.productListTableView.showsHorizontalScrollIndicator = NO;
         self.productListTableView.transform = CGAffineTransformMakeRotation(-M_PI*0.5);
         [self.productListTableView setFrame:CGRectMake(kRowHorizontalPadding * 0.5, kRowVerticalPadding * 0.5, kTableLength - kRowHorizontalPadding, kCellHeight)];

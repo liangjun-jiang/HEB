@@ -31,7 +31,7 @@
         //[super initWithFrame:frame];
         self.thumbNail = [[[UIImageView alloc] initWithFrame:CGRectMake(kProductCellHorizontalInnerpadding, kProductCellVerticalInnerPadding, kCellWidth-kProductCellHorizontalInnerpadding*2, kCellHeight-kProductCellVerticalInnerPadding*2)] autorelease];
         self.thumbNail.opaque = YES;
-        [self.thumbNail setContentMode:UIViewContentModeScaleToFill];
+        [self.thumbNail setContentMode:UIViewContentModeScaleAspectFit];
         
         [self.contentView addSubview:self.thumbNail];
         

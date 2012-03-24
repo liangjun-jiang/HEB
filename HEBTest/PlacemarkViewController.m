@@ -21,10 +21,11 @@
 @synthesize coordinate, title;
 -(id)initWithTitle:(NSString *)mTitle withCoordinate:(CLLocationCoordinate2D )c2d
 {
-    [super init];
-    coordinate = c2d;
-    title = mTitle;
-    
+    if (self=[super init])
+    {
+        coordinate = c2d;
+        title = mTitle;
+    }
     return self;
 }
 
@@ -62,20 +63,11 @@
 #pragma init
 -(id)initWithPlacemarks:(NSArray *)placemarks
 {
-    [super init];
-    self.placemarks = placemarks;
-    
+    if (self = [super init])
+    {    
+        self.placemarks = placemarks;
+    }
     return self;
-}
-
-
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -113,8 +105,6 @@
 
 -(void)dealloc
 {
-    self.mapView = nil;
-    self.placemarks = nil;
     [_placemarks release];
     [_mapView release];
     [super dealloc];

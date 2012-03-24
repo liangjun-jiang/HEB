@@ -1,0 +1,1268 @@
+THEBTest
+v4
+r1
+cCheck dependencies
+cProcessInfoPlistFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Info.plist" HEBTest/HEBTest-Info.plist
+cProcessPCH /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch.pth HEBTest/HEBTest-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/main.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWAppDelegate.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LocationListViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ShoppingListViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductDetailViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCell.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductNameLabel.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductNameLabel.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell_iphone.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell_iphone.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/AboutListViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/PlacemarkViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Product.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Product.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLNode.o /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLElement-Extras.o /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLElement-Extras.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataCompressor.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataDecompressor.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDownloadCache.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIFormDataRequest.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIHTTPRequest.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIInputStream.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASINetworkQueue.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Reachability.o /Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIImage+Resizing.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIImage+Resizing.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIBezierPath+ShadowPath.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIBezierPath+ShadowPath.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs" normal i386
+cGenerateDSYMFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app.dSYM" "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs"
+cCopyStringsFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/en.lproj/InfoPlist.strings" HEBTest/en.lproj/InfoPlist.strings
+cCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/LJHWViewController.xib
+cCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.xib
+cCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.xib
+cCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.xib
+cCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.xib
+cCpResource HEBTest/heb_red.jpg "build/Debug-iphonesimulator/HEB Weekly ADs.app/heb_red.jpg"
+cCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.xib
+cCpResource HEBTest/fruit_basket.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/fruit_basket.png"
+cCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.xib
+cCopyPlistFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/street_store.plist" HEBTest/street_store.plist
+cCopyPlistFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Products.plist" HEBTest/Products.plist
+cCpResource HEBTest/NoImage.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/NoImage.png"
+cCpResource HEBTest/add_button.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/add_button.png"
+cCpResource HEBTest/../Default.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/Default.png"
+cCpResource HEBTest/../Default@2x.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/Default@2x.png"
+cCpResource HEBTest/ad2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/ad2.png"
+cCpResource HEBTest/about2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/about2.png"
+cCpResource HEBTest/list2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/list2.png"
+cCpResource icon1.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/icon1.png"
+cCpResource icon2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/icon2.png"
+cTouch "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+c000000004EE7DDF00000000000000110
+t1323818480
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004E72F23F00000000002050D0
+t1316155967
+s2117840
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c000000004E72F2E600000000002C8C00
+t1316156134
+s2919424
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004E72F1CC0000000000245480
+t1316155852
+s2380928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000004E78059F00000000000859A0
+t1316488607
+s547232
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004E72F2960000000000353830
+t1316156054
+s3487792
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MapKit.framework/MapKit
+c000000004E7807EF00000000000D89E0
+t1316489199
+s887264
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000004E72F3C800000000000998C0
+t1316156360
+s628928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004E72F177000000000006C8A0
+t1316155767
+s444576
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004E7806AB00000000008F7390
+t1316488875
+s9401232
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libxml2.2.7.3.dylib
+c000000004E72F1B5000000000011FDD0
+t1316155829
+s1179088
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libz.1.2.5.dylib
+c000000004E72EDC60000000000013460
+t1316154822
+s78944
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m
+c000000004D3B091C0000000000003DED
+t1295714588
+s15853
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataCompressor.m
+c000000004D3B091C0000000000001AAE
+t1295714588
+s6830
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataDecompressor.m
+c000000004D3B091C0000000000001969
+t1295714588
+s6505
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDownloadCache.m
+c000000004D3B091C000000000000420D
+t1295714588
+s16909
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIFormDataRequest.m
+c000000004D3B091C0000000000002B6A
+t1295714588
+s11114
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m
+c000000004D3B091C0000000000028476
+t1295714588
+s164982
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIInputStream.m
+c000000004D3B091C0000000000000C14
+t1295714588
+s3092
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/ASINetworkQueue.m
+c000000004D3B091C0000000000002C8D
+t1295714588
+s11405
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLElement-Extras.m
+c000000004D3E05A1000000000000028F
+t1295910305
+s655
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLNode.m
+c000000004D3E0259000000000000C8CA
+t1295909465
+s51402
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/../Default.png
+c000000004F2DCF9A000000000000E3E8
+t1328402330
+s58344
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/../Default@2x.png
+c000000004F2DCF940000000000022A47
+t1328402324
+s141895
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.m
+c000000004F2F68430000000000000ABF
+t1328506947
+s2751
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.xib
+c000000004F2DADCE00000000000014A3
+t1328393678
+s5283
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/HEBTest-Prefix.pch
+c000000004F13114A000000000000013D
+t1326649674
+s317
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWAppDelegate.m
+c000000004F2DCDC00000000000000E12
+t1328401856
+s3602
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWViewController.m
+c000000004F2F4BCB0000000000000DA6
+t1328499659
+s3494
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.m
+c000000004F467005000000000000318B
+t1330016261
+s12683
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.xib
+c000000004F18E8C50000000000001A67
+t1327032517
+s6759
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/NoImage.png
+c000000004A4FC56800000000000016F4
+t1246741864
+s5876
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.m
+c000000004F2F4D090000000000000BB2
+t1328499977
+s2994
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.xib
+c000000004F25A6C50000000000001C6F
+t1327867589
+s7279
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Product.m
+c000000004F24C9A10000000000000971
+t1327810977
+s2417
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell.m
+c000000004F1382F400000000000004BB
+t1326678772
+s1211
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell_iphone.m
+c000000004F237C180000000000000D06
+t1327725592
+s3334
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.m
+c000000004F2F4E1C00000000000045C0
+t1328500252
+s17856
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.xib
+c000000004F1325360000000000001870
+t1326654774
+s6256
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCell.m
+c000000004F2DD17D00000000000007D7
+t1328402813
+s2007
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.m
+c000000004F2F4BE30000000000001353
+t1328499683
+s4947
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.xib
+c000000004F2D9E5F0000000000003862
+t1328389727
+s14434
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductNameLabel.m
+c000000004F13475300000000000002B6
+t1326663507
+s694
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Products.plist
+c000000004F24F62F00000000000002AC
+t1327822383
+s684
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.m
+c000000004F2F46770000000000002059
+t1328498295
+s8281
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.xib
+c000000004F1326CD0000000000001867
+t1326655181
+s6247
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIBezierPath+ShadowPath.m
+c000000004F29A90900000000000003D6
+t1328130313
+s982
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIImage+Resizing.m
+c000000004A51156E0000000000000B24
+t1246827886
+s2852
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/about2.png
+c000000004F2DF1A400000000000071D5
+t1328411044
+s29141
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ad2.png
+c000000004F2DF1BB00000000000069E3
+t1328411067
+s27107
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/add_button.png
+c000000004F2D9E150000000000000FF1
+t1328389653
+s4081
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/InfoPlist.strings
+c000000004F13114A000000000000002D
+t1326649674
+s45
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/LJHWViewController.xib
+c000000004F2DFDBF0000000000004C08
+t1328414143
+s19464
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/fruit_basket.png
+c000000004F07A0F5000000000001724F
+t1325900021
+s94799
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/heb_red.jpg
+c000000004F092301000000000000166C
+t1325998849
+s5740
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/list2.png
+c000000004F2DF1910000000000006AED
+t1328411025
+s27373
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/main.m
+c000000004F22C4B80000000000000170
+t1327678648
+s368
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/street_store.plist
+c000000004F2387620000000000008EF4
+t1327728482
+s36596
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.m
+c000000004D3B091C0000000000005E0C
+t1295714588
+s24076
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app.dSYM
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/AboutListViewController.nib
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Default.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Default@2x.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Info.plist
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/LocationListViewController.nib
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/NoImage.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/PkgInfo
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/PlacemarkViewController.nib
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/ProductCategoryViewController.nib
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/ProductDetailViewController.nib
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Products.plist
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/ShoppingListViewController.nib
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/about2.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/ad2.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/add_button.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/en.lproj/LJHWViewController.nib
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/fruit_basket.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/heb_red.jpg
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/icon1.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/icon2.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/list2.png
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/street_store.plist
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIAuthenticationDialog.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataCompressor.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataDecompressor.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDownloadCache.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIFormDataRequest.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIHTTPRequest.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIInputStream.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASINetworkQueue.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/AboutListViewController.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLElement-Extras.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLNode.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/HEB Weekly ADs.LinkFileList
+c000000004F46714E0000000000000F1A
+t1330016590
+s3866
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWAppDelegate.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWViewController.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LocationListViewController.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/PlacemarkViewController.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Product.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell_iphone.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryViewController.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCell.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductDetailViewController.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductNameLabel.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Reachability.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ShoppingListViewController.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIBezierPath+ShadowPath.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIImage+Resizing.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/icon1.png
+c000000004F2F722700000000000022DD
+t1328509479
+s8925
+
+N/Users/ljiang/Documents/workspace/HEB/HEBTest/icon2.png
+c000000004F2F73160000000000004730
+t1328509718
+s18224
+
+N/var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch.pth
+t2
+s0
+
+NHEBTest/HEBTest-Info.plist
+c000000004F2F78D60000000000000590
+t1328511190
+s1424
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataCompressor.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataDecompressor.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDownloadCache.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIFormDataRequest.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIInputStream.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASINetworkQueue.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLElement-Extras.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLNode.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWAppDelegate.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWViewController.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Product.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell_iphone.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCell.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductNameLabel.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIBezierPath+ShadowPath.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIImage+Resizing.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/main.m
+r0
+
+CBuild AST from /Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.m
+r0
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies44f734cea8f6b441^ace57acea8f6b441^---0#1#0#--18"Check dependencies36"69064FE6-DCF1-439B-8849-FE39DF2A87C2-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.295208
+e351709400.986703
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIAuthenticationDialog.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m:136:26:{136:26-136:82}{136:22-136:23}: warning: implicit conversion from enumeration type 'UIInterfaceOrientation' to different enumeration type 'UIDeviceOrientation' [-Wconversion,3]
+o         UIDeviceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
+o                             ~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o1 warning generated.
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.md8b74bd8a8f6b441^48c0fcd8a8f6b441^-458"/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m:136:26:{136:26-136:82}{136:22-136:23}: warning: implicit conversion from enumeration type 'UIInterfaceOrientation' to different enumeration type 'UIDeviceOrientation' [-Wconversion,3]         UIDeviceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];                             ~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1 warning generated.1(21%IDEActivityLogMessage2@118"Implicit conversion from enumeration type 'UIInterfaceOrientation' to different enumeration type 'UIDeviceOrientation'-351709400#0#256#-1#-23%DVTTextDocumentLocation3@87"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m0000000000000000^135#25#135#25#18446744073709551615#0#14"Semantic Issue2(3@87"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m0000000000000000^135#25#135#81#18446744073709551615#0#3@87"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m0000000000000000^135#21#135#22#18446744073709551615#0#-0#0#0#-19%DVTDocumentLocation4@87"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m0000000000000000^2676"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIAuthenticationDialog.o ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIAuthenticationDialog.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIAuthenticationDialog.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIAuthenticationDialog.o36"4B736B1B-A1AC-4387-B0B7-28F232C5CE4D-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataCompressor.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.423047
+e351709400.566131
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataCompressor.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataCompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataCompressor.m21746cd8a8f6b441^afee90d8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataCompressor.m0000000000000000^2646"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataCompressor.o ASIDataCompressor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataCompressor.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataCompressor.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataCompressor.o36"D0F9E39F-3F7E-4469-B0AD-10B71DBECD80-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataDecompressor.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.567540
+e351709400.689036
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataDecompressor.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataDecompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataDecompressor.m656f91d8a8f6b441^8864b0d8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataDecompressor.m0000000000000000^2656"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataDecompressor.o ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataDecompressor.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDataDecompressor.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDataDecompressor.o36"7ACAF567-827F-446F-9302-3549E5C64955-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDownloadCache.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.690359
+e351709400.909979
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDownloadCache.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDownloadCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDownloadCache.m87dcb0d8a8f6b441^f3ffead8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDownloadCache.m0000000000000000^2641"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDownloadCache.o ASIDownloadCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDownloadCache.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIDownloadCache.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIDownloadCache.o36"729504AF-5F91-4F2D-9E06-427FE75364E5-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIFormDataRequest.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.936008
+e351709401.183691
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIFormDataRequest.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIFormDataRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIFormDataRequest.m0c02f3d8a8f6b441^3a072fd9a8f6b441^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIFormDataRequest.m0000000000000000^2651"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIFormDataRequest.o ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIFormDataRequest.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIFormDataRequest.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIFormDataRequest.o36"E76AADAE-A914-46EB-9B6A-73D6E7C4F69D-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIHTTPRequest.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.988159
+e351709402.336699
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIHTTPRequest.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m:16:
+o/Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.h:154:59: warning: declaration of 'struct sockaddr_in' will not be visible outside of this function [3]
+o + (Reachability *) reachabilityWithAddress: (const struct sockaddr_in*) hostAddress;
+o                                                           ^
+o1 warning generated.
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m8e3bfdd8a8f6b441^354356daa8f6b441^-420"In file included from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m:16:/Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.h:154:59: warning: declaration of 'struct sockaddr_in' will not be visible outside of this function [3] + (Reachability *) reachabilityWithAddress: (const struct sockaddr_in*) hostAddress;                                                           ^1 warning generated.1(21%IDEActivityLogMessage2@80"Declaration of 'struct sockaddr_in' will not be visible outside of this function-351709401#89#163#2(36%IDEActivityLogHeaderInclusionMessage3@88"In file included from /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m:16:-351709401#0#89#-0#-23%DVTTextDocumentLocation4@78"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m0000000000000000^15#18446744073709551615#15#18446744073709551615#18446744073709551615#0#---2@144"Declaration of 'struct sockaddr_in' will not be visible outside of this function in /Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.h-351709401#18446744073709551615#0#-0#-4@76"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.h0000000000000000^153#58#153#58#18446744073709551615#0#---1#-4@76"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.h0000000000000000^153#58#153#58#18446744073709551615#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation5@78"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m0000000000000000^2631"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIHTTPRequest.o ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIHTTPRequest.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIHTTPRequest.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIHTTPRequest.o36"C5199AB5-5DDC-4487-9E22-BB8C11CF317F-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIInputStream.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIInputStream.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709401.185145
+e351709401.337718
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIInputStream.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIInputStream.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIInputStream.m658c2fd9a8f6b441^118d56d9a8f6b441^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASIInputStream.m0000000000000000^2631"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIInputStream.o ASIInputStream.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIInputStream.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/ASIInputStream.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASIInputStream.o36"6677FBAC-9A51-4A28-B39C-BC38AE81D36B-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASINetworkQueue.o /Users/ljiang/Documents/workspace/HEB/HEBTest/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709401.338999
+e351709401.538110
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASINetworkQueue.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/ASINetworkQueue.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/ASINetworkQueue.m67ed56d9a8f6b441^6b8290d9a8f6b441^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/ASINetworkQueue.m0000000000000000^2636"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASINetworkQueue.o ASINetworkQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASINetworkQueue.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/ASINetworkQueue.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ASINetworkQueue.o36"783E6F6F-1489-4BC0-A075-881340FA91FE-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/AboutListViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709399.961630
+e351709400.069756
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/AboutListViewController.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.m444ff6d7a8f6b441^badb11d8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.m0000000000000000^2692"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/AboutListViewController.o HEBTest/AboutListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/AboutListViewController.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/AboutListViewController.o36"316DAEAB-A854-4CA0-B613-21A84AB148C0-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLElement-Extras.o /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLElement-Extras.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.161475
+e351709400.293907
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLElement-Extras.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLElement-Extras.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLElement-Extras.m2d7c29d8a8f6b441^3a3d4bd8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLElement-Extras.m0000000000000000^2671"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLElement-Extras.o GDataXMLElement-Extras.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLElement-Extras.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLElement-Extras.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLElement-Extras.o36"E886FE11-D8EF-4100-A687-D0D4EFD7CB17-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLNode.o /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.154814
+e351709400.421713
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLNode.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLNode.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLNode.m69c527d8a8f6b441^0ef56bd8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLNode.m0000000000000000^2621"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLNode.o GDataXMLNode.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLNode.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/GDataXMLNode.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/GDataXMLNode.o36"662A89CB-F6FF-44B9-B7BE-E003F24964CA-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWAppDelegate.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709397.759129
+e351709398.750008
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWAppDelegate.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWAppDelegate.m9676c2d5a8f6b441^c900c0d6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWAppDelegate.m0000000000000000^2652"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWAppDelegate.o HEBTest/LJHWAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWAppDelegate.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWAppDelegate.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWAppDelegate.o36"708FCD3F-BE00-4ACC-82C1-1213F2F48239-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709398.748469
+e351709399.195973
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWViewController.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWViewController.m37c5bfd6a8f6b441^d94032d7a8f6b441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWViewController.m0000000000000000^2667"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWViewController.o HEBTest/LJHWViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWViewController.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LJHWViewController.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LJHWViewController.o36"E6B5B9FD-26EA-4AA7-A612-F19A90076CDD-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LocationListViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709398.751270
+e351709399.306017
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LocationListViewController.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.m0377c0d6a8f6b441^00574ed7a8f6b441^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.m0000000000000000^2707"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LocationListViewController.o HEBTest/LocationListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LocationListViewController.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/LocationListViewController.o36"E98A706B-C371-4AC6-A48A-152724F5BCF4-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/PlacemarkViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.019054
+e351709400.153517
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/PlacemarkViewController.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.me01105d8a8f6b441^a14c27d8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.m0000000000000000^2692"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/PlacemarkViewController.o HEBTest/PlacemarkViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/PlacemarkViewController.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/PlacemarkViewController.o36"938364E0-2188-4AA7-8024-0E6C460AF599-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Product.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Product.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709400.071112
+e351709400.159041
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Product.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Product.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Product.m195912d8a8f6b441^20b628d8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Product.m0000000000000000^2612"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Product.o HEBTest/Product.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Product.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Product.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Product.o36"7D762E6D-4BDA-497E-81F3-346C2E5934C1-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709399.669913
+e351709399.815194
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell.me4a1abd7a8f6b441^9fb0d0d7a8f6b441^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell.m0000000000000000^2672"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell.o HEBTest/ProductCategoryCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell.o36"E08C1924-7F16-4F2E-BA95-DC32E77C0802-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell_iphone.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell_iphone.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709399.909733
+e351709400.017742
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell_iphone.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell_iphone.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell_iphone.m7906e9d7a8f6b441^118b04d8a8f6b441^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell_iphone.m0000000000000000^2707"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell_iphone.o HEBTest/ProductCategoryCell_iphone.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell_iphone.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryCell_iphone.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryCell_iphone.o36"E7379FF8-EBE4-465C-A135-3BBB28A2DD95-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709399.197274
+e351709399.771789
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryViewController.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.mf0a732d7a8f6b441^a9a5c5d7a8f6b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.m0000000000000000^2722"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryViewController.o HEBTest/ProductCategoryViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryViewController.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCategoryViewController.o36"077F9F20-5BFC-4DB5-B014-C3735F038D70-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCell.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709399.773267
+e351709399.908309
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCell.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCell.m2f16c6d7a8f6b441^7b86e8d7a8f6b441^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCell.m0000000000000000^2632"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCell.o HEBTest/ProductCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCell.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCell.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductCell.o36"221F3450-B175-4A1F-81E6-CC3094DBF44E-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductDetailViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709399.491472
+e351709399.668589
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductDetailViewController.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.me8f77dd7a8f6b441^7428abd7a8f6b441^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.m0000000000000000^2712"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductDetailViewController.o HEBTest/ProductDetailViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductDetailViewController.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductDetailViewController.o36"92598BAC-F8E6-49EF-B0F0-EB701BC927B1-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductNameLabel.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductNameLabel.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709399.816491
+e351709399.960015
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductNameLabel.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductNameLabel.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductNameLabel.m7b66d1d7a8f6b441^48c3f5d7a8f6b441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductNameLabel.m0000000000000000^2657"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductNameLabel.o HEBTest/ProductNameLabel.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductNameLabel.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductNameLabel.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ProductNameLabel.o36"2E0D9512-D758-47A5-BE09-5F34DAFC08CA-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Reachability.o /Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709401.541070
+e351709401.872811
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Reachability.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.mcea78ad9a8f6b441^4870dfd9a8f6b441^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.m0000000000000000^2621"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Reachability.o Reachability.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Reachability.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/Reachability.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/Reachability.o36"35E2F236-9B11-4877-8B1B-ED4ACB76CAEC-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ShoppingListViewController.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709399.307364
+e351709399.490169
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ShoppingListViewController.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.mfed24ed7a8f6b441^967b7dd7a8f6b441^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.m0000000000000000^2707"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ShoppingListViewController.o HEBTest/ShoppingListViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ShoppingListViewController.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/ShoppingListViewController.o36"20B7976B-690C-4378-B329-26BD5F024B66-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIBezierPath+ShadowPath.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIBezierPath+ShadowPath.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709401.984602
+e351709402.075506
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIBezierPath+ShadowPath.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIBezierPath+ShadowPath.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIBezierPath+ShadowPath.mec32fcd9a8f6b441^149313daa8f6b441^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIBezierPath+ShadowPath.m0000000000000000^2692"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIBezierPath+ShadowPath.o HEBTest/UIBezierPath+ShadowPath.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIBezierPath+ShadowPath.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIBezierPath+ShadowPath.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIBezierPath+ShadowPath.o36"7F9DE5EE-4BE5-4977-B65A-1D50ADD7A464-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIImage+Resizing.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIImage+Resizing.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709401.874198
+e351709401.983270
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIImage+Resizing.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIImage+Resizing.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIImage+Resizing.m70eedfd9a8f6b441^84b7fbd9a8f6b441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIImage+Resizing.m0000000000000000^2657"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIImage+Resizing.o HEBTest/UIImage+Resizing.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIImage+Resizing.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/UIImage+Resizing.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/UIImage+Resizing.o36"A1FA99E9-DE95-4A94-904A-614F057B1C7B-
+
+CCompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/main.o /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709397.759067
+e351709398.747183
+r1
+xCompileC
+xbuild/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/main.o
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/main.mef75c2d5a8f6b441^3062bfd6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/main.m0000000000000000^2597"CompileC build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/main.o HEBTest/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -include /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch -MMD -MT dependencies -MF /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/main.d -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/main.m -o /Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/main.o36"FB6EC9C7-FAA5-484E-AC07-63D16E4875E2-
+
+CCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.xib
+s351709413.913748
+e351709414.017172
+r1
+xCompileXIB
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compiling /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.xib1c07eae5a8f6b441^c17204e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.xib0000000000000000^897"CompileXIB HEBTest/AboutListViewController.xib    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/AboutListViewController.nib" /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/AboutListViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"E1311139-BDA4-4820-9CB4-0DAFD068592E-
+
+CCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.xib
+s351709413.253574
+e351709413.451188
+r1
+xCompileXIB
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compiling /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.xib0c0441e5a8f6b441^b08e73e5a8f6b441^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.xib0000000000000000^906"CompileXIB HEBTest/LocationListViewController.xib    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/LocationListViewController.nib" /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/LocationListViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"72203E59-8211-42A3-894F-927965A56A77-
+
+CCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.xib
+s351709414.054932
+e351709414.353510
+r1
+xCompileXIB
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compiling /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.xibae2b0ee6a8f6b441^e57f5ae6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.xib0000000000000000^897"CompileXIB HEBTest/PlacemarkViewController.xib    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/PlacemarkViewController.nib" /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/PlacemarkViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"482C52ED-32D6-4C9A-8A8A-94B56FBA72CA-
+
+CCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.xib
+s351709413.452905
+e351709413.547792
+r1
+xCompileXIB
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compiling /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.xib630c74e5a8f6b441^8e3c8ce5a8f6b441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.xib0000000000000000^915"CompileXIB HEBTest/ProductCategoryViewController.xib    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/ProductCategoryViewController.nib" /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductCategoryViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"86DFC1A6-4219-4AE9-B784-23E69222351E-
+
+CCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.xib
+s351709413.640742
+e351709413.875364
+r1
+xCompileXIB
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compiling /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.xib7922a4e5a8f6b441^492de0e5a8f6b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.xib0000000000000000^909"CompileXIB HEBTest/ProductDetailViewController.xib    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/ProductDetailViewController.nib" /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ProductDetailViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"3FB5B534-1B22-4E6D-AC59-7C59F029CC6D-
+
+CCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.xib
+s351709413.549094
+e351709413.639477
+r1
+xCompileXIB
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compiling /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.xib36ad8ce5a8f6b441^f8dea3e5a8f6b441^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.xib0000000000000000^906"CompileXIB HEBTest/ShoppingListViewController.xib    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/ShoppingListViewController.nib" /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ShoppingListViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"863234FB-26A8-45AE-92A4-F227322690E5-
+
+CCompileXIB /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/LJHWViewController.xib
+s351709404.020904
+e351709413.252295
+r1
+xCompileXIB
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/LJHWViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compiling /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/LJHWViewController.xib827005dca8f6b441^3ab040e5a8f6b441^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/LJHWViewController.xib0000000000000000^909"CompileXIB HEBTest/en.lproj/LJHWViewController.xib    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/en.lproj/LJHWViewController.nib" /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/LJHWViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"5904D46B-D536-47C7-BA0A-BADCF160024C-
+
+CCopyPlistFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Products.plist" HEBTest/Products.plist
+s351709414.441699
+e351709414.486951
+r1
+xCopyPlistFile
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Products.plist
+xHEBTest/Products.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection27"Copy HEBTest/Products.plist172c71e6a8f6b441^d0b47ce6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/Products.plist0000000000000000^613"CopyPlistFile "build/Debug-iphonesimulator/HEB Weekly ADs.app/Products.plist" HEBTest/Products.plist    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyPlist --convert binary1 --outdir "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app" -- HEBTest/Products.plist36"84D330F4-82C9-47E4-BC37-98C2B220B76E-
+
+CCopyPlistFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/street_store.plist" HEBTest/street_store.plist
+s351709414.354869
+e351709414.440449
+r1
+xCopyPlistFile
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/street_store.plist
+xHEBTest/street_store.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Copy HEBTest/street_store.plistfef15ae6a8f6b441^c4ce70e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/street_store.plist0000000000000000^625"CopyPlistFile "build/Debug-iphonesimulator/HEB Weekly ADs.app/street_store.plist" HEBTest/street_store.plist    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyPlist --convert binary1 --outdir "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app" -- HEBTest/street_store.plist36"942E6B15-370F-4E00-80C8-DF8DBAB00355-
+
+CCopyStringsFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/en.lproj/InfoPlist.strings" HEBTest/en.lproj/InfoPlist.strings
+s351709404.020513
+e351709404.115822
+r1
+xCopyStringsFile
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/en.lproj/InfoPlist.strings
+xHEBTest/en.lproj/InfoPlist.strings
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy HEBTest/en.lproj/InfoPlist.strings5f5d05dca8f6b441^82ae1ddca8f6b441^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/en.lproj/InfoPlist.strings0000000000000000^701"CopyStringsFile "build/Debug-iphonesimulator/HEB Weekly ADs.app/en.lproj/InfoPlist.strings" HEBTest/en.lproj/InfoPlist.strings    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/en.lproj" -- HEBTest/en.lproj/InfoPlist.strings36"ECEDF631-3512-4594-B757-5B624DB6576E-
+
+CCpResource HEBTest/../Default.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/Default.png"
+s351709414.569387
+e351709414.621201
+r1
+xCpResource
+xHEBTest/../Default.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/Default.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/Default.png87db91e6a8f6b441^1c7da0e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/Default.png00f4d89bddffdf42^713"CpResource HEBTest/../Default.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/Default.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/../Default.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"E79A262C-0E4C-4021-A0FA-FAC47E433A41-
+
+CCpResource HEBTest/../Default@2x.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/Default@2x.png"
+s351709414.627365
+e351709414.647580
+r1
+xCpResource
+xHEBTest/../Default@2x.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/Default@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/Default@2x.png17efa3e6a8f6b441^acc7a5e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/Default@2x.png00f4d89bddffdf42^726"CpResource "HEBTest/../Default@2x.png" "build/Debug-iphonesimulator/HEB Weekly ADs.app/Default@2x.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/../Default@2x.png" "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"8856985E-F1B1-4436-9D7C-147B2947A28A-
+
+CCpResource HEBTest/NoImage.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/NoImage.png"
+s351709414.488197
+e351709414.507202
+r1
+xCpResource
+xHEBTest/NoImage.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/NoImage.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/NoImage.png1f137de6a8f6b441^3fe481e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/NoImage.png00f4d89bddffdf42^707"CpResource HEBTest/NoImage.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/NoImage.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/NoImage.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"05993D8D-3F15-4D19-9BBF-4483950DFFDD-
+
+CCpResource HEBTest/about2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/about2.png"
+s351709414.678239
+e351709414.688712
+r1
+xCpResource
+xHEBTest/about2.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/about2.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/about2.png45b8ade6a8f6b441^5d4fb0e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/about2.png00f4d89bddffdf42^704"CpResource HEBTest/about2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/about2.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/about2.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"7D5D6326-A14E-423A-8368-77F614BB156A-
+
+CCpResource HEBTest/ad2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/ad2.png"
+s351709414.648999
+e351709414.676836
+r1
+xCpResource
+xHEBTest/ad2.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/ad2.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/ad2.png753ca6e6a8f6b441^2045ade6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/ad2.png00f4d89bddffdf42^695"CpResource HEBTest/ad2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/ad2.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/ad2.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"22E0B3C7-F61F-4515-884A-C35B2EEC9D68-
+
+CCpResource HEBTest/add_button.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/add_button.png"
+s351709414.508486
+e351709414.568044
+r1
+xCpResource
+xHEBTest/add_button.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/add_button.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/add_button.png734c82e6a8f6b441^df6a91e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/add_button.png00f4d89bddffdf42^716"CpResource HEBTest/add_button.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/add_button.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/add_button.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"29780CE8-0635-48D6-9503-22B3B035AF5E-
+
+CCpResource HEBTest/fruit_basket.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/fruit_basket.png"
+s351709414.018475
+e351709414.052211
+r1
+xCpResource
+xHEBTest/fruit_basket.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/fruit_basket.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/fruit_basket.png6bd304e6a8f6b441^e65d0de6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/fruit_basket.png00f4d89bddffdf42^722"CpResource HEBTest/fruit_basket.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/fruit_basket.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/fruit_basket.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"923FADA9-F887-4DA3-B4EA-8CC9A27B491B-
+
+CCpResource HEBTest/heb_red.jpg "build/Debug-iphonesimulator/HEB Weekly ADs.app/heb_red.jpg"
+s351709413.876651
+e351709413.912417
+r1
+xCpResource
+xHEBTest/heb_red.jpg
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/heb_red.jpg
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/heb_red.jpgc285e0e5a8f6b441^4164f9e5a8f6b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/heb_red.jpg00f4d89bddffdf42^707"CpResource HEBTest/heb_red.jpg "build/Debug-iphonesimulator/HEB Weekly ADs.app/heb_red.jpg"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/heb_red.jpg "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"061D0768-C149-4727-83F4-4784204E49D8-
+
+CCpResource HEBTest/list2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/list2.png"
+s351709414.690037
+e351709414.709044
+r1
+xCpResource
+xHEBTest/list2.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/list2.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/list2.pnge0bcb0e6a8f6b441^a184b5e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/list2.png00f4d89bddffdf42^701"CpResource HEBTest/list2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/list2.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/list2.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"D6645F0B-9EE1-4565-BA3E-F4B5F64E88FC-
+
+CCpResource icon1.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/icon1.png"
+s351709414.710454
+e351709414.724003
+r1
+xCpResource
+xicon1.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/icon1.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/icon1.png6af9b5e6a8f6b441^3d65b9e6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/icon1.png00f4d89bddffdf42^685"CpResource icon1.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/icon1.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/icon1.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"63DD1FE0-302F-4489-8975-883A02329CB1-
+
+CCpResource icon2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/icon2.png"
+s351709414.725437
+e351709414.730123
+r1
+xCpResource
+xicon2.png
+xbuild/Debug-iphonesimulator/HEB Weekly ADs.app/icon2.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Debug-iphonesimulator/HEB Weekly ADs.app/icon2.png3aceb9e6a8f6b441^10eabae6a8f6b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app/icon2.png00f4d89bddffdf42^685"CpResource icon2.png "build/Debug-iphonesimulator/HEB Weekly ADs.app/icon2.png"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ljiang/Documents/workspace/HEB/HEBTest/icon2.png "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"AAA3C592-6071-49A1-9C7F-124FA87435C6-
+
+CGenerateDSYMFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app.dSYM" "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs"
+s351709403.606007
+e351709404.012370
+r1
+xGenerateDSYMFile
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app.dSYM
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Generating /Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app.dSYMff3e9bdba8f6b441^a22903dca8f6b441^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB%20Weekly%20ADs.app.dSYM00f4d89bddffdf42^722"GenerateDSYMFile "build/Debug-iphonesimulator/HEB Weekly ADs.app.dSYM" "build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/usr/bin/dsymutil "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs" -o "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app.dSYM"36"DC018B56-9FE7-4C2F-BDAF-9D1A8A9BC284-
+
+CLd "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs" normal i386
+s351709402.343679
+e351709403.598411
+r1
+xLd
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs
+xnormal
+xi386
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Link /Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs261a58daa8f6b441^cf3099dba8f6b441^---0#0#0#--1447"Ld "build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs" normal i386    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -L/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -filelist "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/Objects-normal/i386/HEB Weekly ADs.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -ObjC-all_load -Xlinker -no_implicit_dylibs -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 -framework CoreData -framework SystemConfiguration -lxml2.2.7.3 -framework MobileCoreServices -framework CFNetwork -lz.1.2.5 -framework MapKit -framework CoreGraphics -framework CoreLocation -framework UIKit -framework Foundation -o "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/HEB Weekly ADs"36"B13E6D12-9ADA-4908-9D94-971503D8E63F-
+
+CProcessInfoPlistFile "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Info.plist" HEBTest/HEBTest-Info.plist
+s351709390.491824
+e351709390.496427
+r1
+xProcessInfoPlistFile
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Info.plist
+xHEBTest/HEBTest-Info.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection34"Process HEBTest/HEBTest-Info.pliste7ff7dcea8f6b441^0e157fcea8f6b441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/HEBTest-Info.plist0000000000000000^792"ProcessInfoPlistFile "build/Debug-iphonesimulator/HEB Weekly ADs.app/Info.plist" HEBTest/HEBTest-Info.plist    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    builtin-infoPlistUtility HEBTest/HEBTest-Info.plist -genpkginfo "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app/Info.plist"36"0966C382-88B8-4FBF-B384-934DA3767F5A-
+
+CProcessPCH /Users/ljiang/Library/Developer/Xcode/DerivedData/HEBTest-bgwjhhcfsflmviefdyyngnqcuxsa/Index/PrecompiledHeaders/HEBTest-Prefix-ahbfzlafjukvencrerzttexfarfd_ast/HEBTest-Prefix.pch.pth HEBTest/HEBTest-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch.pth HEBTest/HEBTest-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s351709390.504783
+e351709397.751677
+r1
+xProcessPCH
+x/var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch.pth
+xHEBTest/HEBTest-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Precompile HEBTest/HEBTest-Prefix.pchaf5e81cea8f6b441^a46dc0d5a8f6b441^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/HEBTest-Prefix.pch0000000000000000^2604"ProcessPCH /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch.pth HEBTest/HEBTest-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50000 "-I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/HEB Weekly ADs.hmap" -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/include -I/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/libxml2 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/SBJson/Build -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources/i386 -I/Users/ljiang/Documents/workspace/HEB/HEBTest/build/HEBTest.build/Debug-iphonesimulator/HEBTest.build/DerivedSources -F/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator -c /Users/ljiang/Documents/workspace/HEB/HEBTest/HEBTest/HEBTest-Prefix.pch -o /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/kn/48mx55m52v73r9g9r_t539x80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HEBTest-Prefix-ankzaggcgvbqaxgauemvzxbxngqj/HEBTest-Prefix.pch.d36"C40158FC-984E-4258-A40C-4262B946041F-
+
+CTouch "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"
+s351709414.737801
+e351709414.830643
+r1
+xTouch
+x/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Touch /Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app23f7bce6a8f6b441^b5a3d4e6a8f6b441^---0#0#0#--514"Touch "build/Debug-iphonesimulator/HEB Weekly ADs.app"    cd /Users/ljiang/Documents/workspace/HEB/HEBTest    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin://Users/ljiang/Downloads/eclipse/android-sdk-mac_x86/platform-tools:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"    /usr/bin/touch -c "/Users/ljiang/Documents/workspace/HEB/HEBTest/build/Debug-iphonesimulator/HEB Weekly ADs.app"36"E44700FE-462E-4D7B-9C85-EEE9B0D1F43B-
+

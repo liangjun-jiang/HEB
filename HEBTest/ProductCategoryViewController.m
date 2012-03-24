@@ -60,8 +60,8 @@
 
 -(void)dealloc
 {
-    [self.productList release];
-    [self.reusableCells release];
+    [_productList release];
+    [_reusableCells release];
     [_allEntries release];
     _allEntries = nil;
     [_queue release];
@@ -84,11 +84,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.title = @"Items";
+    
     self.clearsSelectionOnViewWillAppear = YES;
     
     Product *product = [[Product alloc] initWithInfo:@"Wait a second ..." price:@"" image:@"" desc:@"" category:@"" psDate:@"" endingDate:@""];
     NSMutableArray *products = [NSMutableArray arrayWithObjects:product, nil];
+    [product release];
     self.categories = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                        products, @"Baby",
                        products, @"Bakery", 
@@ -133,7 +136,6 @@
             ProductCategoryCell_iphone *cell = [[ProductCategoryCell_iphone alloc] initWithFrame:CGRectMake(0, 0, 320, 416)];
             NSSortDescriptor *sortDescriptor= [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
             NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-            
             NSString* categoryName = [sortedCategories objectAtIndex:i];
             NSArray* currentCategory = [self.categories objectForKey:categoryName];
             cell.products = [NSArray arrayWithArray:currentCategory];
@@ -164,7 +166,8 @@
             
             Product *product = [[Product alloc] initWithInfo:name price:price image:imgUrl desc:descStr category:[categories stringByReplacingOccurrencesOfString:@"~~" withString:@","] psDate:dateString endingDate:eString]; 
             
-            [entries addObject:product];            
+            [entries addObject:product];   
+            
         }      
     }
     
@@ -263,6 +266,7 @@
                         } else if ([category isEqualToString:@"Front Page"]){
                             [frontPageArray addObject:product];
                         }
+                        
                     }
                 }
                
@@ -297,7 +301,6 @@
                     
                     NSSortDescriptor *sortDescriptor= [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
                     NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-                    
                     NSString* categoryName = [sortedCategories objectAtIndex:i];
                     NSArray* currentCategory = [self.categories objectForKey:categoryName];
                     cell.products = [NSArray arrayWithArray:currentCategory];
@@ -373,7 +376,6 @@
     
     NSSortDescriptor *sortDescriptor= [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
     NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    
     NSString *categoryName = [sortedCategories objectAtIndex:section];
     
     titleLabel.text = categoryName;

@@ -9,10 +9,11 @@
 #import "ProductDetailViewController.h"
 #import "ShoppingListViewController.h"
 #import "Product.h"
+#import "UIBezierPath+ShadowPath.h"
 
 @implementation ProductDetailViewController
 @synthesize product=_product;
-@synthesize nameLabel=_nameLabel, priceLabel=_priceLabel, descLabel=_descLabel, productImage=_productImage, expirationLabel=_expirationLabel;
+@synthesize productImage=_productImage, expirationLabel=_expirationLabel;
 @synthesize spinner=_spinner, addIntoListButton=_addIntoListButton;
 @synthesize flag=_flag;
 
@@ -66,6 +67,7 @@
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
     [message show];
+    [message release];
 }
 
 #pragma mark - View lifecycle
@@ -77,18 +79,29 @@
     UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"List" style:UIBarButtonItemStylePlain target:self action:@selector(showShoppingList)];
     self.navigationItem.rightBarButtonItem = shoppingListBarItem;
     [shoppingListBarItem release];
-    self.nameLabel.text = self.product.name;
-    self.nameLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
-    self.nameLabel.textColor = [UIColor redColor];
-    self.nameLabel.numberOfLines = 0;
-    self.nameLabel.lineBreakMode = UILineBreakModeWordWrap;
-    self.priceLabel.text = self.product.price;
-    self.priceLabel.numberOfLines = 2;
-    self.descLabel.text = self.product.desc;
-    self.descLabel.numberOfLines = 0;
-    self.descLabel.lineBreakMode = UILineBreakModeWordWrap;
+    UILabel *nameLabel = [[[UILabel alloc] initWithFrame:CGRectMake(23, 5, 271, 30)] autorelease];
+    nameLabel.text = self.product.name;
+    nameLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
+    nameLabel.textColor = [UIColor blueColor];
+    nameLabel.numberOfLines = 0;
+    nameLabel.lineBreakMode = UILineBreakModeWordWrap;
+    [self.view addSubview:nameLabel];
     
-    self.expirationLabel.text = [NSString stringWithFormat:@"Expired on %@",self.product.eDate];
+    UILabel *priceLabel = [[[UILabel alloc] initWithFrame:CGRectMake(23, 35, 271, 15)] autorelease];
+    priceLabel.text = self.product.price;
+    priceLabel.font = [UIFont fontWithName:@"Baskerville-Bold" size:14];
+    priceLabel.textColor = [UIColor redColor];
+    priceLabel.numberOfLines = 0;
+    priceLabel.lineBreakMode = UILineBreakModeWordWrap;
+    [self.view addSubview:priceLabel];
+    
+    UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 68, 271, 35)];
+    descLabel.numberOfLines = 0;
+    descLabel.lineBreakMode = UILineBreakModeWordWrap;
+    descLabel.text = self.product.desc;
+    descLabel.font = [UIFont fontWithName:@"ArialHebrew" size:10];
+    [self.view addSubview:descLabel];
+    [descLabel release];
     
     if (self.flag == 1) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -101,9 +114,6 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    self.nameLabel = nil;
-    self.priceLabel = nil;
-    self.descLabel = nil;
     self.productImage = nil;
     self.spinner = nil;
     self.addIntoListButton = nil;

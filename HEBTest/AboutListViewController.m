@@ -40,7 +40,7 @@
  
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(5.0, 40.0, 310, 310)];
     textLabel.backgroundColor = [UIColor clearColor];
-    textLabel.text = @"H-E-B Grocery Stores (H-E-B) is a privately held San Antonio, Texas-based supermarket chain with more than 315 stores throughout Texas and northern Mexico.  This app provides an easy way to browse the weekly ads, deals and coupon from your nearby H-E-B stores. You can also add the product item into your shipping list, with the friendly shopping list, you can save more. ";
+    textLabel.text = @"H-E-B Grocery Stores (H-E-B) is a privately held San Antonio, Texas-based supermarket chain with more than 315 stores throughout Texas and northern Mexico.  This app provides an easy way to browse the weekly ads, deals and coupon of your nearby H-E-B stores. You can also add the product item into your shipping list, with the friendly shopping list, you can save more.";
     textLabel.numberOfLines = 0;
     textLabel.lineBreakMode = UILineBreakModeWordWrap;
     textLabel.textAlignment = UITextAlignmentRight;
