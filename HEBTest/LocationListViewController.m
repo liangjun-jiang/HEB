@@ -169,7 +169,7 @@
     [_selectedPath release];
     [_locationManger release];
     [_placeMarkers release];
-    [super release];
+    [super dealloc];
 }
 
 
