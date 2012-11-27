@@ -29,10 +29,6 @@
     return self;
 }
 
--(void)dealloc{
-    [title release];
-    [super dealloc];
-}
 
 @end
 
@@ -52,7 +48,7 @@
 }
 -(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
 {
-    MKAnnotationView *aV = [views objectAtIndex:0];
+    MKAnnotationView *aV = views[0];
     id <MKAnnotation> mp = [aV annotation];
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 10000, 10000);
     [mapView setRegion:region];
@@ -79,11 +75,10 @@
     for (id currentObj in self.placemarks){
         if ([currentObj isKindOfClass:[NSDictionary class]]) {
             CLLocationCoordinate2D location;
-            location.latitude = [[[currentObj objectForKey:@"location"] objectForKey:@"lat"] doubleValue];
-            location.longitude = [[[currentObj objectForKey:@"location"] objectForKey:@"lng"] doubleValue];
+            location.latitude = [currentObj[@"location"][@"lat"] doubleValue];
+            location.longitude = [currentObj[@"location"][@"lng"] doubleValue];
             MapViewAnnotation *aN = [[MapViewAnnotation alloc] initWithTitle:@"H-E-B" withCoordinate:location];
             [self.mapView addAnnotation:aN];
-            [aN release];
         }
     }
 }
@@ -103,12 +98,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(void)dealloc
-{
-    [_placemarks release];
-    [_mapView release];
-    [super dealloc];
-}
 
 
 

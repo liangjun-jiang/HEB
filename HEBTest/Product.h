@@ -19,14 +19,14 @@
     NSString *eDate;
     NSString *desc;
 }
-@property(nonatomic,retain) NSString *category;
-@property(nonatomic,retain) NSString *name;
-@property (nonatomic, retain) NSString *price;
-@property (nonatomic, retain) NSString *imgLink;
-@property (nonatomic, retain) NSString *psDate;
-@property (nonatomic, retain) NSString *eDate;
+@property(nonatomic,strong) NSString *category;
+@property(nonatomic,strong) NSString *name;
+@property (nonatomic, strong) NSString *price;
+@property (nonatomic, strong) NSString *imgLink;
+@property (nonatomic, strong) NSString *psDate;
+@property (nonatomic, strong) NSString *eDate;
 
-@property (nonatomic, retain) NSString *desc;
+@property (nonatomic, strong) NSString *desc;
 
 +(NSArray *)keys;
 -(id)initWithDictionary:(NSDictionary *)dictionary;

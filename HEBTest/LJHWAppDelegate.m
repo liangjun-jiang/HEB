@@ -8,35 +8,48 @@
 
 #import "LJHWAppDelegate.h"
 #import "LJHWViewController.h"
+#import "ShoppingListViewController.h"
+#import "AboutListViewController.h"
+
+@interface LJHWAppDelegate()
+@property (nonatomic, strong) UITabBarController *tabBarController;
+@end
 
 @implementation LJHWAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 @synthesize navController = _navController;
-- (void)dealloc
-{
-    
-    [_window release];
-    [_navController release];
-    [_viewController release];
-    [super dealloc];
-}
+@synthesize tabBarController = _tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    self.viewController = [[[LJHWViewController alloc] initWithNibName:@"LJHWViewController" bundle:nil] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.navController = [[[UINavigationController alloc] initWithRootViewController:self.viewController] autorelease];
-    [self.navController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Chalkduster" size:18],UITextAttributeFont, nil]]; 
-    self.navController.navigationBar.tintColor = [UIColor colorWithRed:0.988235294 green:0.0666666667 blue:0.0196078431 alpha:1.0];
+    UIViewController *viewController1, *viewController2, *viewController3;
     
-    self.window.rootViewController = self.navController;
+    viewController1 = [[LJHWViewController alloc]
+                       initWithNibName:@"LJHWViewController" bundle:nil];
+    UINavigationController *navController1 = [[UINavigationController alloc]
+                                              initWithRootViewController:viewController1];
+    
+    viewController2 = [[ShoppingListViewController alloc]
+                       initWithNibName:@"ShoppingListViewController" bundle:nil];
+    UINavigationController *navController2 = [[UINavigationController alloc]
+                                              initWithRootViewController:viewController2];
+    
+    viewController3 = [[AboutListViewController alloc] initWithNibName:@"AboutListViewController" bundle:nil];
+    UINavigationController *navController3 = [[UINavigationController alloc]
+                                              initWithRootViewController:viewController3];
+    
+    _tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[navController1, navController2, navController3];
+    self.window.rootViewController = self.tabBarController;
+
     [self.window makeKeyAndVisible];
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *basePath = ([paths count] > 0) ? paths[0] : nil;
   	NSString *storePath = [basePath stringByAppendingPathComponent: @"Products.plist"];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	// If the expected file doesn't exist, copy the default file.

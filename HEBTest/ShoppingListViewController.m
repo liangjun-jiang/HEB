@@ -14,16 +14,11 @@
 @implementation ShoppingListViewController
 @synthesize selectedProducts=_selectedProducts;
 
--(void)dealloc
-{
-    [_selectedProducts release];
-    [super dealloc];
-}
 
 +(NSString *)pathForDocumentsWithName:(NSString *)documentName
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *path = [paths objectAtIndex:0];
+    NSString *path = paths[0];
     
     return [path stringByAppendingPathComponent:documentName];
 }
@@ -46,7 +41,6 @@
                 if ([currDict isKindOfClass:[NSDictionary class]]) {
                     Product *product = [[Product alloc] initWithDictionary:currDict];
                     [_selectedProducts addObject:product];
-                    [product release];
                     
                 }
             }
@@ -77,7 +71,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
     NSUserDomainMask, 
     YES);
-    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Products.plist"];
+    NSString *path = [paths[0] stringByAppendingPathComponent:@"Products.plist"];
 
     NSString *plist = [productDicts description];
     NSError *error = nil;
@@ -170,7 +164,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         
         cell.accessoryType= UITableViewCellAccessoryDisclosureIndicator;
         UIFont *titleFont = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
@@ -179,7 +173,7 @@
         cell.detailTextLabel.font = detailFont;
         
     }
-    __block Product *product = [[self selectedProducts ] objectAtIndex:indexPath.row];
+    __weak Product *product = [self selectedProducts ][indexPath.row];
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
     cell.textLabel.text = (product.name == nil)?@"":product.name;
@@ -214,7 +208,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [[self displayedSelectProducts] removeObjectAtIndex:indexPath.row];
          
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     
 }
@@ -239,12 +233,11 @@
     
      ProductDetailViewController *detailViewController = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil];
     
-    detailViewController.product = [_selectedProducts objectAtIndex:indexPath.row];
+    detailViewController.product = _selectedProducts[indexPath.row];
     detailViewController.flag = 1;
     detailViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     [self.navigationController presentModalViewController:detailViewController animated:YES];
     
-    [detailViewController release];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
      
 }

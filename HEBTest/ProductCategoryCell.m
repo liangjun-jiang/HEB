@@ -14,12 +14,6 @@
 @synthesize productListTableView=_productListTableView, products=_products;
 
 
-- (void)dealloc
-{
-    self.productListTableView = nil;
-    self.products = nil;
-    [super dealloc];
-}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.products count];
@@ -32,7 +26,7 @@
     
     if (cell == nil) 
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     cell.textLabel.text = @"The title of the cell in the table within the table :O";

@@ -58,20 +58,6 @@
 }
 
 
--(void)dealloc
-{
-    [_productList release];
-    [_reusableCells release];
-    [_allEntries release];
-    _allEntries = nil;
-    [_queue release];
-    _queue = nil;
-    [_feeds release];
-    _feeds = nil;
-    
-    
-    [super dealloc];
-}
 
 
 #pragma mark - View lifecycle
@@ -91,7 +77,6 @@
     
     Product *product = [[Product alloc] initWithInfo:@"Wait a second ..." price:@"" image:@"" desc:@"" category:@"" psDate:@"" endingDate:@""];
     NSMutableArray *products = [NSMutableArray arrayWithObjects:product, nil];
-    [product release];
     self.categories = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                        products, @"Baby",
                        products, @"Bakery", 
@@ -121,10 +106,8 @@
     self.tableView.rowHeight = kCellHeight + (kRowVerticalPadding * 0.5) + (kRowVerticalPadding * 0.5 * 0.5);
     
     self.allEntries = [NSMutableArray array];
-    self.queue = [[[NSOperationQueue alloc] init] autorelease];
-    self.feeds = [NSArray arrayWithObjects:
-                  [NSString stringWithFormat:@"http://heb.inserts2online.com/rss.jsp?drpStoreID=%@&categories=all",self.storeId],
-                  nil]; 
+    self.queue = [[NSOperationQueue alloc] init];
+    self.feeds = @[[NSString stringWithFormat:@"http://heb.inserts2online.com/rss.jsp?drpStoreID=%@&categories=all",self.storeId]]; 
     [self refresh];
     
     if (!self.reusableCells) {
@@ -135,13 +118,12 @@
         {                        
             ProductCategoryCell_iphone *cell = [[ProductCategoryCell_iphone alloc] initWithFrame:CGRectMake(0, 0, 320, 416)];
             NSSortDescriptor *sortDescriptor= [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
-            NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-            NSString* categoryName = [sortedCategories objectAtIndex:i];
-            NSArray* currentCategory = [self.categories objectForKey:categoryName];
+            NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:@[sortDescriptor]];
+            NSString* categoryName = sortedCategories[i];
+            NSArray* currentCategory = (self.categories)[categoryName];
             cell.products = [NSArray arrayWithArray:currentCategory];
             
             [self.reusableCells addObject:cell];
-            [cell release];
         }
       
     }
@@ -270,28 +252,28 @@
                     }
                 }
                
-                [self.categories setObject:babyArray forKey:@"Baby"];
-                [self.categories setObject:bakeryArray forKey:@"Bakery"];
-                [self.categories setObject:beerArray forKey:@"Beer, Wine & Spirits"];
-                [self.categories setObject:comboArray forKey:@"Combo Locos"];
-                [self.categories setObject:cookingArray forKey:@"Cooking Utensils"];
-                [self.categories setObject:dairyArray forKey:@"Dairy"];
-                [self.categories setObject:deliArray forKey:@"Deli"];
-                [self.categories setObject:fishArray forKey:@"Fish Market"];
-                [self.categories setObject:floralArray forKey:@"Floral"];
-                [self.categories setObject:frozenArray forKey:@"Frozen"];
-                [self.categories setObject:generalArray forKey:@"General/Seasonal"];
-                [self.categories setObject:grillingAccessoriesArray forKey:@"Grilling Accessories"];
-                [self.categories setObject:grillsArray forKey:@"Grills"];
-                [self.categories setObject:groceryArray forKey:@"Grocery"];
-                [self.categories setObject:healthArray forKey:@"Health and Beauty"];
-                [self.categories setObject:householdArray forKey:@"Household"];
-                [self.categories setObject:mealArray forKey:@"Meal Deal"];
-                [self.categories setObject:meatArray forKey:@"Meat Market"];
-                [self.categories setObject:petsArray forKey:@"Pets"];
-                [self.categories setObject:pharmacyArray forKey:@"Pharmacy"];
-                [self.categories setObject:produceArray forKey:@"Produce"];
-                [self.categories setObject:frontPageArray forKey:@"Front Page"];
+                (self.categories)[@"Baby"] = babyArray;
+                (self.categories)[@"Bakery"] = bakeryArray;
+                (self.categories)[@"Beer, Wine & Spirits"] = beerArray;
+                (self.categories)[@"Combo Locos"] = comboArray;
+                (self.categories)[@"Cooking Utensils"] = cookingArray;
+                (self.categories)[@"Dairy"] = dairyArray;
+                (self.categories)[@"Deli"] = deliArray;
+                (self.categories)[@"Fish Market"] = fishArray;
+                (self.categories)[@"Floral"] = floralArray;
+                (self.categories)[@"Frozen"] = frozenArray;
+                (self.categories)[@"General/Seasonal"] = generalArray;
+                (self.categories)[@"Grilling Accessories"] = grillingAccessoriesArray;
+                (self.categories)[@"Grills"] = grillsArray;
+                (self.categories)[@"Grocery"] = groceryArray;
+                (self.categories)[@"Health and Beauty"] = healthArray;
+                (self.categories)[@"Household"] = householdArray;
+                (self.categories)[@"Meal Deal"] = mealArray;
+                (self.categories)[@"Meat Market"] = meatArray;
+                (self.categories)[@"Pets"] = petsArray;
+                (self.categories)[@"Pharmacy"] = pharmacyArray;
+                (self.categories)[@"Produce"] = produceArray;
+                (self.categories)[@"Front Page"] = frontPageArray;
                 
                 self.reusableCells = [NSMutableArray array];
                 
@@ -300,12 +282,11 @@
                     ProductCategoryCell_iphone *cell = [[ProductCategoryCell_iphone alloc] initWithFrame:CGRectMake(0, 0, 320, 416)];
                     
                     NSSortDescriptor *sortDescriptor= [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
-                    NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-                    NSString* categoryName = [sortedCategories objectAtIndex:i];
-                    NSArray* currentCategory = [self.categories objectForKey:categoryName];
+                    NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:@[sortDescriptor]];
+                    NSString* categoryName = sortedCategories[i];
+                    NSArray* currentCategory = (self.categories)[categoryName];
                     cell.products = [NSArray arrayWithArray:currentCategory];
                     [self.reusableCells addObject:cell];
-                    [cell release];
                 }
                 
                 
@@ -359,11 +340,11 @@
     UIFont *labelFont;
     
     if (section ==0) {
-        customSectionHeaderView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, kHeadlineSectionHeight)] autorelease];
+        customSectionHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, kHeadlineSectionHeight)];
         titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableView.frame.size.width, kHeadlineSectionHeight)];
         labelFont = [UIFont fontWithName:@"Georgia-BoldItalic" size:16.0];;
     } else {
-        customSectionHeaderView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, kRegularSectionHeight)] autorelease];
+        customSectionHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, kRegularSectionHeight)];
         titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableView.frame.size.width, kRegularSectionHeight)];
         labelFont = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];;   
     }
@@ -375,13 +356,12 @@
     titleLabel.font = labelFont;
     
     NSSortDescriptor *sortDescriptor= [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
-    NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    NSString *categoryName = [sortedCategories objectAtIndex:section];
+    NSArray* sortedCategories = [self.categories.allKeys sortedArrayUsingDescriptors:@[sortDescriptor]];
+    NSString *categoryName = sortedCategories[section];
     
     titleLabel.text = categoryName;
     
     [customSectionHeaderView addSubview:titleLabel];
-    [titleLabel release];
 
     return customSectionHeaderView;
       
@@ -396,7 +376,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProductCategoryCell *cell = [self.reusableCells objectAtIndex:indexPath.section];   
+    ProductCategoryCell *cell = (self.reusableCells)[indexPath.section];   
     return cell;
 }
 

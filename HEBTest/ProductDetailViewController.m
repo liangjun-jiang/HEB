@@ -38,7 +38,6 @@
     ShoppingListViewController *shoppingListView = [[ShoppingListViewController alloc] init];
     shoppingListView.modalTransitionStyle= UIModalTransitionStylePartialCurl;
     [self.navigationController presentModalViewController:shoppingListView animated:YES];
-    [shoppingListView release];
     
 }
 
@@ -49,7 +48,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                          NSUserDomainMask, 
                                                          YES);
-    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Products.plist"];
+    NSString *path = [paths[0] stringByAppendingPathComponent:@"Products.plist"];
     NSMutableArray *productDicts = [NSMutableArray arrayWithContentsOfFile:path];
     [productDicts addObject:[self.product dictionaryWithValuesForKeys:[Product keys]]];
     NSString *plist = [productDicts description];
@@ -67,7 +66,6 @@
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
     [message show];
-    [message release];
 }
 
 #pragma mark - View lifecycle
@@ -78,8 +76,7 @@
     
     UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"List" style:UIBarButtonItemStylePlain target:self action:@selector(showShoppingList)];
     self.navigationItem.rightBarButtonItem = shoppingListBarItem;
-    [shoppingListBarItem release];
-    UILabel *nameLabel = [[[UILabel alloc] initWithFrame:CGRectMake(23, 5, 271, 30)] autorelease];
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 5, 271, 30)];
     nameLabel.text = self.product.name;
     nameLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
     nameLabel.textColor = [UIColor blueColor];
@@ -87,7 +84,7 @@
     nameLabel.lineBreakMode = UILineBreakModeWordWrap;
     [self.view addSubview:nameLabel];
     
-    UILabel *priceLabel = [[[UILabel alloc] initWithFrame:CGRectMake(23, 35, 271, 15)] autorelease];
+    UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 35, 271, 15)];
     priceLabel.text = self.product.price;
     priceLabel.font = [UIFont fontWithName:@"Baskerville-Bold" size:14];
     priceLabel.textColor = [UIColor redColor];
@@ -101,7 +98,6 @@
     descLabel.text = self.product.desc;
     descLabel.font = [UIFont fontWithName:@"ArialHebrew" size:10];
     [self.view addSubview:descLabel];
-    [descLabel release];
     
     if (self.flag == 1) {
         self.navigationItem.rightBarButtonItem.enabled = NO;

@@ -14,7 +14,7 @@
     NSMutableArray *_selectedProducts;
 }
 
-@property (nonatomic, retain) NSMutableArray *selectedProducts;
+@property (nonatomic, strong) NSMutableArray *selectedProducts;
 
 +(NSString *)pathForDocumentsWithName:(NSString *)documentName;
 

@@ -18,9 +18,9 @@
 }
 
 @property(strong,nonatomic) NSString *storeId;
-@property (retain) NSOperationQueue *queue;
-@property (retain) NSMutableArray *allEntries;
-@property (retain) NSArray *feeds;
+@property (strong) NSOperationQueue *queue;
+@property (strong) NSMutableArray *allEntries;
+@property (strong) NSArray *feeds;
 
 @property (strong,nonatomic) NSMutableDictionary *categories;
 @property (strong, nonatomic) NSMutableArray *reusableCells;

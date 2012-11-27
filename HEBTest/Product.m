@@ -12,29 +12,10 @@
 @synthesize name, price, imgLink, category, desc;
 @synthesize psDate, eDate;
 
--(void)dealloc
-{
-    category=nil;
-    name=nil;
-    price = nil;
-    psDate = nil;
-    imgLink = nil;
-    desc = nil;
-    eDate = nil;
-    
-    [name release];
-    [psDate release];
-    [imgLink release];
-    [desc release];
-    [eDate release];
-    [category release];
-    [price release];
-    [super dealloc];
-}
 
 +(NSArray *)keys
 {
-    return [NSArray arrayWithObjects:@"name", @"price", @"imgLink",@"desc", @"category", @"psDate", @"eDate", nil];
+    return @[@"name", @"price", @"imgLink",@"desc", @"category", @"psDate", @"eDate"];
 }
 
 +(NSDateFormatter *)dateFormatter

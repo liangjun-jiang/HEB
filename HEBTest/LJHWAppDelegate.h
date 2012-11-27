@@ -10,7 +10,7 @@
 
 @class LJHWViewController;
 
-@interface LJHWAppDelegate : UIResponder <UIApplicationDelegate>
+@interface LJHWAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 
 @property (strong, nonatomic) UIWindow *window;

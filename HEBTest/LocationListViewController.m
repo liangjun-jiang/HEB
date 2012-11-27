@@ -74,7 +74,7 @@
     NSError *error;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     
-    NSArray *hebs =[json objectForKey:@"results"];
+    NSArray *hebs =json[@"results"];
     
     if ([hebs count] == 0) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -86,9 +86,9 @@
     if (hebs != nil && [hebs count] !=0) {
         for (NSDictionary *heb in hebs)
         {
-            if ([[heb objectForKey:@"name"] isEqualToString:@"H-E-B"]) {
-                [self.locationList addObject:[heb objectForKey:@"vicinity"]];
-                [self.placeMarkers addObject:[heb objectForKey:@"geometry"]];
+            if ([heb[@"name"] isEqualToString:@"H-E-B"]) {
+                [self.locationList addObject:heb[@"vicinity"]];
+                [self.placeMarkers addObject:heb[@"geometry"]];
             }
         }
     }
@@ -98,7 +98,7 @@
 
 -(NSString *)findStoreId:(NSInteger)index
 {
-    NSString *street_name = [self.locationList objectAtIndex:index];
+    NSString *street_name = (self.locationList)[index];
     
     NSString *digits = [street_name stringByTrimmingCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet] ];
     
@@ -113,8 +113,8 @@
     {    
         for (NSDictionary *store in storeDicts)
         {
-            if ([[store objectForKey:@"street_number"] isEqualToString:digits]) {
-                store_id = [store objectForKey:@"store_id"];   
+            if ([store[@"street_number"] isEqualToString:digits]) {
+                store_id = store[@"store_id"];   
             }
         }
     }
@@ -143,12 +143,10 @@
     self.navigationItem.title = @"Nearby H-E-Bs";
     UIBarButtonItem *mapBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(displayPlacemarks)];
     self.navigationItem.rightBarButtonItem = mapBarItem;
-    [mapBarItem release];
     
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    self.locationList = [NSArray arrayWithObjects:@"Wait a second ...",
-                         nil];
+    self.locationList = @[@"Wait a second ..."];
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     [self startUpdatingCurrentLocation];
     
@@ -163,14 +161,6 @@
     _placeMarkers = nil;
 }
 
-- (void)dealloc
-{
-    //_locationManger.delegate = nil;
-    [_selectedPath release];
-    [_locationManger release];
-    [_placeMarkers release];
-    [super dealloc];
-}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -196,7 +186,6 @@
             [self unlockUI];
                 PlacemarkViewController *plvc = [[PlacemarkViewController alloc] initWithPlacemarks:self.placeMarkers];
                 [self.navigationController pushViewController:plvc animated:YES];
-                [plvc release];
             
             });
     }
@@ -223,11 +212,11 @@
                 message = [error description];
                 break;
         }
-        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"An Error occured" 
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Error occured" 
                                                          message:message 
                                                         delegate:nil 
                                                cancelButtonTitle:@"OK" 
-                                               otherButtonTitles:nil] autorelease];
+                                               otherButtonTitles:nil];
         [alert show];
         
     });
@@ -258,13 +247,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         UITableViewCellStyle style = UITableViewCellStyleDefault;
-        cell = [[[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier];
     }
     if ([self.locationList count] > 0) {
         cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.text = [self.locationList objectAtIndex:indexPath.row];
+        cell.textLabel.text = (self.locationList)[indexPath.row];
         UIImage *logoImage = [UIImage imageNamed:@"heb_red.jpg"];
         
         cell.imageView.image = [logoImage imageScaledToSize:CGSizeMake(logoImage.size.width*0.5, logoImage.size.height*0.5)];
@@ -284,7 +273,6 @@
         ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
         productCategoryViewController.storeId = @"202";
         [self.navigationController pushViewController:productCategoryViewController animated:YES];
-        [productCategoryViewController release];
         
         self.navigationItem.rightBarButtonItem.enabled = NO;
         
@@ -295,7 +283,6 @@
         ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
         productCategoryViewController.storeId = [self findStoreId:indexPath.row];
         [self.navigationController pushViewController:productCategoryViewController animated:YES];
-        [productCategoryViewController release];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -350,7 +337,7 @@
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     
     // show the alert
-    UIAlertView *alert = [[[UIAlertView alloc] init] autorelease];
+    UIAlertView *alert = [[UIAlertView alloc] init];
     alert.title = @"Error updating";
     alert.message = [error localizedDescription];
     [alert addButtonWithTitle:@"OK"];

@@ -34,7 +34,7 @@
    
     self.title = @"About";
     
-    UIImageView *imgView = [[[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 150.0, 150.0)] autorelease];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 150.0, 150.0)];
     imgView.image = [UIImage imageNamed:@"fruit_basket.png"];
     [self.view addSubview:imgView];
  
@@ -46,7 +46,6 @@
     textLabel.textAlignment = UITextAlignmentRight;
     textLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
     [self.view addSubview:textLabel];
-    [textLabel release];
     UILabel *textLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(5.0, 350.0, 310, 60)];
     textLabel2.backgroundColor = [UIColor clearColor];
     textLabel2.textColor = [UIColor redColor];
@@ -57,7 +56,6 @@
     textLabel2.font = [UIFont fontWithName:@"Chalkduster" size:16];
     
     [self.view addSubview:textLabel2];
-    [textLabel2 release];
     [super viewDidLoad];
 }
 

@@ -15,8 +15,8 @@
     MKMapView *_mapView;
 }
 
-@property (nonatomic, retain) NSArray *placemarks;
-@property (nonatomic, retain) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) NSArray *placemarks;
+@property (nonatomic, strong) IBOutlet MKMapView *mapView;
 
 // designed initilizers
 
