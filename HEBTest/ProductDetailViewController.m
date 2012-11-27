@@ -13,7 +13,7 @@
 
 @implementation ProductDetailViewController
 @synthesize product=_product;
-@synthesize productImage=_productImage, expirationLabel=_expirationLabel;
+@synthesize productImage=_productImage;//, expirationLabel=_expirationLabel;
 @synthesize flag=_flag;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

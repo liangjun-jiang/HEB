@@ -237,7 +237,7 @@
     
     detailViewController.product = _selectedProducts[indexPath.row];
     detailViewController.flag = 1;
-    detailViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+//    detailViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     [self.navigationController presentModalViewController:detailViewController animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

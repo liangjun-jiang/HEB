@@ -269,6 +269,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (isSettingDefault) {
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
         if (indexPath != self.selectedPath) {
             UITableViewCell *newCell = [tableView  cellForRowAtIndexPath:indexPath];
             newCell.accessoryType = UITableViewCellAccessoryCheckmark;

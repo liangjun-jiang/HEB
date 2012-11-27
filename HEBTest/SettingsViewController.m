@@ -11,8 +11,8 @@
 #import "SwitchTableCell.h"
 #import "LocationListViewController.h"
 
-#define REGION_SECTION 1
-#define ABOUT_SECTION 0
+#define REGION_SECTION 0
+#define ABOUT_SECTION 1
 
 #define TITLE @"title"
 #define VALUE @"placeholder"
@@ -36,6 +36,13 @@
         
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    
 }
 
 - (void)viewDidLoad
