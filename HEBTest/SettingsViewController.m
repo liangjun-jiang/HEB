@@ -19,10 +19,13 @@
 
 @interface SettingsViewController ()<UITextFieldDelegate>
 @property (nonatomic, strong) NSMutableDictionary *contentList;
+@property (nonatomic, strong) NSString *defaultHeb;
+@property (nonatomic, assign) BOOL onOff;
 @end
 
 @implementation SettingsViewController
 @synthesize contentList;
+@synthesize defaultHeb, onOff;
 
 - (id)init {
     return [self initWithStyle:UITableViewStyleGrouped];
@@ -41,7 +44,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    onOff = [defaults boolForKey:@"USE_DEFAULT_LOCATION"];
+    if (onOff) {
+        defaultHeb = [defaults objectForKey:@"DEFAULT_HEB_NAME"];
+    }
     
 }
 
@@ -109,11 +116,9 @@
             
         }
         regionCell.textLabel.text = title;
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        BOOL onOff = [defaults boolForKey:@"USE_DEFAULT_LOCATION"];
         if (onOff) {
-            NSString *defaultHeb = [defaults objectForKey:@"DEFAULT_HEB_NAME"];
             regionCell.detailTextLabel.text = defaultHeb;
+            regionCell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
         }
         
         regionCell.onOffSwitch.on = onOff;
@@ -148,6 +153,7 @@
 - (void)onSwitch:(id)sender
 {
     UISwitch *settingSwitch = (UISwitch *)sender;
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (settingSwitch.on) {
         [defaults setBool:settingSwitch.on forKey:@"USE_DEFAULT_LOCATION"];
@@ -157,6 +163,8 @@
         locationList.isSettingDefault = YES;
         [self.navigationController pushViewController:locationList animated:YES];
     } else {
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        cell.detailTextLabel.text = @"";
         [defaults setBool:!settingSwitch.on forKey:@"USER_DEFAULT_LOCATION"];
         [defaults synchronize];
         
