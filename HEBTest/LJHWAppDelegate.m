@@ -3,11 +3,11 @@
 //  HEBTest
 //
 //  Created by Liangjun Jiang on 1/15/12.
-//  Copyright (c) 2012 Harvard University Extension School. All rights reserved.
+//  Copyright (c) 2012 LJ Apps. All rights reserved.
 //
 
 #import "LJHWAppDelegate.h"
-#import "LJHWViewController.h"
+#import "LocationListViewController.h"
 #import "ShoppingListViewController.h"
 #import "AboutListViewController.h"
 
@@ -28,8 +28,8 @@
     
     UIViewController *viewController1, *viewController2, *viewController3;
     
-    viewController1 = [[LJHWViewController alloc]
-                       initWithNibName:@"LJHWViewController" bundle:nil];
+    viewController1 = [[LocationListViewController alloc]
+                       initWithNibName:@"LocationListViewController" bundle:nil];
     UINavigationController *navController1 = [[UINavigationController alloc]
                                               initWithRootViewController:viewController1];
     

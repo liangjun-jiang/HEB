@@ -16,8 +16,6 @@
 		D65BFBCE14C348CA00B50263 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D65BFBCC14C348CA00B50263 /* InfoPlist.strings */; };
 		D65BFBD014C348CA00B50263 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBCF14C348CA00B50263 /* main.m */; };
 		D65BFBD414C348CA00B50263 /* LJHWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBD314C348CA00B50263 /* LJHWAppDelegate.m */; };
-		D65BFBD714C348CA00B50263 /* LJHWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBD614C348CA00B50263 /* LJHWViewController.m */; };
-		D65BFBDA14C348CA00B50263 /* LJHWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BFBD814C348CA00B50263 /* LJHWViewController.xib */; };
 		D65BFBE514C34AB300B50263 /* LocationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBE314C34AB300B50263 /* LocationListViewController.m */; };
 		D65BFBE614C34AB300B50263 /* LocationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BFBE414C34AB300B50263 /* LocationListViewController.xib */; };
 		D65BFBF814C35CB800B50263 /* ProductCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBF614C35CB700B50263 /* ProductCategoryViewController.m */; };
@@ -61,6 +59,15 @@
 		D6B52B7E1665358C002A339D /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B711665358C002A339D /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
 		D6B52B7F1665358C002A339D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B741665358C002A339D /* Reachability.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
 		D6B52B8116653616002A339D /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B52B8016653616002A339D /* libxml2.2.dylib */; };
+		D6B52B881665470F002A339D /* distance.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B821665470F002A339D /* distance.png */; };
+		D6B52B891665470F002A339D /* distance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B831665470F002A339D /* distance@2x.png */; };
+		D6B52B8A1665470F002A339D /* forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B841665470F002A339D /* forward@2x.png */; };
+		D6B52B8B1665470F002A339D /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B851665470F002A339D /* forward.png */; };
+		D6B52B8C1665470F002A339D /* reverse.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B861665470F002A339D /* reverse.png */; };
+		D6B52B8D1665470F002A339D /* reverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B871665470F002A339D /* reverse@2x.png */; };
+		D6B52B94166548DC002A339D /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B92166548DB002A339D /* DetailHeaderView.xib */; };
+		D6B52B95166548DC002A339D /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B93166548DB002A339D /* ItemDetailViewController.m */; };
+		D6B52B99166549F7002A339D /* ProductPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B97166549F7002A339D /* ProductPhotoViewController.m */; };
 		D6C25FEA14DDD5BD00831E70 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FE914DDD5BD00831E70 /* add_button.png */; };
 		D6C25FF114DDD64A00831E70 /* UIBezierPath+ShadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C25FF014DDD64A00831E70 /* UIBezierPath+ShadowPath.m */; };
 		D6C25FF514DE072700831E70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF414DE072700831E70 /* Default.png */; };
@@ -83,9 +90,6 @@
 		D65BFBD114C348CA00B50263 /* HEBTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HEBTest-Prefix.pch"; sourceTree = "<group>"; };
 		D65BFBD214C348CA00B50263 /* LJHWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJHWAppDelegate.h; sourceTree = "<group>"; };
 		D65BFBD314C348CA00B50263 /* LJHWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJHWAppDelegate.m; sourceTree = "<group>"; };
-		D65BFBD514C348CA00B50263 /* LJHWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJHWViewController.h; sourceTree = "<group>"; };
-		D65BFBD614C348CA00B50263 /* LJHWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJHWViewController.m; sourceTree = "<group>"; };
-		D65BFBD914C348CA00B50263 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LJHWViewController.xib; sourceTree = "<group>"; };
 		D65BFBE214C34AB300B50263 /* LocationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationListViewController.h; sourceTree = "<group>"; };
 		D65BFBE314C34AB300B50263 /* LocationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationListViewController.m; sourceTree = "<group>"; };
 		D65BFBE414C34AB300B50263 /* LocationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationListViewController.xib; sourceTree = "<group>"; };
@@ -157,6 +161,17 @@
 		D6B52B731665358C002A339D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D6B52B741665358C002A339D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		D6B52B8016653616002A339D /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		D6B52B821665470F002A339D /* distance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = distance.png; sourceTree = "<group>"; };
+		D6B52B831665470F002A339D /* distance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "distance@2x.png"; sourceTree = "<group>"; };
+		D6B52B841665470F002A339D /* forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward@2x.png"; sourceTree = "<group>"; };
+		D6B52B851665470F002A339D /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
+		D6B52B861665470F002A339D /* reverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reverse.png; sourceTree = "<group>"; };
+		D6B52B871665470F002A339D /* reverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reverse@2x.png"; sourceTree = "<group>"; };
+		D6B52B92166548DB002A339D /* DetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailHeaderView.xib; sourceTree = "<group>"; };
+		D6B52B93166548DB002A339D /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
+		D6B52B961665491A002A339D /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
+		D6B52B97166549F7002A339D /* ProductPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductPhotoViewController.m; sourceTree = "<group>"; };
+		D6B52B98166549F7002A339D /* ProductPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductPhotoViewController.h; sourceTree = "<group>"; };
 		D6C25FE914DDD5BD00831E70 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		D6C25FEF14DDD64A00831E70 /* UIBezierPath+ShadowPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+ShadowPath.h"; sourceTree = "<group>"; };
 		D6C25FF014DDD64A00831E70 /* UIBezierPath+ShadowPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+ShadowPath.m"; sourceTree = "<group>"; };
@@ -270,9 +285,6 @@
 			children = (
 				D65BFBD214C348CA00B50263 /* LJHWAppDelegate.h */,
 				D65BFBD314C348CA00B50263 /* LJHWAppDelegate.m */,
-				D65BFBD514C348CA00B50263 /* LJHWViewController.h */,
-				D65BFBD614C348CA00B50263 /* LJHWViewController.m */,
-				D65BFBD814C348CA00B50263 /* LJHWViewController.xib */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -280,6 +292,12 @@
 		D6A8E0DD14D23614002417D6 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				D6B52B821665470F002A339D /* distance.png */,
+				D6B52B831665470F002A339D /* distance@2x.png */,
+				D6B52B841665470F002A339D /* forward@2x.png */,
+				D6B52B851665470F002A339D /* forward.png */,
+				D6B52B861665470F002A339D /* reverse.png */,
+				D6B52B871665470F002A339D /* reverse@2x.png */,
 				D6C25FF614DE072E00831E70 /* Default@2x.png */,
 				D6C25FF414DE072700831E70 /* Default.png */,
 				D63592AF14DE298600C1E45C /* list2.png */,
@@ -317,6 +335,11 @@
 		D6A8E0E214D25C06002417D6 /* ADs */ = {
 			isa = PBXGroup;
 			children = (
+				D6B52B97166549F7002A339D /* ProductPhotoViewController.m */,
+				D6B52B98166549F7002A339D /* ProductPhotoViewController.h */,
+				D6B52B961665491A002A339D /* ItemDetailViewController.h */,
+				D6B52B92166548DB002A339D /* DetailHeaderView.xib */,
+				D6B52B93166548DB002A339D /* ItemDetailViewController.m */,
 				D65BFC2114C37B9E00B50263 /* ControlVariables.h */,
 				D65BFC2E14C37DEB00B50263 /* ProductNameLabel.h */,
 				D65BFC2F14C37DEB00B50263 /* ProductNameLabel.m */,
@@ -446,7 +469,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65BFBCE14C348CA00B50263 /* InfoPlist.strings in Resources */,
-				D65BFBDA14C348CA00B50263 /* LJHWViewController.xib in Resources */,
 				D65BFBE614C34AB300B50263 /* LocationListViewController.xib in Resources */,
 				D65BFBF914C35CB800B50263 /* ProductCategoryViewController.xib in Resources */,
 				D65BFBFE14C35E4E00B50263 /* ShoppingListViewController.xib in Resources */,
@@ -467,6 +489,13 @@
 				D69CB90C14DFAF950018119B /* icon1.png in Resources */,
 				D69CB90E14DFAF9D0018119B /* icon2.png in Resources */,
 				D6E1511F165FE3EE003F8147 /* Default-568h@2x.png in Resources */,
+				D6B52B881665470F002A339D /* distance.png in Resources */,
+				D6B52B891665470F002A339D /* distance@2x.png in Resources */,
+				D6B52B8A1665470F002A339D /* forward@2x.png in Resources */,
+				D6B52B8B1665470F002A339D /* forward.png in Resources */,
+				D6B52B8C1665470F002A339D /* reverse.png in Resources */,
+				D6B52B8D1665470F002A339D /* reverse@2x.png in Resources */,
+				D6B52B94166548DC002A339D /* DetailHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +508,6 @@
 			files = (
 				D65BFBD014C348CA00B50263 /* main.m in Sources */,
 				D65BFBD414C348CA00B50263 /* LJHWAppDelegate.m in Sources */,
-				D65BFBD714C348CA00B50263 /* LJHWViewController.m in Sources */,
 				D65BFBE514C34AB300B50263 /* LocationListViewController.m in Sources */,
 				D65BFBF814C35CB800B50263 /* ProductCategoryViewController.m in Sources */,
 				D65BFBFD14C35E4E00B50263 /* ShoppingListViewController.m in Sources */,
@@ -504,6 +532,8 @@
 				D6B52B7D1665358C002A339D /* GDataXMLElement-Extras.m in Sources */,
 				D6B52B7E1665358C002A339D /* GDataXMLNode.m in Sources */,
 				D6B52B7F1665358C002A339D /* Reachability.m in Sources */,
+				D6B52B95166548DC002A339D /* ItemDetailViewController.m in Sources */,
+				D6B52B99166549F7002A339D /* ProductPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,14 +546,6 @@
 				D65BFBCD14C348CA00B50263 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D65BFBD814C348CA00B50263 /* LJHWViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D65BFBD914C348CA00B50263 /* en */,
-			);
-			name = LJHWViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

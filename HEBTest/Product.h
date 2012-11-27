@@ -3,7 +3,7 @@
 //  HEBTest
 //
 //  Created by Liangjun Jiang on 1/18/12.
-//  Copyright (c) 2012 Harvard University Extension School. All rights reserved.
+//  Copyright (c) 2012 LJ Apps. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
