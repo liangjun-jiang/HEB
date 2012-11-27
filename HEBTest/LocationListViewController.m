@@ -146,7 +146,7 @@
     
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    self.locationList = @[@"Wait a second ..."];
+    self.locationList = [NSMutableArray arrayWithArray:@[@"Wait a second ..."]];
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     [self startUpdatingCurrentLocation];
     
@@ -285,8 +285,6 @@
         [self.navigationController pushViewController:productCategoryViewController animated:YES];
     }
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
 }
 
 #pragma mark - CLLocationManagerDelegate

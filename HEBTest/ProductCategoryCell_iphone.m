@@ -13,6 +13,7 @@
 #import "ProductDetailViewController.h"
 #import "LJHWAppDelegate.h"
 #import "Product.h"
+#import "UIImageView+AFNetworking.h"
 
 
 @implementation ProductCategoryCell_iphone
@@ -46,14 +47,14 @@
 {
     static NSString *CellIdentifier = @"ProductCell";
     
-    __weak ProductCell *cell = (ProductCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    __block ProductCell *cell = (ProductCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) 
     {
         cell = [[ProductCell alloc] initWithFrame:CGRectMake(0, 0, kCellWidth, kCellHeight)];
     }
     
-    __weak Product *currentProduct = (self.products)[indexPath.row];
+    __block Product *currentProduct = (self.products)[indexPath.row];
     
     dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
@@ -62,7 +63,8 @@
         image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:currentProduct.imgLink]]];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [cell.thumbNail setImage:image]; 
+            [cell.thumbNail setImageWithURL:[NSURL URLWithString:currentProduct.imgLink] placeholderImage:nil];
+//            [cell.thumbNail setImage:image]; 
         });
     }); 
     

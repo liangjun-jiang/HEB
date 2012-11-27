@@ -11,7 +11,7 @@
  */
 
 #import "ProductPhotoViewController.h"
-
+#import "UIImageView+AFNetworking.h"
 #import "Product.h"
 
 @implementation ProductPhotoViewController
@@ -32,6 +32,7 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    [imageView setImageWithURL:[NSURL URLWithString:product.imgLink] placeholderImage:nil];
 //    imageView.image = [product.image valueForKey:@"image"];
 }
 
