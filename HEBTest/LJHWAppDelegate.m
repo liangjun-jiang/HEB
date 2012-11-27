@@ -11,7 +11,7 @@
 #import "ShoppingListViewController.h"
 #import "SettingsViewController.h"
 #import "ProductCategoryViewController.h"
-
+#import "SSTheme.h"
 
 @interface LJHWAppDelegate()
 
@@ -25,6 +25,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+//    [SSThemeManager customizeAppAppearance];
     
     UIViewController *viewController1, *viewController2, *viewController3;
     

@@ -11,6 +11,7 @@
 #import "ProductDetailViewController.h"
 #import "UIImage+Resizing.h"
 #import "UIImageView+AFNetworking.h"
+#import "SSTheme.h"
 
 @implementation ShoppingListViewController
 @synthesize selectedProducts=_selectedProducts;
@@ -101,9 +102,8 @@
     [super viewDidLoad];
     self.title = @"Shopping List";
     self.clearsSelectionOnViewWillAppear = NO;
- 
-    // We don't allow the use to add 
-    //UIBarButtonItem *addItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)] autorelease];
+    
+    [SSThemeManager customizeTableView:self.tableView];
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.tableView setRowHeight:62.0];

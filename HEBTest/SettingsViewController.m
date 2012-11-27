@@ -12,6 +12,8 @@
 #import "LocationListViewController.h"
 #import  <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import "SSTheme.h"
+
 #define REGION_SECTION 0
 #define ABOUT_SECTION 1
 
@@ -59,7 +61,7 @@
 
     self.title = NSLocalizedString(@"Settings", @"Settings");
     
-//    [SSThemeManager customizeTableView:self.tableView];
+    [SSThemeManager customizeTableView:self.tableView];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

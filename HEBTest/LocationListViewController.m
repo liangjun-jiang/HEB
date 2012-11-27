@@ -11,6 +11,7 @@
 #import "LJHWViewController.h"
 #import "PlacemarkViewController.h"
 #import "UIImage+Resizing.h"
+#import "SSTheme.h"
 
 @interface NSDictionary(JSONCategories)
 +(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString *)urlAddress;
@@ -137,6 +138,8 @@
     self.navigationItem.rightBarButtonItem = mapBarItem;
     
     self.navigationItem.rightBarButtonItem.enabled = NO;
+    
+    [SSThemeManager customizeTableView:self.tableView];
     
     self.locationList = [NSMutableArray arrayWithArray:@[@"Wait a second ..."]];
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
