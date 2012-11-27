@@ -94,21 +94,23 @@
     UITableViewCell *cell = nil;
     NSString *key = [[self.contentList allKeys] objectAtIndex:section];
     NSString *title = [[[self.contentList objectForKey:key] objectAtIndex:row] objectForKey:TITLE];
-    NSNumber *switchState = 0;
-    if (section != ABOUT_SECTION) {
-        switchState = [[[self.contentList objectForKey:key] objectAtIndex:row] objectForKey:VALUE];
-    }
     
     if (section == REGION_SECTION) {
         SwitchTableCell *regionCell = (SwitchTableCell*)[tableView dequeueReusableCellWithIdentifier:RegionCellIdentifier];
         if (regionCell == nil) {
-            regionCell = [[SwitchTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RegionCellIdentifier];
+            regionCell = [[SwitchTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:RegionCellIdentifier];
             
         }
         regionCell.textLabel.text = title;
-        regionCell.onOffSwitch.on = [switchState boolValue];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        BOOL onOff = [defaults boolForKey:@"USE_DEFAULT_LOCATION"];
+        if (onOff) {
+            NSString *defaultHeb = [defaults objectForKey:@"DEFAULT_HEB_NAME"];
+            regionCell.detailTextLabel.text = defaultHeb;
+        }
+        
+        regionCell.onOffSwitch.on = onOff;
         [regionCell.onOffSwitch addTarget:self action:@selector(onSwitch:) forControlEvents:UIControlEventValueChanged];
-        regionCell.onOffSwitch.tag = section*100+row;
         cell = regionCell;
     } else {
         UITableViewCell *aboutCell = [tableView dequeueReusableCellWithIdentifier:AboutCellIdentifier];
@@ -128,7 +130,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UIViewController *viewController = nil;
     if (indexPath.section == ABOUT_SECTION) {
         AboutListViewController *about = [[AboutListViewController alloc] initWithNibName:@"AboutListViewController" bundle:nil];
         [self.navigationController pushViewController:about animated:YES];
@@ -142,10 +143,11 @@
     UISwitch *settingSwitch = (UISwitch *)sender;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (settingSwitch.on) {
-        [defaults setBool:settingSwitch.on forKey:@"USER_DEFAULT_LOCATION"];
+        [defaults setBool:settingSwitch.on forKey:@"USE_DEFAULT_LOCATION"];
         [defaults synchronize];
         
         LocationListViewController *locationList = [[LocationListViewController alloc] initWithNibName:@"LocationListViewController" bundle:nil];
+        locationList.isSettingDefault = YES;
         [self.navigationController pushViewController:locationList animated:YES];
     } else {
         [defaults setBool:!settingSwitch.on forKey:@"USER_DEFAULT_LOCATION"];

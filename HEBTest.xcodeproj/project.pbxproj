@@ -65,9 +65,6 @@
 		D6B52B8B1665470F002A339D /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B851665470F002A339D /* forward.png */; };
 		D6B52B8C1665470F002A339D /* reverse.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B861665470F002A339D /* reverse.png */; };
 		D6B52B8D1665470F002A339D /* reverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B871665470F002A339D /* reverse@2x.png */; };
-		D6B52B94166548DC002A339D /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B92166548DB002A339D /* DetailHeaderView.xib */; };
-		D6B52B95166548DC002A339D /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B93166548DB002A339D /* ItemDetailViewController.m */; };
-		D6B52B99166549F7002A339D /* ProductPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B97166549F7002A339D /* ProductPhotoViewController.m */; };
 		D6B52BAE166553C1002A339D /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B9C166553C1002A339D /* AFHTTPClient.m */; };
 		D6B52BAF166553C1002A339D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B9E166553C1002A339D /* AFHTTPRequestOperation.m */; };
 		D6B52BB0166553C1002A339D /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52BA0166553C1002A339D /* AFImageRequestOperation.m */; };
@@ -179,11 +176,6 @@
 		D6B52B851665470F002A339D /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
 		D6B52B861665470F002A339D /* reverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reverse.png; sourceTree = "<group>"; };
 		D6B52B871665470F002A339D /* reverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reverse@2x.png"; sourceTree = "<group>"; };
-		D6B52B92166548DB002A339D /* DetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailHeaderView.xib; sourceTree = "<group>"; };
-		D6B52B93166548DB002A339D /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
-		D6B52B961665491A002A339D /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
-		D6B52B97166549F7002A339D /* ProductPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductPhotoViewController.m; sourceTree = "<group>"; };
-		D6B52B98166549F7002A339D /* ProductPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductPhotoViewController.h; sourceTree = "<group>"; };
 		D6B52B9B166553C1002A339D /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		D6B52B9C166553C1002A339D /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		D6B52B9D166553C1002A339D /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -376,11 +368,6 @@
 		D6A8E0E214D25C06002417D6 /* ADs */ = {
 			isa = PBXGroup;
 			children = (
-				D6B52B97166549F7002A339D /* ProductPhotoViewController.m */,
-				D6B52B98166549F7002A339D /* ProductPhotoViewController.h */,
-				D6B52B961665491A002A339D /* ItemDetailViewController.h */,
-				D6B52B92166548DB002A339D /* DetailHeaderView.xib */,
-				D6B52B93166548DB002A339D /* ItemDetailViewController.m */,
 				D65BFC2114C37B9E00B50263 /* ControlVariables.h */,
 				D65BFC2E14C37DEB00B50263 /* ProductNameLabel.h */,
 				D65BFC2F14C37DEB00B50263 /* ProductNameLabel.m */,
@@ -561,7 +548,6 @@
 				D6B52B8B1665470F002A339D /* forward.png in Resources */,
 				D6B52B8C1665470F002A339D /* reverse.png in Resources */,
 				D6B52B8D1665470F002A339D /* reverse@2x.png in Resources */,
-				D6B52B94166548DC002A339D /* DetailHeaderView.xib in Resources */,
 				D6B52BBF16656372002A339D /* SettingsViewController.xib in Resources */,
 				D6B52BC1166563AA002A339D /* Settings.plist in Resources */,
 			);
@@ -599,8 +585,6 @@
 				D6B52B7D1665358C002A339D /* GDataXMLElement-Extras.m in Sources */,
 				D6B52B7E1665358C002A339D /* GDataXMLNode.m in Sources */,
 				D6B52B7F1665358C002A339D /* Reachability.m in Sources */,
-				D6B52B95166548DC002A339D /* ItemDetailViewController.m in Sources */,
-				D6B52B99166549F7002A339D /* ProductPhotoViewController.m in Sources */,
 				D6B52BAE166553C1002A339D /* AFHTTPClient.m in Sources */,
 				D6B52BAF166553C1002A339D /* AFHTTPRequestOperation.m in Sources */,
 				D6B52BB0166553C1002A339D /* AFImageRequestOperation.m in Sources */,

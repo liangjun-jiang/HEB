@@ -10,10 +10,13 @@
 #import <MapKit/MapKit.h>
 
 @interface LocationListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
+{
+    BOOL isSettingDefault;
+}
 
 @property (strong,nonatomic) NSMutableArray *locationList;
 @property (strong, nonatomic) NSIndexPath *selectedPath;
 @property (strong, nonatomic) NSMutableArray *placeMarkers;
-
+@property (assign, nonatomic) BOOL isSettingDefault;
 
 @end

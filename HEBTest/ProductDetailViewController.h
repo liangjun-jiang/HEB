@@ -13,11 +13,7 @@
 
 
 @property (strong, nonatomic) Product *product;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
-@property (strong, nonatomic) IBOutlet UILabel *descLabel;
-@property (strong, nonatomic) IBOutlet UILabel *expirationLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *productImage;
+@property (strong, nonatomic) UIImageView *productImage;
 @property (nonatomic,assign) NSUInteger flag;
 
 @end

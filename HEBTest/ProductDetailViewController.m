@@ -9,14 +9,12 @@
 #import "ProductDetailViewController.h"
 #import "ShoppingListViewController.h"
 #import "Product.h"
-#import "UIBezierPath+ShadowPath.h"
 #import "UIImageView+AFNetworking.h"
 
 @implementation ProductDetailViewController
 @synthesize product=_product;
 @synthesize productImage=_productImage, expirationLabel=_expirationLabel;
 @synthesize flag=_flag;
-@synthesize nameLabel, descLabel, priceLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -71,33 +69,28 @@
     UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Add Into List" style:UIBarButtonItemStylePlain target:self action:@selector(addIntoList:)];
     self.navigationItem.rightBarButtonItem = shoppingListBarItem;
     
-    nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 5, 271, 30)];
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 5, 271, 30)];
     nameLabel.text = self.product.name;
     nameLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
     nameLabel.textColor = [UIColor blueColor];
     nameLabel.numberOfLines = 0;
     nameLabel.lineBreakMode = UILineBreakModeWordWrap;
-//    [self.view addSubview:nameLabel];
+    [self.view addSubview:nameLabel];
     
-//    self.nameLabel.text = self.product.name;
-//    self.priceLabel.text = self.product.price;
-//    self.descLabel.text = self.product.desc;
-//    self.expirationLabel.text = self.product.eDate;
-    
-    priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 35, 271, 15)];
+    UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 35, 271, 15)];
     priceLabel.text = self.product.price;
     priceLabel.font = [UIFont fontWithName:@"Baskerville-Bold" size:14];
     priceLabel.textColor = [UIColor redColor];
     priceLabel.numberOfLines = 0;
     priceLabel.lineBreakMode = UILineBreakModeWordWrap;
-//    [self.view addSubview:priceLabel];
+    [self.view addSubview:priceLabel];
     
-    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 68, 271, 35)];
+    UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 68, 271, 35)];
     descLabel.numberOfLines = 0;
     descLabel.lineBreakMode = UILineBreakModeWordWrap;
     descLabel.text = self.product.desc;
     descLabel.font = [UIFont fontWithName:@"ArialHebrew" size:10];
-//    [self.view addSubview:descLabel];
+    [self.view addSubview:descLabel];
     
     if (self.flag == 1) {
         self.navigationItem.rightBarButtonItem = nil;

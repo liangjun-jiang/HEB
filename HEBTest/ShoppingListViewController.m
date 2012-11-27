@@ -10,6 +10,7 @@
 #import "Product.h"
 #import "ProductDetailViewController.h"
 #import "UIImage+Resizing.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation ShoppingListViewController
 @synthesize selectedProducts=_selectedProducts;
@@ -173,7 +174,7 @@
         cell.detailTextLabel.font = detailFont;
         
     }
-    __weak Product *product = [self selectedProducts ][indexPath.row];
+    __block Product *product = [self selectedProducts ][indexPath.row];
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
     cell.textLabel.text = (product.name == nil)?@"":product.name;
@@ -186,11 +187,12 @@
     dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
     dispatch_async(concurrentQueue, ^{        
-        UIImage *image = nil;
-        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:product.imgLink]]];
+//        UIImage *image = nil;
+//        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:product.imgLink]]];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            cell.imageView.image = [image imageScaledToSize:CGSizeMake(42.0, 49.0)];
+            [cell.imageView setImageWithURL:[NSURL URLWithString:product.imgLink]];
+//            cell.imageView.image = [image imageScaledToSize:CGSizeMake(42.0, 49.0)];
         });
     }); 
     

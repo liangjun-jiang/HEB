@@ -67,6 +67,7 @@
 @synthesize selectedPath=_selectedPath;
 @synthesize currentUserCoordiante=_currentUserCoordiante;
 @synthesize placeMarkers=_placeMarkers;
+@synthesize isSettingDefault;
 
 
 -(void)fetchData:(NSData *)responseData
@@ -124,15 +125,6 @@
 }
 
 #pragma mark - View lifecycle
--(void)viewWillAppear:(BOOL)animated
-{
-    /*
-    if (self.navigationItem.rightBarButtonItem.enabled) {
-        self.navigationItem.rightBarButtonItem.enabled = NO;
-    }
-    */
-}
-
 
 - (void)viewDidLoad
 {
@@ -150,8 +142,11 @@
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     [self startUpdatingCurrentLocation];
     
-    
-    self.selectedPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    if (isSettingDefault) {
+        // we need to find out this guy
+        self.selectedPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    } else
+        self.selectedPath = [NSIndexPath indexPathForRow:0 inSection:0];
 }
 
 - (void)viewDidUnload
@@ -248,20 +243,24 @@
     if (cell == nil) {
         UITableViewCellStyle style = UITableViewCellStyleDefault;
         cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier];
+        
     }
     if ([self.locationList count] > 0) {
         cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.textLabel.text = (self.locationList)[indexPath.row];
-        UIImage *logoImage = [UIImage imageNamed:@"heb_red.jpg"];
-        
-        cell.imageView.image = [logoImage imageScaledToSize:CGSizeMake(logoImage.size.width*0.5, logoImage.size.height*0.5)];
-        
-    }
+    } else
+       cell.textLabel.text = @"Didn't find any H-E-B, you can still test drive this app";
     
-    else 
-       cell.textLabel.text = @"Didn't find any H-E-B, you can still test drive this app"; 
+    if (isSettingDefault) {
+        if (indexPath == self.selectedPath) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        } else
+            cell.accessoryType = UITableViewCellAccessoryNone;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     return cell;
 }
 
@@ -269,22 +268,37 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.locationList count] == 0) {
-        ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
-        productCategoryViewController.storeId = @"202";
-        [self.navigationController pushViewController:productCategoryViewController animated:YES];
-        
-        self.navigationItem.rightBarButtonItem.enabled = NO;
-        
+    if (isSettingDefault) {
+        if (indexPath != self.selectedPath) {
+            UITableViewCell *newCell = [tableView  cellForRowAtIndexPath:indexPath];
+            newCell.accessoryType = UITableViewCellAccessoryCheckmark;
+            UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:self.selectedPath];
+            oldCell.accessoryType = UITableViewCellAccessoryNone;
+            self.selectedPath = indexPath;
+            
+            NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:[self findStoreId:indexPath.row] forKey:@"DEFAULT_HEB_ID"];
+            [defaults setObject:newCell.textLabel.text forKey:@"DEFAULT_HEB_NAME"];
+            [defaults synchronize];
+            
+        }
+    } else {
+        if ([self.locationList count] == 0) {
+            ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
+            productCategoryViewController.storeId = @"202";
+            [self.navigationController pushViewController:productCategoryViewController animated:YES];
+            
+            self.navigationItem.rightBarButtonItem.enabled = NO;
+            
+        }
+        else 
+        {
+            self.selectedPath = indexPath;
+            ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
+            productCategoryViewController.storeId = [self findStoreId:indexPath.row];
+            [self.navigationController pushViewController:productCategoryViewController animated:YES];
+        }
     }
-    else 
-    {
-        self.selectedPath = indexPath;
-        ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
-        productCategoryViewController.storeId = [self findStoreId:indexPath.row];
-        [self.navigationController pushViewController:productCategoryViewController animated:YES];
-    }
-    
 }
 
 #pragma mark - CLLocationManagerDelegate
