@@ -9,17 +9,16 @@
 #import "LJHWAppDelegate.h"
 #import "LocationListViewController.h"
 #import "ShoppingListViewController.h"
-#import "AboutListViewController.h"
+#import "SettingsViewController.h"
+
 
 @interface LJHWAppDelegate()
-@property (nonatomic, strong) UITabBarController *tabBarController;
+
 @end
 
 @implementation LJHWAppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
-@synthesize navController = _navController;
 @synthesize tabBarController = _tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -38,12 +37,18 @@
     UINavigationController *navController2 = [[UINavigationController alloc]
                                               initWithRootViewController:viewController2];
     
-    viewController3 = [[AboutListViewController alloc] initWithNibName:@"AboutListViewController" bundle:nil];
+    viewController3 = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
     UINavigationController *navController3 = [[UINavigationController alloc]
                                               initWithRootViewController:viewController3];
     
     _tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[navController1, navController2, navController3];
+    
+    [[self.tabBarController.tabBar.items objectAtIndex:0] setTitle:NSLocalizedString(@"Locations", @"")];
+    [[self.tabBarController.tabBar.items objectAtIndex:1] setTitle:NSLocalizedString(@"List", @"")];
+    
+    [[self.tabBarController.tabBar.items objectAtIndex:2] setTitle:NSLocalizedString(@"Settings", @"")];
+
     self.window.rootViewController = self.tabBarController;
 
     [self.window makeKeyAndVisible];

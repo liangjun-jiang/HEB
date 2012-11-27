@@ -13,16 +13,12 @@
 
 
 @property (strong, nonatomic) Product *product;
-
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descLabel;
 @property (strong, nonatomic) IBOutlet UILabel *expirationLabel;
-
 @property (strong, nonatomic) IBOutlet UIImageView *productImage;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
-@property (strong, nonatomic) IBOutlet UIButton *addIntoListButton;
 @property (nonatomic,assign) NSUInteger flag;
-
-
--(IBAction)addIntoList;
 
 @end
 

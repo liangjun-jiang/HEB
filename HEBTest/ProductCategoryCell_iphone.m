@@ -14,6 +14,7 @@
 #import "LJHWAppDelegate.h"
 #import "Product.h"
 #import "UIImageView+AFNetworking.h"
+#import "ItemDetailViewController.h"
 
 
 @implementation ProductCategoryCell_iphone
@@ -77,13 +78,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    LJHWAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    // Navigation logic may go here. Create and push another view controller.
+   
+    id appDelegate = [[UIApplication sharedApplication] delegate];
     
     ProductDetailViewController *detailViewController = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:[NSBundle mainBundle]];
     detailViewController.product = (self.products)[indexPath.row];
     detailViewController.flag = 0;
-    [appDelegate.navController pushViewController:detailViewController animated:YES];
+    
+    UITabBarController *tabBarController = ((LJHWAppDelegate*)appDelegate).tabBarController;
+    UINavigationController *navController = (UINavigationController *)[tabBarController.viewControllers objectAtIndex:0];
+    [navController pushViewController:detailViewController animated:YES];
     
 }
 

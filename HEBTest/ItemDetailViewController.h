@@ -15,8 +15,7 @@
 @interface ItemDetailViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate> {
     @private
         Product *product;
-        NSMutableArray *ingredients;
-        
+    
         UIView *tableHeaderView;    
         UIButton *photoButton;
         UITextField *nameTextField;
@@ -25,7 +24,6 @@
 }
             
 @property (nonatomic, strong) Product *product;
-@property (nonatomic, strong) NSMutableArray *ingredients;
 
 @property (nonatomic, strong) IBOutlet UIView *tableHeaderView;
 @property (nonatomic, strong) IBOutlet UIButton *photoButton;

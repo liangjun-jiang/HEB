@@ -77,8 +77,11 @@
 		D6B52BB4166553C1002A339D /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52BA9166553C1002A339D /* AFURLConnectionOperation.m */; };
 		D6B52BB5166553C1002A339D /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52BAB166553C1002A339D /* AFXMLRequestOperation.m */; };
 		D6B52BB6166553C1002A339D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52BAD166553C1002A339D /* UIImageView+AFNetworking.m */; };
+		D6B52BBE16656372002A339D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52BBC16656372002A339D /* SettingsViewController.m */; };
+		D6B52BBF16656372002A339D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B52BBD16656372002A339D /* SettingsViewController.xib */; };
+		D6B52BC1166563AA002A339D /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B52BC0166563AA002A339D /* Settings.plist */; };
+		D6B52BC4166563FF002A339D /* SwitchTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52BC3166563FF002A339D /* SwitchTableCell.m */; };
 		D6C25FEA14DDD5BD00831E70 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FE914DDD5BD00831E70 /* add_button.png */; };
-		D6C25FF114DDD64A00831E70 /* UIBezierPath+ShadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C25FF014DDD64A00831E70 /* UIBezierPath+ShadowPath.m */; };
 		D6C25FF514DE072700831E70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF414DE072700831E70 /* Default.png */; };
 		D6C25FF714DE072E00831E70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF614DE072E00831E70 /* Default@2x.png */; };
 		D6E1511F165FE3EE003F8147 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1511E165FE3EE003F8147 /* Default-568h@2x.png */; };
@@ -200,9 +203,13 @@
 		D6B52BAB166553C1002A339D /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		D6B52BAC166553C1002A339D /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		D6B52BAD166553C1002A339D /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		D6B52BBB16656372002A339D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D6B52BBC16656372002A339D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		D6B52BBD16656372002A339D /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		D6B52BC0166563AA002A339D /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		D6B52BC2166563FF002A339D /* SwitchTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchTableCell.h; sourceTree = "<group>"; };
+		D6B52BC3166563FF002A339D /* SwitchTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchTableCell.m; sourceTree = "<group>"; };
 		D6C25FE914DDD5BD00831E70 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
-		D6C25FEF14DDD64A00831E70 /* UIBezierPath+ShadowPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+ShadowPath.h"; sourceTree = "<group>"; };
-		D6C25FF014DDD64A00831E70 /* UIBezierPath+ShadowPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+ShadowPath.m"; sourceTree = "<group>"; };
 		D6C25FF414DE072700831E70 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		D6C25FF614DE072E00831E70 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		D6E1511E165FE3EE003F8147 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -215,9 +222,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6905C2714CE7FB3008E74B3 /* SystemConfiguration.framework in Frameworks */,
 				D6B52B8116653616002A339D /* libxml2.2.dylib in Frameworks */,
 				D691B3FB14D1073F00409BCF /* CoreData.framework in Frameworks */,
-				D6905C2714CE7FB3008E74B3 /* SystemConfiguration.framework in Frameworks */,
 				D6905C1C14CE6EBC008E74B3 /* MobileCoreServices.framework in Frameworks */,
 				D6905C1A14CE6EAA008E74B3 /* CFNetwork.framework in Frameworks */,
 				D6905C1814CE6E95008E74B3 /* libz.1.2.5.dylib in Frameworks */,
@@ -301,6 +308,12 @@
 		D65BFC1B14C378E300B50263 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6B52BC2166563FF002A339D /* SwitchTableCell.h */,
+				D6B52BC3166563FF002A339D /* SwitchTableCell.m */,
+				D6B52BC0166563AA002A339D /* Settings.plist */,
+				D6B52BBB16656372002A339D /* SettingsViewController.h */,
+				D6B52BBC16656372002A339D /* SettingsViewController.m */,
+				D6B52BBD16656372002A339D /* SettingsViewController.xib */,
 				D6A22E2214C52A8D002848E2 /* AboutListViewController.h */,
 				D6A22E2314C52A8D002848E2 /* AboutListViewController.m */,
 				D6A22E2414C52A8D002848E2 /* AboutListViewController.xib */,
@@ -389,8 +402,6 @@
 				D6A22E3A14C5B916002848E2 /* PlacemarkViewController.h */,
 				D6A22E3B14C5B916002848E2 /* PlacemarkViewController.m */,
 				D6A22E3C14C5B916002848E2 /* PlacemarkViewController.xib */,
-				D6C25FEF14DDD64A00831E70 /* UIBezierPath+ShadowPath.h */,
-				D6C25FF014DDD64A00831E70 /* UIBezierPath+ShadowPath.m */,
 			);
 			name = ADs;
 			sourceTree = "<group>";
@@ -551,6 +562,8 @@
 				D6B52B8C1665470F002A339D /* reverse.png in Resources */,
 				D6B52B8D1665470F002A339D /* reverse@2x.png in Resources */,
 				D6B52B94166548DC002A339D /* DetailHeaderView.xib in Resources */,
+				D6B52BBF16656372002A339D /* SettingsViewController.xib in Resources */,
+				D6B52BC1166563AA002A339D /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +588,6 @@
 				D6A22E3D14C5B916002848E2 /* PlacemarkViewController.m in Sources */,
 				D67EC23114C7C49D009A773B /* Product.m in Sources */,
 				D66F1DF814D3B698009C627A /* UIImage+Resizing.m in Sources */,
-				D6C25FF114DDD64A00831E70 /* UIBezierPath+ShadowPath.m in Sources */,
 				D6B52B751665358C002A339D /* ASIAuthenticationDialog.m in Sources */,
 				D6B52B761665358C002A339D /* ASIDataCompressor.m in Sources */,
 				D6B52B771665358C002A339D /* ASIDataDecompressor.m in Sources */,
@@ -598,6 +610,8 @@
 				D6B52BB4166553C1002A339D /* AFURLConnectionOperation.m in Sources */,
 				D6B52BB5166553C1002A339D /* AFXMLRequestOperation.m in Sources */,
 				D6B52BB6166553C1002A339D /* UIImageView+AFNetworking.m in Sources */,
+				D6B52BBE16656372002A339D /* SettingsViewController.m in Sources */,
+				D6B52BC4166563FF002A339D /* SwitchTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
