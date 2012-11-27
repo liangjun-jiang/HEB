@@ -78,6 +78,7 @@
 		D6B52BBF16656372002A339D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B52BBD16656372002A339D /* SettingsViewController.xib */; };
 		D6B52BC1166563AA002A339D /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B52BC0166563AA002A339D /* Settings.plist */; };
 		D6B52BC4166563FF002A339D /* SwitchTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52BC3166563FF002A339D /* SwitchTableCell.m */; };
+		D6B52BCA166584A4002A339D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B52BC9166584A4002A339D /* MessageUI.framework */; };
 		D6C25FEA14DDD5BD00831E70 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FE914DDD5BD00831E70 /* add_button.png */; };
 		D6C25FF514DE072700831E70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF414DE072700831E70 /* Default.png */; };
 		D6C25FF714DE072E00831E70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF614DE072E00831E70 /* Default@2x.png */; };
@@ -201,6 +202,7 @@
 		D6B52BC0166563AA002A339D /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		D6B52BC2166563FF002A339D /* SwitchTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchTableCell.h; sourceTree = "<group>"; };
 		D6B52BC3166563FF002A339D /* SwitchTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchTableCell.m; sourceTree = "<group>"; };
+		D6B52BC9166584A4002A339D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D6C25FE914DDD5BD00831E70 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		D6C25FF414DE072700831E70 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		D6C25FF614DE072E00831E70 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B52BCA166584A4002A339D /* MessageUI.framework in Frameworks */,
 				D6905C2714CE7FB3008E74B3 /* SystemConfiguration.framework in Frameworks */,
 				D6B52B8116653616002A339D /* libxml2.2.dylib in Frameworks */,
 				D691B3FB14D1073F00409BCF /* CoreData.framework in Frameworks */,
@@ -234,6 +237,7 @@
 		D65BFBB414C348CA00B50263 = {
 			isa = PBXGroup;
 			children = (
+				D6B52BC9166584A4002A339D /* MessageUI.framework */,
 				D6B52B571665358C002A339D /* ThirdParty */,
 				D6E1511E165FE3EE003F8147 /* Default-568h@2x.png */,
 				D69CB90D14DFAF9C0018119B /* icon2.png */,

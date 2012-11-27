@@ -10,14 +10,15 @@
 #import "AboutListViewController.h"
 #import "SwitchTableCell.h"
 #import "LocationListViewController.h"
-
+#import  <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 #define REGION_SECTION 0
 #define ABOUT_SECTION 1
 
 #define TITLE @"title"
 #define VALUE @"placeholder"
 
-@interface SettingsViewController ()<UITextFieldDelegate>
+@interface SettingsViewController ()<UITextFieldDelegate,MFMailComposeViewControllerDelegate>
 @property (nonatomic, strong) NSMutableDictionary *contentList;
 @property (nonatomic, strong) NSString *defaultHeb;
 @property (nonatomic, assign) BOOL onOff;
@@ -145,8 +146,10 @@
     if (indexPath.section == ABOUT_SECTION) {
         AboutListViewController *about = [[AboutListViewController alloc] initWithNibName:@"AboutListViewController" bundle:nil];
         [self.navigationController pushViewController:about animated:YES];
-    } else
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    } else {
+        [self displayComposerSheet];
+//        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    }
 }
 
 #pragma mark - OnOffSwitch method
@@ -169,6 +172,64 @@
         [defaults synchronize];
         
     }
+}
+
+
+#pragma mark - mail delegate
+-(void)displayComposerSheet
+{
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    picker.mailComposeDelegate = self;
+    
+    [picker setSubject:@"My feedback"];
+    
+    
+    // Set up recipients
+    NSArray *toRecipients = [NSArray arrayWithObject:@"2010.longhorn@gmail.com"];
+//    NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@example.com", @"third@example.com", nil];
+//    NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@example.com"];
+    
+    [picker setToRecipients:toRecipients];
+//    [picker setCcRecipients:ccRecipients];
+//    [picker setBccRecipients:bccRecipients];
+    
+    // Attach an image to the email
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"rainy" ofType:@"png"];
+//    NSData *myData = [NSData dataWithContentsOfFile:path];
+//    [picker addAttachmentData:myData mimeType:@"image/png" fileName:@"rainy"];
+    
+    // Fill out the email body text
+    NSString *emailBody = @"Thank you for your feedback!";
+    [picker setMessageBody:emailBody isHTML:NO];
+    
+    [self presentModalViewController:picker animated:YES];
+}
+
+
+// Dismisses the email composition interface when users tap Cancel or Send. Proceeds to update the message field with the result of the operation.
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+//    message.hidden = NO;
+    // Notifies users about errors associated with the interface
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+//            message.text = @"Result: canceled";
+            break;
+        case MFMailComposeResultSaved:
+//            message.text = @"Result: saved";
+            break;
+        case MFMailComposeResultSent:
+//            message.text = @"Result: sent";
+            break;
+        case MFMailComposeResultFailed:
+//            message.text = @"Result: failed";
+            break;
+        default:
+//            message.text = @"Result: not sent";
+            break;
+    }
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

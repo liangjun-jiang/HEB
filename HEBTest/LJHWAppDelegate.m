@@ -29,12 +29,16 @@
     UIViewController *viewController1, *viewController2, *viewController3;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"DEFAULT_HEB_ID"]) {
-        viewController1 = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
-        ((ProductCategoryViewController *)viewController1).storeId = [defaults objectForKey:@"DEFAULT_HEB_ID"];
-    } else
+    if  ([defaults boolForKey:@"USE_DEFAULT_LOCATION"]){
+        if ([defaults objectForKey:@"DEFAULT_HEB_ID"]) {
+            viewController1 = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
+            ((ProductCategoryViewController *)viewController1).storeId = [defaults objectForKey:@"DEFAULT_HEB_ID"];
+        }
+    }else {
         viewController1 = [[LocationListViewController alloc]
                        initWithNibName:@"LocationListViewController" bundle:nil];
+        ((LocationListViewController*)viewController1).isSettingDefault = NO;
+    }
     
     UINavigationController *navController1 = [[UINavigationController alloc]
                                               initWithRootViewController:viewController1];

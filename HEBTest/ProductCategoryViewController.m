@@ -57,13 +57,19 @@
     [self.tableView reloadData];
 }
 
-
-
-
 #pragma mark - View lifecycle
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    // this is from setting
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:@"USE_DEFAULT_LOCATION"]) {
+        if ([defaults objectForKey:@"DEFAULT_HEB_ID"]){
+            self.storeId = [defaults objectForKey:@"DEFAULT_HEB_ID"];
+        }
+  
+    }
 }
 
 
