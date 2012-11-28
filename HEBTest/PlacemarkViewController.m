@@ -74,9 +74,11 @@
 
     for (id currentObj in self.placemarks){
         if ([currentObj isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *obj = ((NSDictionary *)currentObj)[@"geometry"];
             CLLocationCoordinate2D location;
-            location.latitude = [currentObj[@"location"][@"lat"] doubleValue];
-            location.longitude = [currentObj[@"location"][@"lng"] doubleValue];
+            
+            location.latitude = [obj[@"location"][@"lat"] doubleValue];
+            location.longitude = [obj[@"location"][@"lng"] doubleValue];
             MapViewAnnotation *aN = [[MapViewAnnotation alloc] initWithTitle:@"H-E-B" withCoordinate:location];
             [self.mapView addAnnotation:aN];
         }

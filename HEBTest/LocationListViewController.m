@@ -65,87 +65,53 @@
 @end
 
 @implementation LocationListViewController
-@synthesize locationList = _locationList;
 @synthesize selectedPath=_selectedPath;
 @synthesize currentUserCoordiante=_currentUserCoordiante;
-@synthesize placeMarkers=_placeMarkers;
 @synthesize isSettingDefault;
 @synthesize locationManger = _locationManger;
+@synthesize latlongs;
+@synthesize nearbyHebs;
 
-
+#pragma mark - Data Fetch
 -(void)fetchData:(NSData *)responseData
 {
     NSError *error;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     
-    NSArray *hebs =json[@"results"];
-    
-    if ([hebs count] == 0) {
+    self.nearbyHebs = json[@"results"];
+    if ([self.nearbyHebs count] == 0) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
     } else
         self.navigationItem.rightBarButtonItem.enabled = YES;
     
-    self.locationList = [[NSMutableArray alloc] initWithCapacity:[hebs count]];
-    self.placeMarkers = [[NSMutableArray alloc] initWithCapacity:[hebs count]];
-    if (hebs != nil && [hebs count] !=0) {
-        for (NSDictionary *heb in hebs)
-        {
-            if ([heb[@"name"] isEqualToString:@"H-E-B"]) {
-                [self.locationList addObject:heb[@"vicinity"]];
-                [self.placeMarkers addObject:heb[@"geometry"]];
-            }
-        }
-    }
     [self.tableView reloadData];
-    
 }
 
 -(NSString *)findStoreId:(NSInteger)index
 {
-    NSString *street_name = (self.locationList)[index];
+    NSDictionary *heb = self.nearbyHebs[index];
+    NSString *street_name = heb[@"vicinity"];
     
     NSString *digits = [street_name stringByTrimmingCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet] ];
     
-    
     NSString  *path = [[NSBundle mainBundle] pathForResource:@"street_store" ofType:@"plist"];
     NSMutableArray *storeDicts = [NSMutableArray arrayWithContentsOfFile:path];
-    NSString *store_id = @"96";
+    NSString *store_id = @"96";  // this is gonna be a default store id!
     
-    if (storeDicts == nil) {
-        NSLog(@"can't read path: %@", path);
-    } else 
-    {    
+    if (storeDicts != nil) {
         for (NSDictionary *store in storeDicts)
         {
             if ([store[@"street_number"] isEqualToString:digits]) {
-                store_id = store[@"store_id"];   
+                store_id = store[@"store_id"];
             }
         }
-    }
+    } 
     
     return store_id;
     
 }
 
 #pragma mark - View lifecycle
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-   
-    
- 
-}
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-    
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -219,12 +185,10 @@
     if (self.placeMarkers!= nil && [self.placeMarkers count]!=0) {
         dispatch_async(dispatch_get_main_queue(),^ {
             [self unlockUI];
-                PlacemarkViewController *plvc = [[PlacemarkViewController alloc] initWithPlacemarks:self.placeMarkers];
+            PlacemarkViewController *plvc = [[PlacemarkViewController alloc] initWithPlacemarks:self.nearbyHebs];
                 [self.navigationController pushViewController:plvc animated:YES];
-            
             });
     }
-    
 }
 
 // display an error
@@ -269,9 +233,13 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if ((self.locationList !=nil) && [self.locationList count] >0)
-        return [self.locationList count];
-    else 
+//    if ((self.locationList !=nil) && [self.locationList count] >0)
+//        return [self.locationList count];
+//    else 
+//        return 1;
+    if ((self.nearbyHebs !=nil) && [self.nearbyHebs count] >0)
+        return [self.nearbyHebs count];
+    else
         return 1;
 }
 
@@ -285,15 +253,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier];
         
     }
-    if ([self.locationList count] > 0) {
+    if ([self.nearbyHebs count] > 0) {
         cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        NSString *queriedAddress; 
+        NSDictionary *hebAddress = self.nearbyHebs[indexPath.row];
+        NSString *queriedAddress = hebAddress[@"vicinity"];
         if (isSettingDefault) {
             NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
             NSString *storeAddress = [defaults objectForKey:@"DEFAULT_HEB_NAME"];
-            queriedAddress = (self.locationList)[indexPath.row];
             if ([storeAddress isEqualToString:queriedAddress]) {
                 cell.accessoryType = UITableViewCellAccessoryCheckmark;
             } else
@@ -322,14 +290,16 @@
             oldCell.accessoryType = UITableViewCellAccessoryNone;
             self.selectedPath = indexPath;
             
+            NSDictionary *heb = self.nearbyHebs[indexPath.row];
             NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
             [defaults setObject:[self findStoreId:indexPath.row] forKey:@"DEFAULT_HEB_ID"];
             [defaults setObject:newCell.textLabel.text forKey:@"DEFAULT_HEB_NAME"];
+            [defaults setObject:heb forKey:@"DEFAULT_HEB"];
             [defaults synchronize];
             
         }
     } else {
-        if ([self.locationList count] == 0) {
+        if ([self.nearbyHebs count] == 0) {
             ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
             productCategoryViewController.storeId = @"202";
             [self.navigationController pushViewController:productCategoryViewController animated:YES];
@@ -398,28 +368,8 @@
     
 }
 
-/*
--(IBAction)performCoordinateGeocode:(id)sender
-{
-    [self lockUI];
-    CLGeocoder *geocoder = [[[CLGeocoder alloc] init] autorelease];
-    CLLocationCoordinate2D coord = _currentUserCoordinate;
-    CLLocation *location = [[[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude] autorelease];
-    
-    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemark, NSError *error){
-        NSLog(@"ReverseGeocodeLocation:completionHandler: Completion handler called");
-        if (error) {
-            NSLog(@"Geocode failed with error:%@",error);
-            [self displayError:error];
-            return ;
-        }
-        NSLog(@"received place marks:%@", placemark);
-        [self displayPlacemarks:placemark];
-    }];
-    
-    
-}
-*/
+
+#pragma mark - Query google Place
 -(void)queryGooglePlace:(CLLocationCoordinate2D)coord
 {
     NSString *placeUrlString = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=6000&types=grocery_or_supermarket&name=heb&sensor=false&key=AIzaSyDI9oKyroNMwBTCSWEoSgVfrKtvQ10S3jw", coord.latitude, coord.longitude];
