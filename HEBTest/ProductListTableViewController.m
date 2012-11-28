@@ -13,6 +13,7 @@
 #import "ProductListTableViewController.h"
 #import "ProductDetailViewController.h"
 #import "SavedProduct.h"
+#import "Product.h"
 #import "ProductTableViewCell.h"
 
 @implementation ProductListTableViewController
@@ -65,7 +66,9 @@
 - (void)showProduct:(SavedProduct *)savedProduct animated:(BOOL)animated
 {
     ProductDetailViewController *detailViewController = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil];
-//    detailViewController.product = product;
+    
+    Product *aProduct = [[Product alloc] initWithInfo:savedProduct.name price:savedProduct.price image:savedProduct.imgLink desc:savedProduct.desc category:savedProduct.category psDate:savedProduct.psDate endingDate:savedProduct.eDate];
+    detailViewController.product = aProduct;
     detailViewController.flag = 1;
     
     [self.navigationController pushViewController:detailViewController animated:animated];
@@ -109,7 +112,6 @@
     }
     
 	[self configureCell:recipeCell atIndexPath:indexPath];
-    
     return recipeCell;
 }
 
@@ -124,7 +126,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	SavedProduct *product = (SavedProduct *)[fetchedResultsController objectAtIndexPath:indexPath];
-    
     [self showProduct:product animated:YES];
 }
 

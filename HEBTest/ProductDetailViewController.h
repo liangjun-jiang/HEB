@@ -13,6 +13,7 @@
 
 
 @property (strong, nonatomic) Product *product;
+
 @property (strong, nonatomic) UIImageView *productImage;
 @property (nonatomic,assign) NSUInteger flag;
 

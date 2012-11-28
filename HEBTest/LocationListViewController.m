@@ -12,6 +12,7 @@
 #import "PlacemarkViewController.h"
 #import "UIImage+Resizing.h"
 #import "SSTheme.h"
+#import "SVProgressHUD.h"
 
 @interface NSDictionary(JSONCategories)
 +(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString *)urlAddress;
@@ -130,8 +131,7 @@
 {
     [super awakeFromNib];
     
-    UITabBarItem *item = [[self navigationController] tabBarItem];
-    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabPower];
+   
     
  
 }
@@ -140,8 +140,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if  (self){
-        UITabBarItem *item = [[self navigationController] tabBarItem];
-        [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabPower];
+       
     }
     return self;
 }
@@ -178,6 +177,14 @@
     _placeMarkers = nil;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    if (self.isSettingDefault) {
+        [SVProgressHUD showWithStatus:@"Will be effective next time you open the app."];
+    }
+    
+}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

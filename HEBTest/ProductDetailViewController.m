@@ -45,11 +45,14 @@
     
     SavedProduct *savedProduct = [NSEntityDescription insertNewObjectForEntityForName:@"SavedProduct" inManagedObjectContext:context];
     
+    // I know this is silly. I just don't want to spend any effort on Product Category page
     savedProduct.name = self.product.name;
     savedProduct.desc = self.product.desc;
     savedProduct.eDate = self.product.eDate;
     savedProduct.price = self.product.price;
     savedProduct.category = self.product.category;
+    savedProduct.psDate = self.product.psDate;
+    savedProduct.imgLink = self.product.imgLink;
     
 	NSError *error = nil;
 	if (![savedProduct.managedObjectContext save:&error]) {
@@ -67,19 +70,6 @@
         self.navigationItem.rightBarButtonItem.enabled = NO;
     }
 
-    
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-//                                                         NSUserDomainMask, 
-//                                                         YES);
-//    NSString *path = [paths[0] stringByAppendingPathComponent:@"Products.plist"];
-//    NSMutableArray *productDicts = [NSMutableArray arrayWithContentsOfFile:path];
-//    [productDicts addObject:[self.product dictionaryWithValuesForKeys:[Product keys]]];
-//    NSString *plist = [productDicts description];
-//    NSError *error = nil;
-// 
-//    [plist writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
-
- 
 }
 
 #pragma mark - View lifecycle
@@ -87,7 +77,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     
     UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addIntoList:)];
     self.navigationItem.rightBarButtonItem = shoppingListBarItem;

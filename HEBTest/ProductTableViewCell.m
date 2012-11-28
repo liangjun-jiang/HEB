@@ -9,7 +9,7 @@
  */
 
 #import "ProductTableViewCell.h"
-
+#import "UIImageView+AFNetworking.h"
 #pragma mark -
 #pragma mark SubviewFrames category
 
@@ -135,10 +135,12 @@
     if (newProduct != product) {
         product = newProduct;
 	}
-//	imageView.image = product.imgLink;
+    [imageView setImageWithURL:[NSURL URLWithString:product.imgLink]];
 	nameLabel.text = product.name;
 	priceLabel.text = product.price;
-	eDateLabel.text = product.eDate;
+    NSArray *dateArray = [product.eDate componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+	eDateLabel.text = [dateArray objectAtIndex:0];
 }
 
 @end

@@ -257,6 +257,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
      ProductDetailViewController *detailViewController = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil];
+    
     detailViewController.product = _selectedProducts[indexPath.row];
     detailViewController.flag = 1;
     [self.navigationController presentModalViewController:detailViewController animated:YES];
