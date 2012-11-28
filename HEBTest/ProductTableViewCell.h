@@ -13,17 +13,17 @@
 @interface ProductTableViewCell : UITableViewCell {
     SavedProduct *product;
     
-    UIImageView *imageView;
-    UILabel *nameLabel;
-    UILabel *priceLabel;
-    UILabel *eDateLabel;
+//    UIImageView *imageView;
+//    UILabel *nameLabel;
+//    UILabel *priceLabel;
+//    UILabel *eDateLabel;
 }
 
 @property (nonatomic, retain) SavedProduct *product;
 
-@property (nonatomic, retain) UIImageView *imageView;
-@property (nonatomic, retain) UILabel *nameLabel;
-@property (nonatomic, retain) UILabel *priceLabel;
-@property (nonatomic, retain) UILabel *eDateLabel;
+//@property (nonatomic, retain) UIImageView *imageView;
+//@property (nonatomic, retain) UILabel *nameLabel;
+//@property (nonatomic, retain) UILabel *priceLabel;
+//@property (nonatomic, retain) UILabel *eDateLabel;
 
 @end

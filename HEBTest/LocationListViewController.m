@@ -181,7 +181,7 @@
 {
     [super viewWillDisappear:animated];
     if (self.isSettingDefault) {
-        [SVProgressHUD showWithStatus:@"Will be effective next time you open the app."];
+        [SVProgressHUD showSuccessWithStatus:@"Will be effective next time you open the app."];
     }
     
 }

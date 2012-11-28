@@ -41,7 +41,7 @@
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Set the table view's row height
-    self.tableView.rowHeight = 44.0;
+    self.tableView.rowHeight = 60.0;
 	
 	NSError *error = nil;
 	if (![[self fetchedResultsController] performFetch:&error]) {
@@ -77,6 +77,12 @@
 
 #pragma mark -
 #pragma mark Table view methods
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 60.0;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger count = [[fetchedResultsController sections] count];

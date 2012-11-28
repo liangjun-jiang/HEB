@@ -18,7 +18,7 @@
 #import "GDataXMLNode.h"
 #import "GDataXMLElement-Extras.h"
 #import "SSTheme.h"
-
+#import "SVProgressHUD.h"
 
 @implementation ProductCategoryViewController
 @synthesize storeId = _storeId;
@@ -29,6 +29,7 @@
 
 - (void)refresh {
     
+    [SVProgressHUD showWithStatus:@"Loading..."];
     for (NSString *feed in _feeds) {
         NSURL *url = [NSURL URLWithString:feed];
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
@@ -182,6 +183,7 @@
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
+    [SVProgressHUD dismiss];
     
     [_queue addOperationWithBlock:^{
         
@@ -314,8 +316,10 @@
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
+    
     NSError *error = [request error];
-    NSLog(@"Error: %@", error);
+    [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+//    NSLog(@"Error: %@", error);
 }
 
 - (void)viewDidUnload
