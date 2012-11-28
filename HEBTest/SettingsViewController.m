@@ -59,13 +59,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     onOff = [defaults boolForKey:@"USE_DEFAULT_LOCATION"];
     if (onOff) {
         defaultHeb = [defaults objectForKey:@"DEFAULT_HEB_NAME"];
+        NSLog(@"default heb: %@",defaultHeb);
     }
-    UITabBarItem *item = [[self navigationController] tabBarItem];
-    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabControls];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
@@ -176,7 +177,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (settingSwitch.on) {
-        [defaults setBool:settingSwitch.on forKey:@"USE_DEFAULT_LOCATION"];
+        [defaults setBool:YES forKey:@"USE_DEFAULT_LOCATION"];
         [defaults synchronize];
         
         LocationListViewController *locationList = [[LocationListViewController alloc] initWithNibName:@"LocationListViewController" bundle:nil];
@@ -185,7 +186,7 @@
     } else {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         cell.detailTextLabel.text = @"";
-        [defaults setBool:!settingSwitch.on forKey:@"USE_DEFAULT_LOCATION"];
+        [defaults setBool:NO forKey:@"USE_DEFAULT_LOCATION"];
         [defaults synchronize];
         
     }
@@ -203,18 +204,8 @@
     
     // Set up recipients
     NSArray *toRecipients = [NSArray arrayWithObject:@"2010.longhorn@gmail.com"];
-//    NSArray *ccRecipients = [NSArray arrayWithObjects:@"second@example.com", @"third@example.com", nil];
-//    NSArray *bccRecipients = [NSArray arrayWithObject:@"fourth@example.com"];
     
     [picker setToRecipients:toRecipients];
-//    [picker setCcRecipients:ccRecipients];
-//    [picker setBccRecipients:bccRecipients];
-    
-    // Attach an image to the email
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"rainy" ofType:@"png"];
-//    NSData *myData = [NSData dataWithContentsOfFile:path];
-//    [picker addAttachmentData:myData mimeType:@"image/png" fileName:@"rainy"];
-    
     // Fill out the email body text
     NSString *emailBody = @"Thank you for your feedback!";
     [picker setMessageBody:emailBody isHTML:NO];

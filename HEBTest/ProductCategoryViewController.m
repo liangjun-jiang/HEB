@@ -7,7 +7,6 @@
 //
 
 #import "ProductCategoryViewController.h"
-#import "ShoppingListViewController.h"
 #import "ProductDetailViewController.h"
 #import "ProductCategoryCell.h"
 #import "ControlVariables.h"
@@ -147,7 +146,7 @@
       
     }
      
-//    [self performSelector:@selector(updateTable) withObject:nil afterDelay:5];
+    [self performSelector:@selector(updateTable) withObject:nil afterDelay:3];
 }
 
 
@@ -313,7 +312,7 @@
             }];
         }        
     }];
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
