@@ -7,7 +7,6 @@
 //
 
 #import "ProductDetailViewController.h"
-#import "ShoppingListViewController.h"
 #import "Product.h"
 #import "UIImageView+AFNetworking.h"
 #import "SVProgressHUD.h"

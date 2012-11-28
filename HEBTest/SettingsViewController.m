@@ -158,6 +158,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if (indexPath.section == ABOUT_SECTION) {
         if (indexPath.row == 0) {
             AboutListViewController *about = [[AboutListViewController alloc] initWithNibName:@"AboutListViewController" bundle:nil];
@@ -165,9 +166,6 @@
         } else {
             [self displayComposerSheet];
         }
-        
-    } else {
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
 }
 
@@ -187,7 +185,7 @@
     } else {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         cell.detailTextLabel.text = @"";
-        [defaults setBool:!settingSwitch.on forKey:@"USER_DEFAULT_LOCATION"];
+        [defaults setBool:!settingSwitch.on forKey:@"USE_DEFAULT_LOCATION"];
         [defaults synchronize];
         
     }

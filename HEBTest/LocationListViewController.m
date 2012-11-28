@@ -278,18 +278,23 @@
         cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.text = (self.locationList)[indexPath.row];
+        NSString *queriedAddress; 
+        if (isSettingDefault) {
+            NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
+            NSString *storeAddress = [defaults objectForKey:@"DEFAULT_HEB_NAME"];
+            queriedAddress = (self.locationList)[indexPath.row];
+            if ([storeAddress isEqualToString:queriedAddress]) {
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            } else
+                cell.accessoryType = UITableViewCellAccessoryNone;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        cell.textLabel.text = queriedAddress;
     } else
        cell.textLabel.text = @"Didn't find any H-E-B, you can still test drive this app";
     
-    if (isSettingDefault) {
-        if (indexPath == self.selectedPath) {
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        } else
-            cell.accessoryType = UITableViewCellAccessoryNone;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
+    
     return cell;
 }
 
@@ -378,12 +383,7 @@
     [self stopUpdatingCurrentLocation];
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     
-    // show the alert
-    UIAlertView *alert = [[UIAlertView alloc] init];
-    alert.title = @"Error updating";
-    alert.message = [error localizedDescription];
-    [alert addButtonWithTitle:@"OK"];
-    [alert show];
+    [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
     
 }
 
