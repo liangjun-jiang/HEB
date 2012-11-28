@@ -160,7 +160,7 @@
         // Create the fetch request for the entity.
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         // Edit the entity name as appropriate.
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Product" inManagedObjectContext:managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"SavedProduct" inManagedObjectContext:managedObjectContext];
         [fetchRequest setEntity:entity];
         
         // Edit the sort key as appropriate.

@@ -62,7 +62,10 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		abort();
 	} else
+    {
         [SVProgressHUD showSuccessWithStatus:@"Success."];
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }
 
     
 //    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
