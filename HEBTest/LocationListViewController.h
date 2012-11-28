@@ -12,8 +12,10 @@
 @interface LocationListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 {
     BOOL isSettingDefault;
+    CLLocationManager *_locationManger;
 }
 
+@property (strong,nonatomic) CLLocationManager *locationManger;
 @property (strong,nonatomic) NSMutableArray *locationList;
 @property (strong, nonatomic) NSIndexPath *selectedPath;
 @property (strong, nonatomic) NSMutableArray *placeMarkers;

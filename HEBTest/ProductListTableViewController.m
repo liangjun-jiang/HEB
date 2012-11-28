@@ -118,6 +118,7 @@
     }
     
 	[self configureCell:recipeCell atIndexPath:indexPath];
+    [recipeCell setNeedsDisplay];
     return recipeCell;
 }
 

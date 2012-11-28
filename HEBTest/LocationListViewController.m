@@ -49,7 +49,7 @@
 #define kFarWestAustinCoordinate CLLocationCoordinate2DMake(30.3488, -97.7554)
 @interface LocationListViewController() {
 @private
-    CLLocationManager *_locationManger;
+   
     CLLocationCoordinate2D _currentUserCoordinate;
     
     UIActivityIndicatorView *_currentLocationActivityIndicator;
@@ -70,6 +70,7 @@
 @synthesize currentUserCoordiante=_currentUserCoordiante;
 @synthesize placeMarkers=_placeMarkers;
 @synthesize isSettingDefault;
+@synthesize locationManger = _locationManger;
 
 
 -(void)fetchData:(NSData *)responseData
@@ -134,6 +135,16 @@
    
     
  
+}
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

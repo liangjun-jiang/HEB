@@ -64,7 +64,7 @@
     onOff = [defaults boolForKey:@"USE_DEFAULT_LOCATION"];
     if (onOff) {
         defaultHeb = [defaults objectForKey:@"DEFAULT_HEB_NAME"];
-        NSLog(@"default heb: %@",defaultHeb);
+//        NSLog(@"default heb: %@",defaultHeb);
     }
     [self.tableView reloadData];
 }

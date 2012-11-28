@@ -14,15 +14,16 @@
 #import "SSTheme.h"
 #import <CoreData/CoreData.h>
 
-@interface LJHWAppDelegate()
+@interface LJHWAppDelegate()<CLLocationManagerDelegate>
 
-
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @end
 
 @implementation LJHWAppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+@synthesize locationManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -37,16 +38,30 @@
     
     [SSThemeManager customizeAppAppearance];
     
-    UIViewController *viewController1, *viewController2, *viewController3;
+    // Create location manager with filters set for battery efficiency.
+	locationManager = [[CLLocationManager alloc] init];
+	locationManager.delegate = self;
+	locationManager.distanceFilter = kCLLocationAccuracyHundredMeters;
+	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
+    UIViewController *viewController1, *viewController2, *viewController3;
+    CGFloat lat = 0.0f;
+    CGFloat lgt = 0.0f;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if  ([defaults boolForKey:@"USE_DEFAULT_LOCATION"]){
         if ([defaults objectForKey:@"DEFAULT_HEB_ID"]) {
             viewController1 = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
             ((ProductCategoryViewController *)viewController1).storeId = [defaults objectForKey:@"DEFAULT_HEB_ID"];
+            lat = [defaults floatForKey:@"latitude"];
+            lgt = [defaults floatForKey:@"longtitude"];
+            
+            CLLocationCoordinate2D coordiante = CLLocationCoordinate2DMake(lat, lgt);
+            CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:coordiante radius:1000.0 identifier:[NSString stringWithFormat:@"%f, %f", lat, lgt]];
+			[locationManager startMonitoringForRegion:newRegion desiredAccuracy:kCLLocationAccuracyBest];
+            
         }
     }else {
-        viewController1 = [[LocationListViewController alloc]
+        viewController2 = [[LocationListViewController alloc]
                        initWithNibName:@"LocationListViewController" bundle:nil];
         ((LocationListViewController*)viewController1).isSettingDefault = NO;
     }
@@ -85,17 +100,9 @@
 
     [self.window makeKeyAndVisible];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? paths[0] : nil;
-  	NSString *storePath = [basePath stringByAppendingPathComponent: @"Products.plist"];
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	// If the expected file doesn't exist, copy the default file.
-	if (![fileManager fileExistsAtPath:storePath]) {
-		NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"Products" ofType:@"plist"];
-		if (defaultStorePath) {
-            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
-		}
-	}
+    
+    
+    
     return YES;
 }
 
@@ -105,8 +112,32 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    if ([CLLocationManager significantLocationChangeMonitoringAvailable]) {
+		// Stop significant location updates and start normal location updates again since the app is in the forefront.
+		[self.locationManager stopMonitoringSignificantLocationChanges];
+        
+	}
+	else {
+		NSLog(@"Significant location change monitoring is not available.");
+	}
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    /*
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+     */
+    if ([CLLocationManager significantLocationChangeMonitoringAvailable]) {
+		// Stop normal location updates and start significant location change updates for battery efficiency.
+        [self.locationManager startMonitoringSignificantLocationChanges];
+	}
+	else {
+		NSLog(@"Significant location change monitoring is not available.");
+	}
+    
+    
+}
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	
@@ -210,6 +241,28 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
     return basePath;
+}
+
+#pragma mark - Region Managerment
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region  {
+	NSString *event = [NSString stringWithFormat:@"didEnterRegion %@ at %@", region.identifier, [NSDate date]];
+	
+//	[self updateWithEvent:event];
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+	NSString *event = [NSString stringWithFormat:@"didExitRegion %@ at %@", region.identifier, [NSDate date]];
+	
+//	[self updateWithEvent:event];
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error {
+	NSString *event = [NSString stringWithFormat:@"monitoringDidFailForRegion %@: %@", region.identifier, error];
+	
+//	[self updateWithEvent:event];
 }
 
 @end
