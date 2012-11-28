@@ -204,6 +204,11 @@
 		D6B52CC716658624002A339D /* SSMetalTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52C4816658624002A339D /* SSMetalTheme.m */; };
 		D6B52CC816658624002A339D /* SSSmallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52C4A16658624002A339D /* SSSmallButton.m */; };
 		D6B52CC916658624002A339D /* SSTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52C4C16658624002A339D /* SSTheme.m */; };
+		D6B52CEB16666A46002A339D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6B52CE816666A46002A339D /* SVProgressHUD.bundle */; };
+		D6B52CEC16666A46002A339D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52CEA16666A46002A339D /* SVProgressHUD.m */; };
+		D6B52CEF16666C22002A339D /* Product.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6B52CED16666C21002A339D /* Product.xcdatamodeld */; };
+		D6B52D0216667383002A339D /* ProductListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52D0016667383002A339D /* ProductListTableViewController.m */; };
+		D6B52D05166673E3002A339D /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52D03166673E3002A339D /* ProductTableViewCell.m */; };
 		D6C25FEA14DDD5BD00831E70 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FE914DDD5BD00831E70 /* add_button.png */; };
 		D6C25FF514DE072700831E70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF414DE072700831E70 /* Default.png */; };
 		D6C25FF714DE072E00831E70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF614DE072E00831E70 /* Default@2x.png */; };
@@ -456,6 +461,14 @@
 		D6B52C4A16658624002A339D /* SSSmallButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSSmallButton.m; sourceTree = "<group>"; };
 		D6B52C4B16658624002A339D /* SSTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTheme.h; sourceTree = "<group>"; };
 		D6B52C4C16658624002A339D /* SSTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTheme.m; sourceTree = "<group>"; };
+		D6B52CE816666A46002A339D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		D6B52CE916666A46002A339D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		D6B52CEA16666A46002A339D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		D6B52CEE16666C22002A339D /* Product.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Product.xcdatamodel; sourceTree = "<group>"; };
+		D6B52D0016667383002A339D /* ProductListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListTableViewController.m; sourceTree = "<group>"; };
+		D6B52D0116667383002A339D /* ProductListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListTableViewController.h; sourceTree = "<group>"; };
+		D6B52D03166673E3002A339D /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
+		D6B52D04166673E3002A339D /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
 		D6C25FE914DDD5BD00831E70 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		D6C25FF414DE072700831E70 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		D6C25FF614DE072E00831E70 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -469,10 +482,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D691B3FB14D1073F00409BCF /* CoreData.framework in Frameworks */,
 				D6B52BCA166584A4002A339D /* MessageUI.framework in Frameworks */,
 				D6905C2714CE7FB3008E74B3 /* SystemConfiguration.framework in Frameworks */,
 				D6B52B8116653616002A339D /* libxml2.2.dylib in Frameworks */,
-				D691B3FB14D1073F00409BCF /* CoreData.framework in Frameworks */,
 				D6905C1C14CE6EBC008E74B3 /* MobileCoreServices.framework in Frameworks */,
 				D6905C1A14CE6EAA008E74B3 /* CFNetwork.framework in Frameworks */,
 				D6905C1814CE6E95008E74B3 /* libz.1.2.5.dylib in Frameworks */,
@@ -538,6 +551,7 @@
 				D65BFC1C14C3794700B50263 /* Main */,
 				D65BFBCA14C348CA00B50263 /* Supporting Files */,
 				D65BFC1B14C378E300B50263 /* View Controllers */,
+				D6B52CED16666C21002A339D /* Product.xcdatamodeld */,
 			);
 			path = HEBTest;
 			sourceTree = "<group>";
@@ -616,6 +630,10 @@
 		D6A8E0E114D25BDA002417D6 /* Shopping List */ = {
 			isa = PBXGroup;
 			children = (
+				D6B52D03166673E3002A339D /* ProductTableViewCell.m */,
+				D6B52D04166673E3002A339D /* ProductTableViewCell.h */,
+				D6B52D0016667383002A339D /* ProductListTableViewController.m */,
+				D6B52D0116667383002A339D /* ProductListTableViewController.h */,
 				D65BFBFA14C35E4E00B50263 /* ShoppingListViewController.h */,
 				D65BFBFB14C35E4E00B50263 /* ShoppingListViewController.m */,
 				D65BFBFC14C35E4E00B50263 /* ShoppingListViewController.xib */,
@@ -654,6 +672,7 @@
 		D6B52B571665358C002A339D /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				D6B52CE716666A46002A339D /* SVProgressHUD */,
 				D6B52B9A166553C1002A339D /* AFNetworking */,
 				D6B52B581665358C002A339D /* ASIHTTP */,
 				D6B52B6D1665358C002A339D /* Google */,
@@ -872,6 +891,16 @@
 			path = Metal;
 			sourceTree = "<group>";
 		};
+		D6B52CE716666A46002A339D /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D6B52CE816666A46002A339D /* SVProgressHUD.bundle */,
+				D6B52CE916666A46002A339D /* SVProgressHUD.h */,
+				D6B52CEA16666A46002A339D /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1074,6 +1103,7 @@
 				D6B52CC416658624002A339D /* toolbarBackgroundLandscape@2x.png in Resources */,
 				D6B52CC516658624002A339D /* topShadow.png in Resources */,
 				D6B52CC616658624002A339D /* topShadow@2x.png in Resources */,
+				D6B52CEB16666A46002A339D /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1123,6 +1153,10 @@
 				D6B52CC716658624002A339D /* SSMetalTheme.m in Sources */,
 				D6B52CC816658624002A339D /* SSSmallButton.m in Sources */,
 				D6B52CC916658624002A339D /* SSTheme.m in Sources */,
+				D6B52CEC16666A46002A339D /* SVProgressHUD.m in Sources */,
+				D6B52CEF16666C22002A339D /* Product.xcdatamodeld in Sources */,
+				D6B52D0216667383002A339D /* ProductListTableViewController.m in Sources */,
+				D6B52D05166673E3002A339D /* ProductTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1313,6 +1347,19 @@
 			defaultConfigurationName = Distribution;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D6B52CED16666C21002A339D /* Product.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6B52CEE16666C22002A339D /* Product.xcdatamodel */,
+			);
+			currentVersion = D6B52CEE16666C22002A339D /* Product.xcdatamodel */;
+			path = Product.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D65BFBB614C348CA00B50263 /* Project object */;
 }

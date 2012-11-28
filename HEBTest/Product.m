@@ -18,11 +18,6 @@
     return @[@"name", @"price", @"imgLink",@"desc", @"category", @"psDate", @"eDate"];
 }
 
-+(NSDateFormatter *)dateFormatter
-{
-    return nil;
-}
-
 -(id)init
 {
     self = [super init];
@@ -59,24 +54,6 @@
     
     [self setValuesForKeysWithDictionary:dictionary];
     return self;
-}
-
--(void)processImageDataWithBlock:(void (^)(NSData *imageData))processImage
-{
-    NSString *url = imgLink;
-    NSString *new_url = [url stringByReplacingOccurrencesOfString:@"small" withString:@"large"];
-    dispatch_queue_t callerQueue = dispatch_get_current_queue();
-    dispatch_queue_t downloadQueue = dispatch_queue_create("thumbnail download", NULL);
-    dispatch_async(downloadQueue, ^{
-        NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:new_url]];
-        if (imgData == nil) {
-            imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-        }
-        dispatch_async(callerQueue, ^{
-            processImage(imgData); 
-        });
-    });
-    dispatch_release(downloadQueue);
 }
 
 @end

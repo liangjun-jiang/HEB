@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Product : NSObject
+@interface Product : NSManagedObject
 {
     
     NSString *category;
@@ -30,7 +31,6 @@
 
 +(NSArray *)keys;
 -(id)initWithDictionary:(NSDictionary *)dictionary;
--(void)processImageDataWithBlock:(void (^)(NSData *imageData))processImage;
 -(id)initWithInfo:(NSString*)iName price:(NSString*)iPrice image:(NSString *)iImage desc:(NSString*)iDesc category:(NSString *)iCategory psDate:(NSString *)iDate endingDate:(NSString *)eDate;
 
 @end

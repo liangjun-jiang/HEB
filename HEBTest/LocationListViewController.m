@@ -136,6 +136,15 @@
  
 }
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if  (self){
+        UITabBarItem *item = [[self navigationController] tabBarItem];
+        [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabPower];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {

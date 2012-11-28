@@ -12,9 +12,11 @@
 @interface ShoppingListViewController : UITableViewController
 {
     NSMutableArray *_selectedProducts;
+    NSManagedObjectContext *managedObjectContext;
 }
 
 @property (nonatomic, strong) NSMutableArray *selectedProducts;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 +(NSString *)pathForDocumentsWithName:(NSString *)documentName;
 

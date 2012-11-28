@@ -15,6 +15,7 @@
 
 @implementation ShoppingListViewController
 @synthesize selectedProducts=_selectedProducts;
+@synthesize managedObjectContext;
 
 
 +(NSString *)pathForDocumentsWithName:(NSString *)documentName
@@ -35,16 +36,19 @@
             path = [[NSBundle mainBundle] pathForResource:@"Products" ofType:@"plist"];
             productDicts = [NSMutableArray arrayWithContentsOfFile:path];
         }
-        _selectedProducts = [[NSMutableArray alloc] initWithCapacity:[productDicts count]-1];
-        
-        if ([productDicts isKindOfClass:[NSArray class]]) {
-            [productDicts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                if (idx != 0) {
-                    Product *product = [[Product alloc] initWithDictionary:(NSDictionary *)obj];
-                    [_selectedProducts addObject:product];
-                }
-            }];
+        if ([productDicts count] >1) {
+            _selectedProducts = [[NSMutableArray alloc] initWithCapacity:[productDicts count]-1];
+            
+            if ([productDicts isKindOfClass:[NSArray class]]) {
+                [productDicts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    if (idx != 0) {
+                        Product *product = [[Product alloc] initWithDictionary:(NSDictionary *)obj];
+                        [_selectedProducts addObject:product];
+                    }
+                }];
+            }
         }
+       
     }
     return _selectedProducts;
 }
@@ -93,16 +97,16 @@
 
 
 #pragma mark - View lifecycle
-- (void)awakeFromNib
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    [super awakeFromNib];
-    
-    UITabBarItem *item = [[self navigationController] tabBarItem];
-    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabDoor];
-    
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if  (self){
+        
+        
+    }
+    return self;
 }
-
-
 
 - (void)viewDidLoad
 {
@@ -130,9 +134,10 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    NSLog(@"vie will appear");
     [self displayedSelectProducts];
     [self.tableView reloadData];
-    [super viewWillAppear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

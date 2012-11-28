@@ -59,16 +59,16 @@
 }
 
 #pragma mark - View lifecycle
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    UITabBarItem *item = [[self navigationController] tabBarItem];
-    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabPower];
-    
-    
-}
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if  (self){
+        
+        
+    }
+    return self;
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {

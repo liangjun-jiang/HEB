@@ -49,6 +49,8 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        UITabBarItem *item = [[self navigationController] tabBarItem];
+        [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabControls];
         
     }
     return self;
@@ -62,7 +64,8 @@
     if (onOff) {
         defaultHeb = [defaults objectForKey:@"DEFAULT_HEB_NAME"];
     }
-    
+    UITabBarItem *item = [[self navigationController] tabBarItem];
+    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabControls];
 }
 
 - (void)viewDidLoad

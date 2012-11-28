@@ -10,6 +10,7 @@
 #import "ShoppingListViewController.h"
 #import "Product.h"
 #import "UIImageView+AFNetworking.h"
+#import "SVProgressHUD.h"
 
 @implementation ProductDetailViewController
 @synthesize product=_product;
@@ -21,6 +22,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+
     }
     return self;
 }
@@ -48,15 +51,10 @@
     [plist writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
     
     if (error) {
-        NSLog(@"Error writting file at path: %@; error was %@", path, error);
+        [SVProgressHUD showErrorWithStatus:@"Something wrong"];
+    } else {
+        [SVProgressHUD showSuccessWithStatus:@"Success."];
     }
-    
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Confirmed"
-                                                      message:@"Item added."
-                                                     delegate:nil
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-    [message show];
 }
 
 #pragma mark - View lifecycle
@@ -66,7 +64,7 @@
     [super viewDidLoad];
     
     
-    UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Add Into List" style:UIBarButtonItemStylePlain target:self action:@selector(addIntoList:)];
+    UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addIntoList:)];
     self.navigationItem.rightBarButtonItem = shoppingListBarItem;
     
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 5, 271, 30)];
