@@ -147,7 +147,7 @@
       
     }
      
-    [self performSelector:@selector(updateTable) withObject:nil afterDelay:5];
+//    [self performSelector:@selector(updateTable) withObject:nil afterDelay:5];
 }
 
 
@@ -313,6 +313,7 @@
             }];
         }        
     }];
+    [self.tableView reloadData];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {

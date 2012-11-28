@@ -9,7 +9,6 @@
 #import "LJHWAppDelegate.h"
 #import "LocationListViewController.h"
 #import "ProductListTableViewController.h"
-#import "ShoppingListViewController.h"
 #import "SettingsViewController.h"
 #import "ProductCategoryViewController.h"
 #import "SSTheme.h"
@@ -55,12 +54,8 @@
     UINavigationController *navController1 = [[UINavigationController alloc]
                                               initWithRootViewController:viewController1];
     
-//    viewController2 = [[ShoppingListViewController alloc]
-//                       initWithNibName:@"ShoppingListViewController" bundle:nil];
-//    ((ShoppingListViewController*)viewController2).managedObjectContext = context;
-    
     viewController2 = [[ProductListTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    ((ShoppingListViewController*)viewController2).managedObjectContext = context;
+    ((ProductListTableViewController*)viewController2).managedObjectContext = context;
     
     UINavigationController *navController2 = [[UINavigationController alloc]
                                               initWithRootViewController:viewController2];

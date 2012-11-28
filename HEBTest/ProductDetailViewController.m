@@ -78,6 +78,8 @@
 {
     [super viewDidLoad];
     
+    self.title = @"Product Detail";
+    
     UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addIntoList:)];
     self.navigationItem.rightBarButtonItem = shoppingListBarItem;
     

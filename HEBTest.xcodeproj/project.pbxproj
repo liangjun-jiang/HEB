@@ -20,8 +20,6 @@
 		D65BFBE614C34AB300B50263 /* LocationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BFBE414C34AB300B50263 /* LocationListViewController.xib */; };
 		D65BFBF814C35CB800B50263 /* ProductCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBF614C35CB700B50263 /* ProductCategoryViewController.m */; };
 		D65BFBF914C35CB800B50263 /* ProductCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BFBF714C35CB700B50263 /* ProductCategoryViewController.xib */; };
-		D65BFBFD14C35E4E00B50263 /* ShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFBFB14C35E4E00B50263 /* ShoppingListViewController.m */; };
-		D65BFBFE14C35E4E00B50263 /* ShoppingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BFBFC14C35E4E00B50263 /* ShoppingListViewController.xib */; };
 		D65BFC0214C35F5500B50263 /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFC0014C35F5500B50263 /* ProductDetailViewController.m */; };
 		D65BFC0314C35F5500B50263 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BFC0114C35F5500B50263 /* ProductDetailViewController.xib */; };
 		D65BFC0714C3603200B50263 /* ProductCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFC0514C3603100B50263 /* ProductCategoryCell.m */; };
@@ -237,9 +235,6 @@
 		D65BFBF514C35CB700B50263 /* ProductCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategoryViewController.h; sourceTree = "<group>"; };
 		D65BFBF614C35CB700B50263 /* ProductCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategoryViewController.m; sourceTree = "<group>"; };
 		D65BFBF714C35CB700B50263 /* ProductCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCategoryViewController.xib; sourceTree = "<group>"; };
-		D65BFBFA14C35E4E00B50263 /* ShoppingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListViewController.h; sourceTree = "<group>"; };
-		D65BFBFB14C35E4E00B50263 /* ShoppingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListViewController.m; sourceTree = "<group>"; };
-		D65BFBFC14C35E4E00B50263 /* ShoppingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingListViewController.xib; sourceTree = "<group>"; };
 		D65BFBFF14C35F5500B50263 /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
 		D65BFC0014C35F5500B50263 /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
 		D65BFC0114C35F5500B50263 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
@@ -639,9 +634,6 @@
 				D6B52D04166673E3002A339D /* ProductTableViewCell.h */,
 				D6B52D0016667383002A339D /* ProductListTableViewController.m */,
 				D6B52D0116667383002A339D /* ProductListTableViewController.h */,
-				D65BFBFA14C35E4E00B50263 /* ShoppingListViewController.h */,
-				D65BFBFB14C35E4E00B50263 /* ShoppingListViewController.m */,
-				D65BFBFC14C35E4E00B50263 /* ShoppingListViewController.xib */,
 			);
 			name = "Shopping List";
 			sourceTree = "<group>";
@@ -960,7 +952,6 @@
 				D65BFBCE14C348CA00B50263 /* InfoPlist.strings in Resources */,
 				D65BFBE614C34AB300B50263 /* LocationListViewController.xib in Resources */,
 				D65BFBF914C35CB800B50263 /* ProductCategoryViewController.xib in Resources */,
-				D65BFBFE14C35E4E00B50263 /* ShoppingListViewController.xib in Resources */,
 				D65BFC0314C35F5500B50263 /* ProductDetailViewController.xib in Resources */,
 				D65BFC1614C3648700B50263 /* heb_red.jpg in Resources */,
 				D6A22E2614C52A8D002848E2 /* AboutListViewController.xib in Resources */,
@@ -1123,7 +1114,6 @@
 				D65BFBD414C348CA00B50263 /* LJHWAppDelegate.m in Sources */,
 				D65BFBE514C34AB300B50263 /* LocationListViewController.m in Sources */,
 				D65BFBF814C35CB800B50263 /* ProductCategoryViewController.m in Sources */,
-				D65BFBFD14C35E4E00B50263 /* ShoppingListViewController.m in Sources */,
 				D65BFC0214C35F5500B50263 /* ProductDetailViewController.m in Sources */,
 				D65BFC0714C3603200B50263 /* ProductCategoryCell.m in Sources */,
 				D65BFC2514C37D4300B50263 /* ProductCell.m in Sources */,
