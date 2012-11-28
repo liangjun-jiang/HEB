@@ -17,6 +17,7 @@
 #import "ASIHTTPRequest.h"
 #import "GDataXMLNode.h"
 #import "GDataXMLElement-Extras.h"
+#import "SSTheme.h"
 
 
 @implementation ProductCategoryViewController
@@ -58,6 +59,17 @@
 }
 
 #pragma mark - View lifecycle
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    UITabBarItem *item = [[self navigationController] tabBarItem];
+    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabPower];
+    
+    
+}
+
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

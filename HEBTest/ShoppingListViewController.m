@@ -31,22 +31,19 @@
         NSString *path = [[self class] pathForDocumentsWithName:@"Products.plist"];
         NSArray *productDicts = [NSMutableArray arrayWithContentsOfFile:path];
         if (productDicts == nil) {
-            NSLog(@"can't read path: %@", path);
+//            NSLog(@"can't read path: %@", path);
             path = [[NSBundle mainBundle] pathForResource:@"Products" ofType:@"plist"];
             productDicts = [NSMutableArray arrayWithContentsOfFile:path];
         }
-        _selectedProducts = [[NSMutableArray alloc] initWithCapacity:[productDicts count]];
+        _selectedProducts = [[NSMutableArray alloc] initWithCapacity:[productDicts count]-1];
         
         if ([productDicts isKindOfClass:[NSArray class]]) {
-            for (NSDictionary *currDict in productDicts)
-            {
-                if ([currDict isKindOfClass:[NSDictionary class]]) {
-                    Product *product = [[Product alloc] initWithDictionary:currDict];
+            [productDicts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                if (idx != 0) {
+                    Product *product = [[Product alloc] initWithDictionary:(NSDictionary *)obj];
                     [_selectedProducts addObject:product];
-                    
                 }
-            }
-
+            }];
         }
     }
     return _selectedProducts;
@@ -96,6 +93,16 @@
 
 
 #pragma mark - View lifecycle
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    UITabBarItem *item = [[self navigationController] tabBarItem];
+    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabDoor];
+    
+}
+
+
 
 - (void)viewDidLoad
 {
@@ -107,9 +114,6 @@
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.tableView setRowHeight:62.0];
-    
-    [self displayedSelectProducts];
-    
 }
 
 -(void)setEditing:(BOOL)editing animated:(BOOL)animated
@@ -126,6 +130,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self displayedSelectProducts];
     [self.tableView reloadData];
     [super viewWillAppear:animated];
 }
@@ -156,7 +161,7 @@
     if ([_selectedProducts count] == 0) {
         return 1;
     }
-    return [_selectedProducts count];;
+    return [_selectedProducts count]-1;;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -174,28 +179,42 @@
         cell.detailTextLabel.font = detailFont;
         
     }
-    __block Product *product = [self selectedProducts ][indexPath.row];
+    
+    static NSDateFormatter *dateFormatter = nil;
+    if (dateFormatter == nil) {
+        dateFormatter =  [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    }
+   
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-    cell.textLabel.text = (product.name == nil)?@"":product.name;
+    
     cell.detailTextLabel.numberOfLines = 0;
     cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, before %@",product.price, product.eDate];
+    
+    
     UIImage *holderImage = [UIImage imageNamed:@"NoImage"];
     cell.imageView.image = [holderImage imageScaledToSize:CGSizeMake(42.0, 49.0)];
     
-    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    
-    dispatch_async(concurrentQueue, ^{        
-//        UIImage *image = nil;
-//        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:product.imgLink]]];
+    if ([[self selectedProducts] count] > 0) {
+        __block Product *product = [self selectedProducts ][indexPath.row];
+        cell.textLabel.text = (product.name == nil)?@"":product.name;
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [cell.imageView setImageWithURL:[NSURL URLWithString:product.imgLink]];
-//            cell.imageView.image = [image imageScaledToSize:CGSizeMake(42.0, 49.0)];
-        });
-    }); 
+        NSArray *dateArray = [product.eDate componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+//        NSLog(@"http: '%@'", [dateArray objectAtIndex:0]);
+        
+        NSString *dateString = [dateArray objectAtIndex:0];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, before %@",product.price, dateString];
     
+        dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+        dispatch_async(concurrentQueue, ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [cell.imageView setImageWithURL:[NSURL URLWithString:product.imgLink]];
+            });
+        });
+    }
+     
     return cell;
 }
 
@@ -232,14 +251,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
      ProductDetailViewController *detailViewController = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil];
-    
     detailViewController.product = _selectedProducts[indexPath.row];
     detailViewController.flag = 1;
-//    detailViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     [self.navigationController presentModalViewController:detailViewController animated:YES];
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
      
 }

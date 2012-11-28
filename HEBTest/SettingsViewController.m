@@ -34,6 +34,16 @@
     return [self initWithStyle:UITableViewStyleGrouped];
 }
 
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    UITabBarItem *item = [[self navigationController] tabBarItem];
+    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabControls];
+    
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];

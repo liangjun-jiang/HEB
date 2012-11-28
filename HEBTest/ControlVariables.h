@@ -27,7 +27,8 @@
 //#define kHorizontalTableBackgroundColor [UIColor colorWithRed:0.988235294 green:0.0470588235 blue:0.007843 alpha:1.0]
 #define kHorizontalTableBackgroundColor [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]
 
-#define kHorizontalTableSelectedBackgroundColor [UIColor colorWithRed:0.988235294 green:0.0470588235 blue:0.007843 alpha:1.0]
+//#define kHorizontalTableSelectedBackgroundColor [UIColor colorWithRed:0.988235294 green:0.0470588235 blue:0.007843 alpha:1.0]
+#define kHorizontalTableSelectedBackgroundColor [UIColor clearColor]
 
 
 

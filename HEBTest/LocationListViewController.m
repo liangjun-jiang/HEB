@@ -126,6 +126,16 @@
 }
 
 #pragma mark - View lifecycle
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    UITabBarItem *item = [[self navigationController] tabBarItem];
+    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabPower];
+    
+ 
+}
+
 
 - (void)viewDidLoad
 {

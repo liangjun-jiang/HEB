@@ -898,7 +898,7 @@
 		D65BFBB614C348CA00B50263 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Harvard University Extension School";
 			};
 			buildConfigurationList = D65BFBB914C348CA00B50263 /* Build configuration list for PBXProject "HEBTest" */;

@@ -26,7 +26,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-//    [SSThemeManager customizeAppAppearance];
+    [SSThemeManager customizeAppAppearance];
     
     UIViewController *viewController1, *viewController2, *viewController3;
     
