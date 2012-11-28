@@ -159,11 +159,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == ABOUT_SECTION) {
-        AboutListViewController *about = [[AboutListViewController alloc] initWithNibName:@"AboutListViewController" bundle:nil];
-        [self.navigationController pushViewController:about animated:YES];
+        if (indexPath.row == 0) {
+            AboutListViewController *about = [[AboutListViewController alloc] initWithNibName:@"AboutListViewController" bundle:nil];
+            [self.navigationController pushViewController:about animated:YES];
+        } else {
+            [self displayComposerSheet];
+        }
+        
     } else {
-        [self displayComposerSheet];
-//        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
 }
 
