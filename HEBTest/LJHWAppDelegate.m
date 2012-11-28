@@ -8,6 +8,7 @@
 
 #import "LJHWAppDelegate.h"
 #import "LocationListViewController.h"
+#import "ProductListTableViewController.h"
 #import "ShoppingListViewController.h"
 #import "SettingsViewController.h"
 #import "ProductCategoryViewController.h"
@@ -15,11 +16,6 @@
 #import <CoreData/CoreData.h>
 
 @interface LJHWAppDelegate()
-@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-@property (nonatomic, readonly) NSString *applicationDocumentsDirectory;
 
 
 @end
@@ -59,8 +55,11 @@
     UINavigationController *navController1 = [[UINavigationController alloc]
                                               initWithRootViewController:viewController1];
     
-    viewController2 = [[ShoppingListViewController alloc]
-                       initWithNibName:@"ShoppingListViewController" bundle:nil];
+//    viewController2 = [[ShoppingListViewController alloc]
+//                       initWithNibName:@"ShoppingListViewController" bundle:nil];
+//    ((ShoppingListViewController*)viewController2).managedObjectContext = context;
+    
+    viewController2 = [[ProductListTableViewController alloc] initWithStyle:UITableViewStylePlain];
     ((ShoppingListViewController*)viewController2).managedObjectContext = context;
     
     UINavigationController *navController2 = [[UINavigationController alloc]

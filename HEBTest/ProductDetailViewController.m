@@ -11,6 +11,8 @@
 #import "Product.h"
 #import "UIImageView+AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "SavedProduct.h"
+#import "LJHWAppDelegate.h"
 
 @implementation ProductDetailViewController
 @synthesize product=_product;
@@ -38,23 +40,43 @@
 
 -(void)addIntoList:(id)sender
 {
+    id appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = ((LJHWAppDelegate*)appDelegate).managedObjectContext;
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                         NSUserDomainMask, 
-                                                         YES);
-    NSString *path = [paths[0] stringByAppendingPathComponent:@"Products.plist"];
-    NSMutableArray *productDicts = [NSMutableArray arrayWithContentsOfFile:path];
-    [productDicts addObject:[self.product dictionaryWithValuesForKeys:[Product keys]]];
-    NSString *plist = [productDicts description];
-    NSError *error = nil;
- 
-    [plist writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    SavedProduct *savedProduct = [NSEntityDescription insertNewObjectForEntityForName:@"SavedProduct" inManagedObjectContext:context];
     
-    if (error) {
+    savedProduct.name = self.product.name;
+    savedProduct.desc = self.product.desc;
+    savedProduct.eDate = self.product.eDate;
+    savedProduct.price = self.product.price;
+    savedProduct.category = self.product.category;
+    
+	NSError *error = nil;
+	if (![savedProduct.managedObjectContext save:&error]) {
+		/*
+		 Replace this implementation with code to handle the error appropriately.
+		 
+		 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+		 */
         [SVProgressHUD showErrorWithStatus:@"Something wrong"];
-    } else {
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		abort();
+	} else
         [SVProgressHUD showSuccessWithStatus:@"Success."];
-    }
+
+    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+//                                                         NSUserDomainMask, 
+//                                                         YES);
+//    NSString *path = [paths[0] stringByAppendingPathComponent:@"Products.plist"];
+//    NSMutableArray *productDicts = [NSMutableArray arrayWithContentsOfFile:path];
+//    [productDicts addObject:[self.product dictionaryWithValuesForKeys:[Product keys]]];
+//    NSString *plist = [productDicts description];
+//    NSError *error = nil;
+// 
+//    [plist writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
+
+ 
 }
 
 #pragma mark - View lifecycle

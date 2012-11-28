@@ -12,7 +12,7 @@
 
 #import "ProductListTableViewController.h"
 #import "ProductDetailViewController.h"
-#import "Product.h"
+#import "SavedProduct.h"
 #import "ProductTableViewCell.h"
 
 @implementation ProductListTableViewController
@@ -22,6 +22,16 @@
 
 #pragma mark -
 #pragma mark UIViewController overrides
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        
+    }
+    
+    return self;
+}
+
 
 - (void)viewDidLoad {
     // Configure the navigation bar
@@ -29,9 +39,6 @@
 
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-//    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add:)];
-//    self.navigationItem.rightBarButtonItem = addButtonItem;
-//    
     // Set the table view's row height
     self.tableView.rowHeight = 44.0;
 	
@@ -55,39 +62,10 @@
 
 
 #pragma mark -
-#pragma mark Recipe support
-
-//- (void)add:(id)sender {
-//     // To add a new recipe, create a RecipeAddViewController.  Present it as a modal view so that the user's focus is on the task of adding the recipe; wrap the controller in a navigation controller to provide a navigation bar for the Done and Save buttons (added by the RecipeAddViewController in its viewDidLoad method).
-//    RecipeAddViewController *addController = [[RecipeAddViewController alloc] initWithNibName:@"RecipeAddView" bundle:nil];
-//    addController.delegate = self;
-//	
-//	Recipe *newRecipe = [NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
-//	addController.recipe = newRecipe;
-//
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addController];
-//    [self presentModalViewController:navigationController animated:YES];
-//    
-//    [navigationController release];
-//    [addController release];
-//}
-//
-//
-//- (void)recipeAddViewController:(RecipeAddViewController *)recipeAddViewController didAddRecipe:(Recipe *)recipe {
-//    if (recipe) {        
-//        // Show the recipe in a new view controller
-//        [self showRecipe:recipe animated:NO];
-//    }
-//    
-//    // Dismiss the modal add recipe view controller
-//    [self dismissModalViewControllerAnimated:YES];
-//}
-
-
-- (void)showProduct:(Product *)product animated:(BOOL)animated
+- (void)showProduct:(SavedProduct *)savedProduct animated:(BOOL)animated
 {
     ProductDetailViewController *detailViewController = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil];
-    detailViewController.product = product;
+//    detailViewController.product = product;
     detailViewController.flag = 1;
     
     [self.navigationController pushViewController:detailViewController animated:animated];
@@ -138,14 +116,14 @@
 
 - (void)configureCell:(ProductTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     // Configure the cell
-	Product *product = (Product *)[fetchedResultsController objectAtIndexPath:indexPath];
+	SavedProduct *product = (SavedProduct *)[fetchedResultsController objectAtIndexPath:indexPath];
     cell.product = product;
 }
 
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	Product *product = (Product *)[fetchedResultsController objectAtIndexPath:indexPath];
+	SavedProduct *product = (SavedProduct *)[fetchedResultsController objectAtIndexPath:indexPath];
     
     [self showProduct:product animated:YES];
 }
@@ -255,8 +233,6 @@
 	// The fetch controller has sent all current change notifications, so tell the table view to process all updates.
 	[self.tableView endUpdates];
 }
-
-
 
 
 @end

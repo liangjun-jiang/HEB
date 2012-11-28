@@ -209,6 +209,7 @@
 		D6B52CEF16666C22002A339D /* Product.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6B52CED16666C21002A339D /* Product.xcdatamodeld */; };
 		D6B52D0216667383002A339D /* ProductListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52D0016667383002A339D /* ProductListTableViewController.m */; };
 		D6B52D05166673E3002A339D /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52D03166673E3002A339D /* ProductTableViewCell.m */; };
+		D6B52D0816667A5A002A339D /* SavedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52D0716667A59002A339D /* SavedProduct.m */; };
 		D6C25FEA14DDD5BD00831E70 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FE914DDD5BD00831E70 /* add_button.png */; };
 		D6C25FF514DE072700831E70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF414DE072700831E70 /* Default.png */; };
 		D6C25FF714DE072E00831E70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF614DE072E00831E70 /* Default@2x.png */; };
@@ -469,6 +470,8 @@
 		D6B52D0116667383002A339D /* ProductListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListTableViewController.h; sourceTree = "<group>"; };
 		D6B52D03166673E3002A339D /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
 		D6B52D04166673E3002A339D /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
+		D6B52D0616667A59002A339D /* SavedProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedProduct.h; sourceTree = "<group>"; };
+		D6B52D0716667A59002A339D /* SavedProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedProduct.m; sourceTree = "<group>"; };
 		D6C25FE914DDD5BD00831E70 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		D6C25FF414DE072700831E70 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		D6C25FF614DE072E00831E70 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -552,6 +555,8 @@
 				D65BFBCA14C348CA00B50263 /* Supporting Files */,
 				D65BFC1B14C378E300B50263 /* View Controllers */,
 				D6B52CED16666C21002A339D /* Product.xcdatamodeld */,
+				D6B52D0616667A59002A339D /* SavedProduct.h */,
+				D6B52D0716667A59002A339D /* SavedProduct.m */,
 			);
 			path = HEBTest;
 			sourceTree = "<group>";
@@ -1157,6 +1162,7 @@
 				D6B52CEF16666C22002A339D /* Product.xcdatamodeld in Sources */,
 				D6B52D0216667383002A339D /* ProductListTableViewController.m in Sources */,
 				D6B52D05166673E3002A339D /* ProductTableViewCell.m in Sources */,
+				D6B52D0816667A5A002A339D /* SavedProduct.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

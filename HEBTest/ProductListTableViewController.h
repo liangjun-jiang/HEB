@@ -12,7 +12,7 @@
 
 #import <CoreData/CoreData.h>
 
-@class Product;
+@class SavedProduct;
 @class ProductTableViewCell;
 
 @interface ProductListTableViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
@@ -24,7 +24,7 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-- (void)showProduct:(Product *)recipe animated:(BOOL)animated;
+- (void)showProduct:(SavedProduct *)savedProduct animated:(BOOL)animated;
 - (void)configureCell:(ProductTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end

@@ -8,10 +8,10 @@
  
  */
 
-#import "Product.h"
+#import "SavedProduct.h"
 
 @interface ProductTableViewCell : UITableViewCell {
-    Product *product;
+    SavedProduct *product;
     
     UIImageView *imageView;
     UILabel *nameLabel;
@@ -19,7 +19,7 @@
     UILabel *eDateLabel;
 }
 
-@property (nonatomic, retain) Product *product;
+@property (nonatomic, retain) SavedProduct *product;
 
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) UILabel *nameLabel;

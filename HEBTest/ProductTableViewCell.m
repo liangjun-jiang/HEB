@@ -131,7 +131,7 @@
 #pragma mark -
 #pragma mark Recipe set accessor
 
-- (void)setProduct:(Product *)newProduct {
+- (void)setProduct:(SavedProduct *)newProduct {
     if (newProduct != product) {
         product = newProduct;
 	}
