@@ -58,6 +58,7 @@
 }
 
 @property (readonly) CLLocationCoordinate2D currentUserCoordiante;
+@property (nonatomic, strong) NSString *msg;
 -(void)startUpdatingCurrentLocation;
 -(void)queryGooglePlace:(CLLocationCoordinate2D) coord;
 @end
@@ -68,7 +69,7 @@
 @synthesize isSettingDefault;
 @synthesize locationManger = _locationManger;
 @synthesize nearbyHebs;
-
+@synthesize msg;
 #pragma mark - Data Fetch
 -(void)fetchData:(NSData *)responseData
 {
@@ -77,6 +78,7 @@
     
     self.nearbyHebs = json[@"results"];
     if ([self.nearbyHebs count] == 0) {
+        msg = @"Didn't find any H-E-B, but you can still test drive the app.";
         self.navigationItem.rightBarButtonItem.enabled = NO;
     } else
         self.navigationItem.rightBarButtonItem.enabled = YES;
@@ -125,6 +127,9 @@
 
     self.clearsSelectionOnViewWillAppear = YES;
  
+    
+    msg = @"Searching for nearby H-E-B...";
+    
     self.navigationItem.title = @"Nearby H-E-Bs";
     UIBarButtonItem *mapBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(displayPlacemarks)];
     self.navigationItem.rightBarButtonItem = mapBarItem;
@@ -235,9 +240,7 @@
         
     }
     if ([self.nearbyHebs count] > 0) {
-        cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
-        cell.textLabel.numberOfLines = 0;
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+        
         NSDictionary *hebAddress = self.nearbyHebs[indexPath.row];
         NSString *queriedAddress = hebAddress[@"vicinity"];
         if (isSettingDefault) {
@@ -252,7 +255,11 @@
         }
         cell.textLabel.text = queriedAddress;
     } else
-       cell.textLabel.text = @"Hold on...";
+       cell.textLabel.text = msg;
+    
+    cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
     
     return cell;
 }

@@ -71,4 +71,11 @@
             [self setNeedsLayout];
         }
 }
+
+
+- (void)dealloc
+{
+    [self.thumbNail removeObserver:self forKeyPath:@"image"];
+}
+
 @end
