@@ -55,20 +55,10 @@
         cell = [[ProductCell alloc] initWithFrame:CGRectMake(0, 0, kCellWidth, kCellHeight)];
     }
     
-    __block Product *currentProduct = (self.products)[indexPath.row];
+    Product *currentProduct = (self.products)[indexPath.row];
     
-    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    
-    dispatch_async(concurrentQueue, ^{        
-        UIImage *image = nil;
-        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:currentProduct.imgLink]]];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [cell.thumbNail setImageWithURL:[NSURL URLWithString:currentProduct.imgLink] placeholderImage:nil];
-//            [cell.thumbNail setImage:image]; 
-        });
-    }); 
-    
+    [cell.thumbNail setImageWithURL:[NSURL URLWithString:currentProduct.imgLink] placeholderImage:nil];
+    [cell setNeedsLayout];
     cell.titleLabel.text = currentProduct.name;
     
     return cell;

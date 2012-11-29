@@ -16,10 +16,7 @@
 }
 
 @property (strong,nonatomic) CLLocationManager *locationManger;
-@property (strong,nonatomic) NSMutableArray *locationList;
 @property (strong, nonatomic) NSIndexPath *selectedPath;
-@property (strong, nonatomic) NSMutableArray *placeMarkers;
-@property (strong, nonatomic) NSMutableArray *latlongs;
 @property (strong, nonatomic) NSArray *nearbyHebs;
 @property (assign, nonatomic) BOOL isSettingDefault;
 

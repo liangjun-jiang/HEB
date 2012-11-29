@@ -312,14 +312,12 @@
             }];
         }        
     }];
-//    [self.tableView reloadData];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
     
     NSError *error = [request error];
     [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
-//    NSLog(@"Error: %@", error);
 }
 
 - (void)viewDidUnload

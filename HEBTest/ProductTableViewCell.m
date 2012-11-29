@@ -35,6 +35,7 @@
         [self.detailTextLabel setTextColor:[UIColor blackColor]];
         [self.detailTextLabel setHighlightedTextColor:[UIColor whiteColor]];
         
+        //http://blog.slaunchaman.com/2011/08/14/cocoa-touch-circumventing-uitableviewcell-redraw-issues-with-multithreading/
         if (self) {
             [[self imageView] addObserver:self
                                forKeyPath:@"image"

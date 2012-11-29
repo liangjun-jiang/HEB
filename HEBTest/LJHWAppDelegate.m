@@ -45,23 +45,23 @@
 	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     UIViewController *viewController1, *viewController2, *viewController3;
-    CGFloat lat = 0.0f;
-    CGFloat lgt = 0.0f;
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if  ([defaults boolForKey:@"USE_DEFAULT_LOCATION"]){
         if ([defaults objectForKey:@"DEFAULT_HEB_ID"]) {
             viewController1 = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
             ((ProductCategoryViewController *)viewController1).storeId = [defaults objectForKey:@"DEFAULT_HEB_ID"];
-            lat = [defaults floatForKey:@"latitude"];
-            lgt = [defaults floatForKey:@"longtitude"];
+            NSDictionary *heb = [defaults objectForKey:@"DEFAULT_HEB"];
+            NSDictionary *geometry = heb[@"geometry"];
+            CLLocationCoordinate2D location = CLLocationCoordinate2DMake([geometry[@"location"][@"lat"] doubleValue], [geometry[@"location"][@"lng"] doubleValue]);
             
-            CLLocationCoordinate2D coordiante = CLLocationCoordinate2DMake(lat, lgt);
-            CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:coordiante radius:1000.0 identifier:[NSString stringWithFormat:@"%f, %f", lat, lgt]];
+            NSLog(@"region this : %.3f, %.3f",location.latitude, location.longitude);
+            CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:1000.0 identifier:heb[@"vicinity"]];
 			[locationManager startMonitoringForRegion:newRegion desiredAccuracy:kCLLocationAccuracyBest];
             
         }
     }else {
-        viewController2 = [[LocationListViewController alloc]
+        viewController1 = [[LocationListViewController alloc]
                        initWithNibName:@"LocationListViewController" bundle:nil];
         ((LocationListViewController*)viewController1).isSettingDefault = NO;
     }

@@ -14,6 +14,8 @@
 #import "SSTheme.h"
 #import "SVProgressHUD.h"
 
+
+#pragma mark - Helper method
 @interface NSDictionary(JSONCategories)
 +(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString *)urlAddress;
 -(NSData *)toJSON;
@@ -47,29 +49,24 @@
 @end
 
 #define kFarWestAustinCoordinate CLLocationCoordinate2DMake(30.3488, -97.7554)
+
 @interface LocationListViewController() {
 @private
    
     CLLocationCoordinate2D _currentUserCoordinate;
-    
-    UIActivityIndicatorView *_currentLocationActivityIndicator;
-    
-    NSURLConnection *theConnection;
     NSArray *parsedLocation;
 }
 
 @property (readonly) CLLocationCoordinate2D currentUserCoordiante;
 -(void)startUpdatingCurrentLocation;
-//-(IBAction)performCoordinateGeocode:(id)sender;
 -(void)queryGooglePlace:(CLLocationCoordinate2D) coord;
 @end
 
 @implementation LocationListViewController
-@synthesize selectedPath=_selectedPath;
+//@synthesize selectedPath=_selectedPath;
 @synthesize currentUserCoordiante=_currentUserCoordiante;
 @synthesize isSettingDefault;
 @synthesize locationManger = _locationManger;
-@synthesize latlongs;
 @synthesize nearbyHebs;
 
 #pragma mark - Data Fetch
@@ -136,22 +133,15 @@
     
     [SSThemeManager customizeTableView:self.tableView];
     
-    self.locationList = [NSMutableArray arrayWithArray:@[@"Wait a second ..."]];
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     [self startUpdatingCurrentLocation];
     
-    if (isSettingDefault) {
-        // we need to find out this guy
-        self.selectedPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    } else
-        self.selectedPath = [NSIndexPath indexPathForRow:0 inSection:0];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    _locationList = nil;
-    _placeMarkers = nil;
+  
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -170,6 +160,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - UI control
 
 -(void)lockUI
 {
@@ -182,7 +173,7 @@
 
 -(void)displayPlacemarks
 {
-    if (self.placeMarkers!= nil && [self.placeMarkers count]!=0) {
+    if (self.nearbyHebs!= nil && [self.nearbyHebs count]!=0) {
         dispatch_async(dispatch_get_main_queue(),^ {
             [self unlockUI];
             PlacemarkViewController *plvc = [[PlacemarkViewController alloc] initWithPlacemarks:self.nearbyHebs];
@@ -211,12 +202,7 @@
                 message = [error description];
                 break;
         }
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Error occured" 
-                                                         message:message 
-                                                        delegate:nil 
-                                               cancelButtonTitle:@"OK" 
-                                               otherButtonTitles:nil];
-        [alert show];
+        [SVProgressHUD showErrorWithStatus:message];
         
     });
 }
@@ -232,11 +218,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-//    if ((self.locationList !=nil) && [self.locationList count] >0)
-//        return [self.locationList count];
-//    else 
-//        return 1;
     if ((self.nearbyHebs !=nil) && [self.nearbyHebs count] >0)
         return [self.nearbyHebs count];
     else
@@ -271,8 +252,7 @@
         }
         cell.textLabel.text = queriedAddress;
     } else
-       cell.textLabel.text = @"Didn't find any H-E-B, you can still test drive this app";
-    
+       cell.textLabel.text = @"Hold on...";
     
     return cell;
 }
@@ -283,18 +263,31 @@
 {
     if (isSettingDefault) {
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
-        if (indexPath != self.selectedPath) {
+        
+        NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
+        NSDictionary *storedHEB = [defaults objectForKey:@"DEFAULT_HEB"];
+        
+        __block NSInteger cellIndex = 0;
+        [self.nearbyHebs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([storedHEB[@"id"] isEqualToString:((NSDictionary*)obj)[@"id"]]) {
+                cellIndex = idx;
+                *stop = YES;
+            }
+        }];
+        
+        NSDictionary *currentHEB = self.nearbyHebs[indexPath.row];
+      
+        if (![storedHEB isEqualToDictionary:currentHEB]) {
             UITableViewCell *newCell = [tableView  cellForRowAtIndexPath:indexPath];
             newCell.accessoryType = UITableViewCellAccessoryCheckmark;
-            UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:self.selectedPath];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:cellIndex inSection:0];
+            UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:indexPath];
             oldCell.accessoryType = UITableViewCellAccessoryNone;
-            self.selectedPath = indexPath;
-            
-            NSDictionary *heb = self.nearbyHebs[indexPath.row];
+         
             NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
             [defaults setObject:[self findStoreId:indexPath.row] forKey:@"DEFAULT_HEB_ID"];
             [defaults setObject:newCell.textLabel.text forKey:@"DEFAULT_HEB_NAME"];
-            [defaults setObject:heb forKey:@"DEFAULT_HEB"];
+            [defaults setObject:currentHEB forKey:@"DEFAULT_HEB"];
             [defaults synchronize];
             
         }
@@ -309,7 +302,7 @@
         }
         else 
         {
-            self.selectedPath = indexPath;
+//            self.selectedPath = indexPath;
             ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
             productCategoryViewController.storeId = [self findStoreId:indexPath.row];
             [self.navigationController pushViewController:productCategoryViewController animated:YES];
@@ -334,12 +327,14 @@
         _locationManger.purpose = @"This is used to search your nearby H-E-B";
     }
     [_locationManger startUpdatingLocation];
+    
+//    [SVProgressHUD showWithStatus:@"Searching..."];
 }
 
 -(void)stopUpdatingCurrentLocation
 {
+//    [SVProgressHUD dismiss];
     [_locationManger stopUpdatingLocation];
-    
 }
 
 
@@ -363,9 +358,7 @@
     // stop updating
     [self stopUpdatingCurrentLocation];
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
-    
     [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
-    
 }
 
 
