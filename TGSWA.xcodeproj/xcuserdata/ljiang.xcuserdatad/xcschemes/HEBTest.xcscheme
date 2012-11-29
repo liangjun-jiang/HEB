@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D65BFBBE14C348CA00B50263"
-               BuildableName = "HEB Weekly ADs.app"
+               BuildableName = "Texas Grocery Store Weekly Ads.app"
                BlueprintName = "TGSWA"
                ReferencedContainer = "container:TGSWA.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D65BFBBE14C348CA00B50263"
-            BuildableName = "HEB Weekly ADs.app"
+            BuildableName = "Texas Grocery Store Weekly Ads.app"
             BlueprintName = "TGSWA"
             ReferencedContainer = "container:TGSWA.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D65BFBBE14C348CA00B50263"
-            BuildableName = "HEB Weekly ADs.app"
+            BuildableName = "Texas Grocery Store Weekly Ads.app"
             BlueprintName = "TGSWA"
             ReferencedContainer = "container:TGSWA.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D65BFBBE14C348CA00B50263"
-            BuildableName = "HEB Weekly ADs.app"
+            BuildableName = "Texas Grocery Store Weekly Ads.app"
             BlueprintName = "TGSWA"
             ReferencedContainer = "container:TGSWA.xcodeproj">
          </BuildableReference>

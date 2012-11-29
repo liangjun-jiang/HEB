@@ -109,8 +109,11 @@
         self.navigationItem.rightBarButtonItem = nil;
        
     }
+//    NSLog(@"the link :%@",self.product.imgLink);
     
-    [self.productImage setImageWithURL:[NSURL URLWithString:self.product.imgLink] placeholderImage:nil];
+    NSString *largeImageLink = [self.product.imgLink stringByReplacingOccurrencesOfString:@"small"
+                                                                               withString:@"large"];
+    [self.productImage setImageWithURL:[NSURL URLWithString:largeImageLink] placeholderImage:nil];
     
 }
 
