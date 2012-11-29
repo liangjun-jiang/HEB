@@ -55,7 +55,7 @@
             NSDictionary *geometry = heb[@"geometry"];
             CLLocationCoordinate2D location = CLLocationCoordinate2DMake([geometry[@"location"][@"lat"] doubleValue], [geometry[@"location"][@"lng"] doubleValue]);
             
-            NSLog(@"region this : %.3f, %.3f",location.latitude, location.longitude);
+//            NSLog(@"region this : %.3f, %.3f",location.latitude, location.longitude);
             CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:1000.0 identifier:heb[@"vicinity"]];
 			[locationManager startMonitoringForRegion:newRegion desiredAccuracy:kCLLocationAccuracyBest];
             

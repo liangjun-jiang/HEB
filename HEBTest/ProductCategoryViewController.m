@@ -146,7 +146,7 @@
       
     }
      
-    [self performSelector:@selector(updateTable) withObject:nil afterDelay:3];
+    [self performSelector:@selector(updateTable) withObject:nil afterDelay:5];
 }
 
 
@@ -396,7 +396,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProductCategoryCell *cell = (self.reusableCells)[indexPath.section];   
+    ProductCategoryCell *cell = (self.reusableCells)[indexPath.section];
+    [cell setNeedsLayout];
     return cell;
 }
 
