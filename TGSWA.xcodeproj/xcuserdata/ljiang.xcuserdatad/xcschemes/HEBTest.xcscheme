@@ -7,17 +7,17 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "NO"
+            buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
-            buildForAnalyzing = "NO">
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D65BFBBE14C348CA00B50263"
                BuildableName = "HEB Weekly ADs.app"
-               BlueprintName = "HEBTest"
-               ReferencedContainer = "container:HEBTest.xcodeproj">
+               BlueprintName = "TGSWA"
+               ReferencedContainer = "container:TGSWA.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,14 +34,14 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D65BFBBE14C348CA00B50263"
             BuildableName = "HEB Weekly ADs.app"
-            BlueprintName = "HEBTest"
-            ReferencedContainer = "container:HEBTest.xcodeproj">
+            BlueprintName = "TGSWA"
+            ReferencedContainer = "container:TGSWA.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D65BFBBE14C348CA00B50263"
             BuildableName = "HEB Weekly ADs.app"
-            BlueprintName = "HEBTest"
-            ReferencedContainer = "container:HEBTest.xcodeproj">
+            BlueprintName = "TGSWA"
+            ReferencedContainer = "container:TGSWA.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D65BFBBE14C348CA00B50263"
             BuildableName = "HEB Weekly ADs.app"
-            BlueprintName = "HEBTest"
-            ReferencedContainer = "container:HEBTest.xcodeproj">
+            BlueprintName = "TGSWA"
+            ReferencedContainer = "container:TGSWA.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -81,6 +81,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Distribution"
+      customArchiveName = "H-E-B Weekly ADs"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

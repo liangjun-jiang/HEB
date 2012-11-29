@@ -219,14 +219,14 @@
 		D63592AA14DE297300C1E45C /* ad2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad2.png; sourceTree = "<group>"; };
 		D63592AD14DE297D00C1E45C /* about2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about2.png; sourceTree = "<group>"; };
 		D63592AF14DE298600C1E45C /* list2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list2.png; sourceTree = "<group>"; };
-		D65BFBBF14C348CA00B50263 /* HEB Weekly ADs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HEB Weekly ADs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D65BFBBF14C348CA00B50263 /* Texas Grocery Store Weekly Ads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Texas Grocery Store Weekly Ads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65BFBC314C348CA00B50263 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D65BFBC514C348CA00B50263 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D65BFBC714C348CA00B50263 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D65BFBCB14C348CA00B50263 /* HEBTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HEBTest-Info.plist"; sourceTree = "<group>"; };
+		D65BFBCB14C348CA00B50263 /* TGSWA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TGSWA-Info.plist"; sourceTree = "<group>"; };
 		D65BFBCD14C348CA00B50263 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D65BFBCF14C348CA00B50263 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D65BFBD114C348CA00B50263 /* HEBTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HEBTest-Prefix.pch"; sourceTree = "<group>"; };
+		D65BFBD114C348CA00B50263 /* TGSWA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TGSWA-Prefix.pch"; sourceTree = "<group>"; };
 		D65BFBD214C348CA00B50263 /* LJHWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJHWAppDelegate.h; sourceTree = "<group>"; };
 		D65BFBD314C348CA00B50263 /* LJHWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJHWAppDelegate.m; sourceTree = "<group>"; };
 		D65BFBE214C34AB300B50263 /* LocationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationListViewController.h; sourceTree = "<group>"; };
@@ -515,7 +515,7 @@
 		D65BFBC014C348CA00B50263 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D65BFBBF14C348CA00B50263 /* HEB Weekly ADs.app */,
+				D65BFBBF14C348CA00B50263 /* Texas Grocery Store Weekly Ads.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -561,10 +561,10 @@
 			children = (
 				D69BB93014D513D00053F7AA /* Products.plist */,
 				D66F1DF914D3BF21009C627A /* street_store.plist */,
-				D65BFBCB14C348CA00B50263 /* HEBTest-Info.plist */,
+				D65BFBCB14C348CA00B50263 /* TGSWA-Info.plist */,
 				D65BFBCC14C348CA00B50263 /* InfoPlist.strings */,
 				D65BFBCF14C348CA00B50263 /* main.m */,
-				D65BFBD114C348CA00B50263 /* HEBTest-Prefix.pch */,
+				D65BFBD114C348CA00B50263 /* TGSWA-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -901,9 +901,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D65BFBBE14C348CA00B50263 /* HEBTest */ = {
+		D65BFBBE14C348CA00B50263 /* TGSWA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D65BFBDD14C348CA00B50263 /* Build configuration list for PBXNativeTarget "HEBTest" */;
+			buildConfigurationList = D65BFBDD14C348CA00B50263 /* Build configuration list for PBXNativeTarget "TGSWA" */;
 			buildPhases = (
 				D65BFBBB14C348CA00B50263 /* Sources */,
 				D65BFBBC14C348CA00B50263 /* Frameworks */,
@@ -913,9 +913,9 @@
 			);
 			dependencies = (
 			);
-			name = HEBTest;
+			name = TGSWA;
 			productName = HEBTest;
-			productReference = D65BFBBF14C348CA00B50263 /* HEB Weekly ADs.app */;
+			productReference = D65BFBBF14C348CA00B50263 /* Texas Grocery Store Weekly Ads.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -927,7 +927,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Harvard University Extension School";
 			};
-			buildConfigurationList = D65BFBB914C348CA00B50263 /* Build configuration list for PBXProject "HEBTest" */;
+			buildConfigurationList = D65BFBB914C348CA00B50263 /* Build configuration list for PBXProject "TGSWA" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -939,7 +939,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D65BFBBE14C348CA00B50263 /* HEBTest */,
+				D65BFBBE14C348CA00B50263 /* TGSWA */,
 			);
 		};
 /* End PBXProject section */
@@ -1184,7 +1184,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "7BACA096-4847-49F6-B736-84BB09BED8C7";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7BACA096-4847-49F6-B736-84BB09BED8C7";
@@ -1199,19 +1199,19 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HEBTest/HEBTest-Prefix.pch";
+				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SOURCE_ROOT)/SBJson/Build\"",
 				);
-				INFOPLIST_FILE = "HEBTest/HEBTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				INFOPLIST_FILE = "HEBTest/TGSWA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-ObjC-all_load",
 				);
-				PRODUCT_NAME = "HEB Weekly ADs";
+				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -1237,7 +1237,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47452A96-95AE-46D4-90A5-41C00FE6306E";
 				SDKROOT = iphoneos;
@@ -1258,7 +1258,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "7BACA096-4847-49F6-B736-84BB09BED8C7";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1275,20 +1275,20 @@
 				FRAMEWORK_SEARCH_PATHS = /usr/include/libxml2;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HEBTest/HEBTest-Prefix.pch";
+				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SOURCE_ROOT)/SBJson/Build\"",
 				);
-				INFOPLIST_FILE = "HEBTest/HEBTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				INFOPLIST_FILE = "HEBTest/TGSWA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-ObjC-all_load",
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC-all_load";
-				PRODUCT_NAME = "HEB Weekly ADs";
+				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1301,19 +1301,19 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HEBTest/HEBTest-Prefix.pch";
+				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SOURCE_ROOT)/SBJson/Build\"",
 				);
-				INFOPLIST_FILE = "HEBTest/HEBTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				INFOPLIST_FILE = "HEBTest/TGSWA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-ObjC-all_load",
 				);
-				PRODUCT_NAME = "HEB Weekly ADs";
+				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1322,7 +1322,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D65BFBB914C348CA00B50263 /* Build configuration list for PBXProject "HEBTest" */ = {
+		D65BFBB914C348CA00B50263 /* Build configuration list for PBXProject "TGSWA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D65BFBDB14C348CA00B50263 /* Debug */,
@@ -1332,7 +1332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Distribution;
 		};
-		D65BFBDD14C348CA00B50263 /* Build configuration list for PBXNativeTarget "HEBTest" */ = {
+		D65BFBDD14C348CA00B50263 /* Build configuration list for PBXNativeTarget "TGSWA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D65BFBDE14C348CA00B50263 /* Debug */,
