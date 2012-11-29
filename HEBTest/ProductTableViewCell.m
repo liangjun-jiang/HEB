@@ -34,6 +34,8 @@
         [self.detailTextLabel setFont:[UIFont systemFontOfSize:12.0]];
         [self.detailTextLabel setTextColor:[UIColor blackColor]];
         [self.detailTextLabel setHighlightedTextColor:[UIColor whiteColor]];
+        self.detailTextLabel.numberOfLines = 0;
+        self.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
         
         //http://blog.slaunchaman.com/2011/08/14/cocoa-touch-circumventing-uitableviewcell-redraw-issues-with-multithreading/
         if (self) {
@@ -68,7 +70,7 @@
     [self.imageView setImageWithURL:[NSURL URLWithString:product.imgLink]];
 	
     self.textLabel.text = product.name;
-    self.detailTextLabel.text =  [NSString stringWithFormat:@"%@, ending:%@", product.price, product.eDate];
+    self.detailTextLabel.text =  [NSString stringWithFormat:@"%@, expired on:%@", product.price, product.eDate];
     
     
 }

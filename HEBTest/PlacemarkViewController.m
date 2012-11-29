@@ -71,18 +71,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Map";
 
-    for (id currentObj in self.placemarks){
-        if ([currentObj isKindOfClass:[NSDictionary class]]) {
-            NSDictionary *obj = ((NSDictionary *)currentObj)[@"geometry"];
-            CLLocationCoordinate2D location;
-            
-            location.latitude = [obj[@"location"][@"lat"] doubleValue];
-            location.longitude = [obj[@"location"][@"lng"] doubleValue];
-            MapViewAnnotation *aN = [[MapViewAnnotation alloc] initWithTitle:@"H-E-B" withCoordinate:location];
-            [self.mapView addAnnotation:aN];
-        }
-    }
+    [self.placemarks enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSDictionary *currentObj = ((NSDictionary *)obj)[@"geometry"];
+        CLLocationCoordinate2D location;
+        
+        location.latitude = [currentObj[@"location"][@"lat"] doubleValue];
+        location.longitude = [currentObj[@"location"][@"lng"] doubleValue];
+        MapViewAnnotation *aN = [[MapViewAnnotation alloc] initWithTitle:@"H-E-B" withCoordinate:location];
+        [self.mapView addAnnotation:aN];
+    }];
+    
 }
 
 - (void)viewDidUnload
