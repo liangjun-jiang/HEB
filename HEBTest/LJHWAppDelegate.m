@@ -252,20 +252,20 @@
 #pragma mark - Region Managerment
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region  {
-	NSString *event = [NSString stringWithFormat:@"didEnterRegion %@ at %@", region.identifier, [NSDate date]];
+	NSString *event = [NSString stringWithFormat:@"You are entering the HEB at %@. Have your shopping list ready.", region.identifier];
 	[self updateWithEvent:event];
 }
 
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
-	NSString *event = [NSString stringWithFormat:@"didExitRegion %@ at %@", region.identifier, [NSDate date]];
+	NSString *event = [NSString stringWithFormat:@"You are leaving the HEB at %@. Do you have everything?", region.identifier];
 	
 	[self updateWithEvent:event];
 }
 
 
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error {
-	NSString *event = [NSString stringWithFormat:@"monitoringDidFailForRegion %@: %@", region.identifier, error];
+	NSString *event = [NSString stringWithFormat:@"Monitoring fail for HEB location %@", region.identifier];
 	[self updateWithEvent:event];
 }
 
