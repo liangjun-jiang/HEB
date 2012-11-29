@@ -106,9 +106,15 @@
     return YES;
 }
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    // This doesn't help clean up the badge shown
+ 	application.applicationIconBadgeNumber = 0;
+}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    application.applicationIconBadgeNumber = 0;
+    
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
@@ -247,22 +253,31 @@
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region  {
 	NSString *event = [NSString stringWithFormat:@"didEnterRegion %@ at %@", region.identifier, [NSDate date]];
-	
-//	[self updateWithEvent:event];
+	[self updateWithEvent:event];
 }
 
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
 	NSString *event = [NSString stringWithFormat:@"didExitRegion %@ at %@", region.identifier, [NSDate date]];
 	
-//	[self updateWithEvent:event];
+	[self updateWithEvent:event];
 }
 
 
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error {
 	NSString *event = [NSString stringWithFormat:@"monitoringDidFailForRegion %@: %@", region.identifier, error];
-	
-//	[self updateWithEvent:event];
+	[self updateWithEvent:event];
+}
+
+- (void)updateWithEvent:(NSString *)message {
+    
+    // Update the icon badge number.
+	[UIApplication sharedApplication].applicationIconBadgeNumber++;
+
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertBody = message;
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 }
 
 @end
