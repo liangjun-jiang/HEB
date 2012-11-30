@@ -139,7 +139,7 @@
                 
             }
             regionCell.textLabel.text = title;
-            if (onOff) {
+            if (onOff && row == 0) {
                 regionCell.detailTextLabel.text = defaultHeb;
             } else {
                 regionCell.detailTextLabel.text = desc;
@@ -219,8 +219,11 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (tagNumber == 100) {
         if (settingSwitch.on) {
-            [defaults setBool:YES forKey:@"USE_DEFAULT_LOCATION"];
-            [defaults synchronize];
+            
+            // we have to wait until the user has set a specific heb
+            // in this case, delegete could be a better approach
+//            [defaults setBool:YES forKey:@"USE_DEFAULT_LOCATION"];
+//            [defaults synchronize];
             
             LocationListViewController *locationList = [[LocationListViewController alloc] initWithNibName:@"LocationListViewController" bundle:nil];
             locationList.isSettingDefault = YES;

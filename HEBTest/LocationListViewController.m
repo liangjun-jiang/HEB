@@ -275,7 +275,7 @@
 {
     NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
     if (isSettingDefault) {
-        if ([self.nearbyHebs count] == 0) {
+        if ([self.nearbyHebs count] > 0) {
         
             [tableView deselectRowAtIndexPath:indexPath animated:NO];
             
@@ -298,15 +298,15 @@
                 UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:indexPath];
                 oldCell.accessoryType = UITableViewCellAccessoryNone;
              
+                // I DN'T GET IT WHY HAS TO BE SET SO  MANY TIMES
+                [defaults setBool:YES forKey:@"USE_DEFAULT_LOCATION"];
                 [defaults setObject:[self findStoreId:indexPath.row] forKey:@"DEFAULT_HEB_ID"];
                 [defaults setObject:newCell.textLabel.text forKey:@"DEFAULT_HEB_NAME"];
                 [defaults setObject:currentHEB forKey:@"DEFAULT_HEB"];
-                
+                [defaults synchronize];
             }
-        } else  {
-            [defaults setBool:NO forKey:@"USE_DEFAULT_LOCATION"];
         }
-        [defaults synchronize];
+        
     } else {
         if ([self.nearbyHebs count] == 0) {
             ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
