@@ -77,6 +77,9 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     
     self.nearbyHebs = json[@"results"];
+//    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"vlaue",@"key", nil];
+    
+//    NSLog(@"",dict objectForKey:@"key");
     if ([self.nearbyHebs count] == 0) {
         msg = @"Didn't find any H-E-B, but you can still test drive the app.";
         self.navigationItem.rightBarButtonItem.enabled = NO;

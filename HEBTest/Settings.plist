@@ -10,6 +10,18 @@
 			<key>title</key>
 			<string>Set a default HEB</string>
 		</dict>
+		<dict>
+			<key>default</key>
+			<integer>0</integer>
+			<key>title</key>
+			<string>Use Geo-fenceing</string>
+		</dict>
+		<dict>
+			<key>default</key>
+			<integer>1000</integer>
+			<key>title</key>
+			<string>Geo-fencing Distance</string>
+		</dict>
 	</array>
 	<key>About</key>
 	<array>

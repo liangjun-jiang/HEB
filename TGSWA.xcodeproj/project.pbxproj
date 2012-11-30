@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D63592AB14DE297300C1E45C /* ad2.png in Resources */ = {isa = PBXBuildFile; fileRef = D63592AA14DE297300C1E45C /* ad2.png */; };
-		D63592AE14DE297D00C1E45C /* about2.png in Resources */ = {isa = PBXBuildFile; fileRef = D63592AD14DE297D00C1E45C /* about2.png */; };
-		D63592B014DE298600C1E45C /* list2.png in Resources */ = {isa = PBXBuildFile; fileRef = D63592AF14DE298600C1E45C /* list2.png */; };
 		D65BFBC414C348CA00B50263 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC314C348CA00B50263 /* UIKit.framework */; };
 		D65BFBC614C348CA00B50263 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC514C348CA00B50263 /* Foundation.framework */; };
 		D65BFBC814C348CA00B50263 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC714C348CA00B50263 /* CoreGraphics.framework */; };
@@ -23,7 +20,6 @@
 		D65BFC0214C35F5500B50263 /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFC0014C35F5500B50263 /* ProductDetailViewController.m */; };
 		D65BFC0314C35F5500B50263 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BFC0114C35F5500B50263 /* ProductDetailViewController.xib */; };
 		D65BFC0714C3603200B50263 /* ProductCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFC0514C3603100B50263 /* ProductCategoryCell.m */; };
-		D65BFC1614C3648700B50263 /* heb_red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D65BFC0F14C3648700B50263 /* heb_red.jpg */; };
 		D65BFC2514C37D4300B50263 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFC2314C37D4300B50263 /* ProductCell.m */; };
 		D65BFC3014C37DEB00B50263 /* ProductNameLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BFC2F14C37DEB00B50263 /* ProductNameLabel.m */; };
 		D66F1DF814D3B698009C627A /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F1DF714D3B698009C627A /* UIImage+Resizing.m */; };
@@ -208,7 +204,6 @@
 		D6B52D0216667383002A339D /* ProductListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52D0016667383002A339D /* ProductListTableViewController.m */; };
 		D6B52D05166673E3002A339D /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52D03166673E3002A339D /* ProductTableViewCell.m */; };
 		D6B52D0816667A5A002A339D /* SavedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52D0716667A59002A339D /* SavedProduct.m */; };
-		D6C25FEA14DDD5BD00831E70 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FE914DDD5BD00831E70 /* add_button.png */; };
 		D6C25FF514DE072700831E70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF414DE072700831E70 /* Default.png */; };
 		D6C25FF714DE072E00831E70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C25FF614DE072E00831E70 /* Default@2x.png */; };
 		D6E1511F165FE3EE003F8147 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E1511E165FE3EE003F8147 /* Default-568h@2x.png */; };
@@ -953,19 +948,14 @@
 				D65BFBE614C34AB300B50263 /* LocationListViewController.xib in Resources */,
 				D65BFBF914C35CB800B50263 /* ProductCategoryViewController.xib in Resources */,
 				D65BFC0314C35F5500B50263 /* ProductDetailViewController.xib in Resources */,
-				D65BFC1614C3648700B50263 /* heb_red.jpg in Resources */,
 				D6A22E2614C52A8D002848E2 /* AboutListViewController.xib in Resources */,
 				D6A22E2D14C52C86002848E2 /* fruit_basket.png in Resources */,
 				D6A22E3E14C5B916002848E2 /* PlacemarkViewController.xib in Resources */,
 				D66F1DFA14D3BF21009C627A /* street_store.plist in Resources */,
 				D69BB93114D513D00053F7AA /* Products.plist in Resources */,
 				D6712AAD14D5BB3F0095C326 /* NoImage.png in Resources */,
-				D6C25FEA14DDD5BD00831E70 /* add_button.png in Resources */,
 				D6C25FF514DE072700831E70 /* Default.png in Resources */,
 				D6C25FF714DE072E00831E70 /* Default@2x.png in Resources */,
-				D63592AB14DE297300C1E45C /* ad2.png in Resources */,
-				D63592AE14DE297D00C1E45C /* about2.png in Resources */,
-				D63592B014DE298600C1E45C /* list2.png in Resources */,
 				D69CB90C14DFAF950018119B /* icon1.png in Resources */,
 				D69CB90E14DFAF9D0018119B /* icon2.png in Resources */,
 				D6E1511F165FE3EE003F8147 /* Default-568h@2x.png in Resources */,

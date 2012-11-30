@@ -18,40 +18,31 @@
 #define ABOUT_SECTION 1
 
 #define TITLE @"title"
-#define VALUE @"placeholder"
+
+#define kFont [UIFont boldSystemFontOfSize:14.0];
 
 @interface SettingsViewController ()<UITextFieldDelegate,MFMailComposeViewControllerDelegate>
 @property (nonatomic, strong) NSMutableDictionary *contentList;
 @property (nonatomic, strong) NSString *defaultHeb;
 @property (nonatomic, assign) BOOL onOff;
+@property (nonatomic, retain, readonly) UISlider *sliderCtl;
 @end
 
 @implementation SettingsViewController
 @synthesize contentList;
 @synthesize defaultHeb, onOff;
+@synthesize sliderCtl;
 
 - (id)init {
     return [self initWithStyle:UITableViewStyleGrouped];
 }
 
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    UITabBarItem *item = [[self navigationController] tabBarItem];
-    [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabControls];
-    
-}
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        UITabBarItem *item = [[self navigationController] tabBarItem];
-        [SSThemeManager customizeTabBarItem:item forTab:SSThemeTabControls];
-        
     }
     return self;
 }
@@ -80,11 +71,9 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
+    self.contentList = [NSDictionary dictionaryWithContentsOfFile:plistPath];
     
-    self.contentList = [NSPropertyListSerialization propertyListWithData:[NSData dataWithContentsOfFile:plistPath]
-                                                                 options:NSPropertyListMutableContainers
-                                                                  format:NULL
-                                                                   error:NULL];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -127,20 +116,45 @@
     NSString *title = [[[self.contentList objectForKey:key] objectAtIndex:row] objectForKey:TITLE];
     
     if (section == REGION_SECTION) {
-        SwitchTableCell *regionCell = (SwitchTableCell*)[tableView dequeueReusableCellWithIdentifier:RegionCellIdentifier];
-        if (regionCell == nil) {
-            regionCell = [[SwitchTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:RegionCellIdentifier];
+        if  (row !=2){
+            SwitchTableCell *regionCell = (SwitchTableCell*)[tableView dequeueReusableCellWithIdentifier:RegionCellIdentifier];
+            if (regionCell == nil) {
+                regionCell = [[SwitchTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:RegionCellIdentifier];
+                
+            }
+            regionCell.textLabel.text = title;
+            if (onOff) {
+                regionCell.detailTextLabel.text = defaultHeb;
+                regionCell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
+            }
+            
+            regionCell.onOffSwitch.on = onOff;
+            regionCell.onOffSwitch.tag = 100 + row;
+            [regionCell.onOffSwitch addTarget:self action:@selector(onSwitch:) forControlEvents:UIControlEventValueChanged];
+            cell = regionCell;
+        } else {
+            static NSString *kDisplayCell_ID = @"DisplayCellID";
+            cell = [self.tableView dequeueReusableCellWithIdentifier:kDisplayCell_ID];
+            if (cell == nil)
+            {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kDisplayCell_ID];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            }
+            else
+            {
+                // the cell is being recycled, remove old embedded controls
+                UIView *viewToRemove = nil;
+                viewToRemove = [cell.contentView viewWithTag:110];
+                if (viewToRemove)
+                    [viewToRemove removeFromSuperview];
+            }
+            
+            cell.textLabel.text = title;
+            cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+            UIControl *control = self.sliderCtl;
+            [cell.contentView addSubview:control];
             
         }
-        regionCell.textLabel.text = title;
-        if (onOff) {
-            regionCell.detailTextLabel.text = defaultHeb;
-            regionCell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
-        }
-        
-        regionCell.onOffSwitch.on = onOff;
-        [regionCell.onOffSwitch addTarget:self action:@selector(onSwitch:) forControlEvents:UIControlEventValueChanged];
-        cell = regionCell;
     } else {
         UITableViewCell *aboutCell = [tableView dequeueReusableCellWithIdentifier:AboutCellIdentifier];
         if (aboutCell == nil) {
@@ -151,6 +165,7 @@
         cell = aboutCell;
     }
     
+    cell.textLabel.font = kFont;
     return cell;
 }
 
@@ -174,22 +189,32 @@
 - (void)onSwitch:(id)sender
 {
     UISwitch *settingSwitch = (UISwitch *)sender;
-    
+    NSUInteger tagNumber = settingSwitch.tag;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (settingSwitch.on) {
-        [defaults setBool:YES forKey:@"USE_DEFAULT_LOCATION"];
-        [defaults synchronize];
-        
-        LocationListViewController *locationList = [[LocationListViewController alloc] initWithNibName:@"LocationListViewController" bundle:nil];
-        locationList.isSettingDefault = YES;
-        [self.navigationController pushViewController:locationList animated:YES];
-    } else {
-        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-        cell.detailTextLabel.text = @"";
-        [defaults setBool:NO forKey:@"USE_DEFAULT_LOCATION"];
-        [defaults synchronize];
+    if (tagNumber == 100) {
+        if (settingSwitch.on) {
+            [defaults setBool:YES forKey:@"USE_DEFAULT_LOCATION"];
+            [defaults synchronize];
+            
+            LocationListViewController *locationList = [[LocationListViewController alloc] initWithNibName:@"LocationListViewController" bundle:nil];
+            locationList.isSettingDefault = YES;
+            [self.navigationController pushViewController:locationList animated:YES];
+        } else {
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+            cell.detailTextLabel.text = @"";
+            [defaults setBool:NO forKey:@"USE_DEFAULT_LOCATION"];
+            [defaults synchronize];
+            
+        }
+    } else if (tagNumber == 101) {
+        if  (settingSwitch.on)
+            [defaults setBool:YES forKey:@"USE_GEOFENCING"];
+        else
+            [defaults setBool:NO forKey:@"USER_GEOFENCING"];
         
     }
+    
+    
 }
 
 
@@ -201,7 +226,6 @@
     
     [picker setSubject:@"My feedback"];
     
-    
     // Set up recipients
     NSArray *toRecipients = [NSArray arrayWithObject:@"2010.longhorn@gmail.com"];
     
@@ -210,7 +234,8 @@
     NSString *emailBody = @"Thank you for your feedback!";
     [picker setMessageBody:emailBody isHTML:NO];
     
-    [self presentModalViewController:picker animated:YES];
+    [self presentViewController:picker animated:YES completion:nil];
+    
 }
 
 
@@ -237,7 +262,41 @@
 //            message.text = @"Result: not sent";
             break;
     }
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UISlider
+- (void)sliderAction:(id)sender
+{
+    UISlider *slider = (UISlider *)sender;
+    [slider setValue:((int)((slider.value + 25) / 50) * 50) animated:NO];
+    
+}
+
+#define kSliderHeight			7.0
+- (UISlider *)sliderCtl
+{
+    if (sliderCtl == nil)
+    {
+        CGRect frame = CGRectMake(174.0, 12.0, 120.0, kSliderHeight);
+        sliderCtl = [[UISlider alloc] initWithFrame:frame];
+        [sliderCtl addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
+        
+        // in case the parent view draws with a custom color or gradient, use a transparent color
+        sliderCtl.backgroundColor = [UIColor clearColor];
+        
+        sliderCtl.minimumValue = 50.0;
+        sliderCtl.maximumValue = 2000.0;
+        sliderCtl.continuous = YES;
+    
+        sliderCtl.value = 50.0;
+        
+		// Add an accessibility label that describes the slider.
+		[sliderCtl setAccessibilityLabel:NSLocalizedString(@"StandardSlider", @"")];
+		
+		sliderCtl.tag = 110;	// tag this view for later so we can remove it from recycled table cells
+    }
+    return sliderCtl;
 }
 
 @end
