@@ -18,6 +18,8 @@
 #define ABOUT_SECTION 1
 
 #define TITLE @"title"
+#define kDESC @"desc"
+
 
 #define kFont [UIFont boldSystemFontOfSize:14.0];
 
@@ -67,14 +69,22 @@
     self.title = NSLocalizedString(@"Settings", @"Settings");
     
     [SSThemeManager customizeTableView:self.tableView];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
  
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
     self.contentList = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:@"USER_GEOFENCING"]) {
+        [defaults setDouble:self.sliderCtl.value forKey:@"GEOFENCING_RADIUS"];
+        [defaults synchronize];
+    }
     
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -116,6 +126,8 @@
     NSString *title = [[[self.contentList objectForKey:key] objectAtIndex:row] objectForKey:TITLE];
     
     if (section == REGION_SECTION) {
+        NSString *desc = [[[self.contentList objectForKey:key] objectAtIndex:row] objectForKey:kDESC];
+        
         if  (row !=2){
             SwitchTableCell *regionCell = (SwitchTableCell*)[tableView dequeueReusableCellWithIdentifier:RegionCellIdentifier];
             if (regionCell == nil) {
@@ -125,8 +137,10 @@
             regionCell.textLabel.text = title;
             if (onOff) {
                 regionCell.detailTextLabel.text = defaultHeb;
-                regionCell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
+            } else {
+                regionCell.detailTextLabel.text = desc;
             }
+            regionCell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
             
             regionCell.onOffSwitch.on = onOff;
             regionCell.onOffSwitch.tag = 100 + row;
@@ -137,7 +151,7 @@
             cell = [self.tableView dequeueReusableCellWithIdentifier:kDisplayCell_ID];
             if (cell == nil)
             {
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kDisplayCell_ID];
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kDisplayCell_ID];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
             else
@@ -150,8 +164,16 @@
             }
             
             cell.textLabel.text = title;
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            double radius = [defaults doubleForKey:@"GEOFENCING_RADIUS"];
+            
+            if ((radius - 0) < 10.0) {
+                radius = 1000;
+            }
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f mile", radius*0.00062] ;
             cell.textLabel.font = [UIFont systemFontOfSize:14.0];
             UIControl *control = self.sliderCtl;
+            control.enabled = onOff;
             [cell.contentView addSubview:control];
             
         }
@@ -207,10 +229,15 @@
             
         }
     } else if (tagNumber == 101) {
-        if  (settingSwitch.on)
+        if  (settingSwitch.on){
             [defaults setBool:YES forKey:@"USE_GEOFENCING"];
+            self.sliderCtl.enabled = YES;
+        }
         else
+        {
             [defaults setBool:NO forKey:@"USER_GEOFENCING"];
+            self.sliderCtl.enabled = NO;
+        }
         
     }
     
@@ -271,6 +298,9 @@
     UISlider *slider = (UISlider *)sender;
     [slider setValue:((int)((slider.value + 25) / 50) * 50) animated:NO];
     
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f",slider.value];
+    
 }
 
 #define kSliderHeight			7.0
@@ -289,7 +319,7 @@
         sliderCtl.maximumValue = 2000.0;
         sliderCtl.continuous = YES;
     
-        sliderCtl.value = 50.0;
+        sliderCtl.value = 1000.0;
         
 		// Add an accessibility label that describes the slider.
 		[sliderCtl setAccessibilityLabel:NSLocalizedString(@"StandardSlider", @"")];

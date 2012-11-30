@@ -211,9 +211,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D63592AA14DE297300C1E45C /* ad2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad2.png; sourceTree = "<group>"; };
-		D63592AD14DE297D00C1E45C /* about2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about2.png; sourceTree = "<group>"; };
-		D63592AF14DE298600C1E45C /* list2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list2.png; sourceTree = "<group>"; };
 		D65BFBBF14C348CA00B50263 /* Texas Grocery Store Weekly Ads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Texas Grocery Store Weekly Ads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65BFBC314C348CA00B50263 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D65BFBC514C348CA00B50263 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -235,7 +232,6 @@
 		D65BFC0114C35F5500B50263 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
 		D65BFC0414C3603100B50263 /* ProductCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategoryCell.h; sourceTree = "<group>"; };
 		D65BFC0514C3603100B50263 /* ProductCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategoryCell.m; sourceTree = "<group>"; };
-		D65BFC0F14C3648700B50263 /* heb_red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = heb_red.jpg; sourceTree = "<group>"; };
 		D65BFC2114C37B9E00B50263 /* ControlVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariables.h; sourceTree = "<group>"; };
 		D65BFC2214C37D4300B50263 /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
 		D65BFC2314C37D4300B50263 /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
@@ -462,7 +458,6 @@
 		D6B52D04166673E3002A339D /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
 		D6B52D0616667A59002A339D /* SavedProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedProduct.h; sourceTree = "<group>"; };
 		D6B52D0716667A59002A339D /* SavedProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedProduct.m; sourceTree = "<group>"; };
-		D6C25FE914DDD5BD00831E70 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		D6C25FF414DE072700831E70 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		D6C25FF614DE072E00831E70 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		D6E1511E165FE3EE003F8147 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -600,13 +595,8 @@
 				D6B52B871665470F002A339D /* reverse@2x.png */,
 				D6C25FF614DE072E00831E70 /* Default@2x.png */,
 				D6C25FF414DE072700831E70 /* Default.png */,
-				D63592AF14DE298600C1E45C /* list2.png */,
-				D63592AD14DE297D00C1E45C /* about2.png */,
-				D63592AA14DE297300C1E45C /* ad2.png */,
 				D6A22E2C14C52C86002848E2 /* fruit_basket.png */,
-				D65BFC0F14C3648700B50263 /* heb_red.jpg */,
 				D6712AAC14D5BB3F0095C326 /* NoImage.png */,
-				D6C25FE914DDD5BD00831E70 /* add_button.png */,
 			);
 			name = res;
 			sourceTree = "<group>";

@@ -58,9 +58,11 @@
                 NSDictionary *geometry = heb[@"geometry"];
                 CLLocationCoordinate2D location = CLLocationCoordinate2DMake([geometry[@"location"][@"lat"] doubleValue], [geometry[@"location"][@"lng"] doubleValue]);
     //            NSLog(@"region this : %.3f, %.3f",location.latitude, location.longitude);
-                NSNumber *radius = [defaults valueForKey:@"GEO_RADIUS"];
-                double radius_double = (radius ==nil)?1000.0:[radius doubleValue];
-                CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:radius_double identifier:heb[@"vicinity"]];
+                double radius = [defaults doubleForKey:@"GEOFENCING_RADIUS"];
+                if (radius >2000.0) {
+                    radius = 1000.0;
+                }
+                CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:radius identifier:heb[@"vicinity"]];
                 [locationManager startMonitoringForRegion:newRegion];
             }
             

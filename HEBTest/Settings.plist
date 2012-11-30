@@ -5,18 +5,24 @@
 	<key>Default</key>
 	<array>
 		<dict>
+			<key>desc</key>
+			<string></string>
 			<key>default</key>
 			<integer>0</integer>
 			<key>title</key>
 			<string>Set a default HEB</string>
 		</dict>
 		<dict>
+			<key>desc</key>
+			<string>Notifying you when you are close your HEB</string>
 			<key>default</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>title</key>
 			<string>Use Geo-fenceing</string>
 		</dict>
 		<dict>
+			<key>desc</key>
+			<string>default is 0.62 Mile (1kM)</string>
 			<key>default</key>
 			<integer>1000</integer>
 			<key>title</key>
