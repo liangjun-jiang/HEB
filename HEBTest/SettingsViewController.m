@@ -81,8 +81,6 @@
         [defaults setDouble:self.sliderCtl.value forKey:@"GEOFENCING_RADIUS"];
         [defaults synchronize];
     }
-    
-    
 }
 
 
@@ -93,6 +91,12 @@
 }
 
 #pragma mark - Table view data source
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return (indexPath.section == REGION_SECTION)? 60.0 :44.0;
+    
+}
+
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
@@ -141,7 +145,7 @@
                 regionCell.detailTextLabel.text = desc;
             }
             regionCell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
-            
+            regionCell.detailTextLabel.numberOfLines = 2;
             regionCell.onOffSwitch.on = onOff;
             regionCell.onOffSwitch.tag = 100 + row;
             [regionCell.onOffSwitch addTarget:self action:@selector(onSwitch:) forControlEvents:UIControlEventValueChanged];
@@ -171,7 +175,7 @@
                 radius = 1000;
             }
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f mile", radius*0.00062] ;
-            cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+//            cell.textLabel.font = [UIFont systemFontOfSize:14.0];
             UIControl *control = self.sliderCtl;
             control.enabled = onOff;
             [cell.contentView addSubview:control];
@@ -299,7 +303,7 @@
     [slider setValue:((int)((slider.value + 25) / 50) * 50) animated:NO];
     
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f",slider.value];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f mile",slider.value * 0.00062];
     
 }
 

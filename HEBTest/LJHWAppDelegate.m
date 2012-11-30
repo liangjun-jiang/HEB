@@ -59,9 +59,7 @@
                 CLLocationCoordinate2D location = CLLocationCoordinate2DMake([geometry[@"location"][@"lat"] doubleValue], [geometry[@"location"][@"lng"] doubleValue]);
     //            NSLog(@"region this : %.3f, %.3f",location.latitude, location.longitude);
                 double radius = [defaults doubleForKey:@"GEOFENCING_RADIUS"];
-                if (radius >2000.0) {
-                    radius = 1000.0;
-                }
+                
                 CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:radius identifier:heb[@"vicinity"]];
                 [locationManager startMonitoringForRegion:newRegion];
             }

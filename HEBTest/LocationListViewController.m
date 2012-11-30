@@ -77,9 +77,7 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     
     self.nearbyHebs = json[@"results"];
-//    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"vlaue",@"key", nil];
-    
-//    NSLog(@"",dict objectForKey:@"key");
+
     if ([self.nearbyHebs count] == 0) {
         msg = @"Didn't find any H-E-B, but you can still test drive the app.";
         self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -155,9 +153,9 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    if (self.isSettingDefault) {
-        [SVProgressHUD showSuccessWithStatus:@"Will be effective next time you open the app."];
-    }
+//    if (self.isSettingDefault) {
+//        [SVProgressHUD showSuccessWithStatus:@"Will be effective next time you open the app."];
+//    }
     
 }
 
@@ -257,8 +255,12 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         cell.textLabel.text = queriedAddress;
-    } else
-       cell.textLabel.text = msg;
+    } else {
+        cell.textLabel.text = msg;
+         NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setBool:NO forKey:@"USE_DEFAULT_LOCATION"];
+        [defaults synchronize];
+    }
     
     cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
     cell.textLabel.numberOfLines = 0;
@@ -271,40 +273,46 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
     if (isSettingDefault) {
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        if ([self.nearbyHebs count] == 0) {
         
-        NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
-        NSDictionary *storedHEB = [defaults objectForKey:@"DEFAULT_HEB"];
-        
-        __block NSInteger cellIndex = 0;
-        [self.nearbyHebs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            if ([storedHEB[@"id"] isEqualToString:((NSDictionary*)obj)[@"id"]]) {
-                cellIndex = idx;
-                *stop = YES;
-            }
-        }];
-        
-        NSDictionary *currentHEB = self.nearbyHebs[indexPath.row];
-      
-        if (![storedHEB isEqualToDictionary:currentHEB]) {
-            UITableViewCell *newCell = [tableView  cellForRowAtIndexPath:indexPath];
-            newCell.accessoryType = UITableViewCellAccessoryCheckmark;
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:cellIndex inSection:0];
-            UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:indexPath];
-            oldCell.accessoryType = UITableViewCellAccessoryNone;
-         
-            NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setObject:[self findStoreId:indexPath.row] forKey:@"DEFAULT_HEB_ID"];
-            [defaults setObject:newCell.textLabel.text forKey:@"DEFAULT_HEB_NAME"];
-            [defaults setObject:currentHEB forKey:@"DEFAULT_HEB"];
-            [defaults synchronize];
+            [tableView deselectRowAtIndexPath:indexPath animated:NO];
             
+            NSDictionary *storedHEB = [defaults objectForKey:@"DEFAULT_HEB"];
+            
+            __block NSInteger cellIndex = 0;
+            [self.nearbyHebs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                if ([storedHEB[@"id"] isEqualToString:((NSDictionary*)obj)[@"id"]]) {
+                    cellIndex = idx;
+                    *stop = YES;
+                }
+            }];
+            
+            NSDictionary *currentHEB = self.nearbyHebs[indexPath.row];
+          
+            if (![storedHEB isEqualToDictionary:currentHEB]) {
+                UITableViewCell *newCell = [tableView  cellForRowAtIndexPath:indexPath];
+                newCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:cellIndex inSection:0];
+                UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:indexPath];
+                oldCell.accessoryType = UITableViewCellAccessoryNone;
+             
+                [defaults setObject:[self findStoreId:indexPath.row] forKey:@"DEFAULT_HEB_ID"];
+                [defaults setObject:newCell.textLabel.text forKey:@"DEFAULT_HEB_NAME"];
+                [defaults setObject:currentHEB forKey:@"DEFAULT_HEB"];
+                
+            }
+        } else  {
+            [defaults setBool:NO forKey:@"USE_DEFAULT_LOCATION"];
         }
+        [defaults synchronize];
     } else {
         if ([self.nearbyHebs count] == 0) {
             ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
             productCategoryViewController.storeId = @"202";
+            
+            
             [self.navigationController pushViewController:productCategoryViewController animated:YES];
             
             self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -312,7 +320,6 @@
         }
         else 
         {
-//            self.selectedPath = indexPath;
             ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
             productCategoryViewController.storeId = [self findStoreId:indexPath.row];
             [self.navigationController pushViewController:productCategoryViewController animated:YES];

@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>desc</key>
-			<string></string>
+			<string>Will be effective next time you open the app.</string>
 			<key>default</key>
 			<integer>0</integer>
 			<key>title</key>
