@@ -51,13 +51,18 @@
         if ([defaults objectForKey:@"DEFAULT_HEB_ID"]) {
             viewController1 = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
             ((ProductCategoryViewController *)viewController1).storeId = [defaults objectForKey:@"DEFAULT_HEB_ID"];
-            NSDictionary *heb = [defaults objectForKey:@"DEFAULT_HEB"];
-            NSDictionary *geometry = heb[@"geometry"];
-            CLLocationCoordinate2D location = CLLocationCoordinate2DMake([geometry[@"location"][@"lat"] doubleValue], [geometry[@"location"][@"lng"] doubleValue]);
             
-//            NSLog(@"region this : %.3f, %.3f",location.latitude, location.longitude);
-            CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:1000.0 identifier:heb[@"vicinity"]];
-			[locationManager startMonitoringForRegion:newRegion desiredAccuracy:kCLLocationAccuracyBest];
+            // handle geo-fencing
+            if ([defaults boolForKey:@"USE_GEOFENCING"]) {
+                NSDictionary *heb = [defaults objectForKey:@"DEFAULT_HEB"];
+                NSDictionary *geometry = heb[@"geometry"];
+                CLLocationCoordinate2D location = CLLocationCoordinate2DMake([geometry[@"location"][@"lat"] doubleValue], [geometry[@"location"][@"lng"] doubleValue]);
+    //            NSLog(@"region this : %.3f, %.3f",location.latitude, location.longitude);
+                NSNumber *radius = [defaults valueForKey:@"GEO_RADIUS"];
+                double radius_double = (radius ==nil)?1000.0:[radius doubleValue];
+                CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:radius_double identifier:heb[@"vicinity"]];
+                [locationManager startMonitoringForRegion:newRegion];
+            }
             
         }
     }else {
