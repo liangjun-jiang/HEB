@@ -31,9 +31,9 @@
 		D6905C1C14CE6EBC008E74B3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6905C1B14CE6EBC008E74B3 /* MobileCoreServices.framework */; };
 		D6905C2714CE7FB3008E74B3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6905C2614CE7FB3008E74B3 /* SystemConfiguration.framework */; };
 		D691B3FB14D1073F00409BCF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691B3FA14D1073F00409BCF /* CoreData.framework */; };
-		D6972ED71669AF83002FD2AB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D6972ED61669AF83002FD2AB /* icon.png */; };
-		D6972ED91669AF8B002FD2AB /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6972ED81669AF8B002FD2AB /* icon@2x.png */; };
 		D69BB93114D513D00053F7AA /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = D69BB93014D513D00053F7AA /* Products.plist */; };
+		D69C2E12166A647400A68729 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D69C2E11166A647400A68729 /* icon.png */; };
+		D69C2E14166A647C00A68729 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D69C2E13166A647C00A68729 /* icon@2x.png */; };
 		D6A22E2514C52A8D002848E2 /* AboutListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A22E2314C52A8D002848E2 /* AboutListViewController.m */; };
 		D6A22E2614C52A8D002848E2 /* AboutListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A22E2414C52A8D002848E2 /* AboutListViewController.xib */; };
 		D6A22E2D14C52C86002848E2 /* fruit_basket.png in Resources */ = {isa = PBXBuildFile; fileRef = D6A22E2C14C52C86002848E2 /* fruit_basket.png */; };
@@ -248,9 +248,9 @@
 		D6905C1B14CE6EBC008E74B3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D6905C2614CE7FB3008E74B3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D691B3FA14D1073F00409BCF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D6972ED61669AF83002FD2AB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		D6972ED81669AF8B002FD2AB /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		D69BB93014D513D00053F7AA /* Products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
+		D69C2E11166A647400A68729 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		D69C2E13166A647C00A68729 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		D6A22E2214C52A8D002848E2 /* AboutListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutListViewController.h; sourceTree = "<group>"; };
 		D6A22E2314C52A8D002848E2 /* AboutListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutListViewController.m; sourceTree = "<group>"; };
 		D6A22E2414C52A8D002848E2 /* AboutListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutListViewController.xib; sourceTree = "<group>"; };
@@ -491,8 +491,8 @@
 		D65BFBB414C348CA00B50263 = {
 			isa = PBXGroup;
 			children = (
-				D6972ED81669AF8B002FD2AB /* icon@2x.png */,
-				D6972ED61669AF83002FD2AB /* icon.png */,
+				D69C2E13166A647C00A68729 /* icon@2x.png */,
+				D69C2E11166A647400A68729 /* icon.png */,
 				D6B52BCB16658623002A339D /* Theme */,
 				D6B52B571665358C002A339D /* ThirdParty */,
 				D6E1511E165FE3EE003F8147 /* Default-568h@2x.png */,
@@ -1078,8 +1078,8 @@
 				D6B52CC516658624002A339D /* topShadow.png in Resources */,
 				D6B52CC616658624002A339D /* topShadow@2x.png in Resources */,
 				D6B52CEB16666A46002A339D /* SVProgressHUD.bundle in Resources */,
-				D6972ED71669AF83002FD2AB /* icon.png in Resources */,
-				D6972ED91669AF8B002FD2AB /* icon@2x.png in Resources */,
+				D69C2E12166A647400A68729 /* icon.png in Resources */,
+				D69C2E14166A647C00A68729 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
