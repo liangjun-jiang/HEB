@@ -31,9 +31,9 @@
 		D6905C1C14CE6EBC008E74B3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6905C1B14CE6EBC008E74B3 /* MobileCoreServices.framework */; };
 		D6905C2714CE7FB3008E74B3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6905C2614CE7FB3008E74B3 /* SystemConfiguration.framework */; };
 		D691B3FB14D1073F00409BCF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691B3FA14D1073F00409BCF /* CoreData.framework */; };
+		D6972ED71669AF83002FD2AB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D6972ED61669AF83002FD2AB /* icon.png */; };
+		D6972ED91669AF8B002FD2AB /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6972ED81669AF8B002FD2AB /* icon@2x.png */; };
 		D69BB93114D513D00053F7AA /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = D69BB93014D513D00053F7AA /* Products.plist */; };
-		D69CB90C14DFAF950018119B /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = D69CB90B14DFAF950018119B /* icon1.png */; };
-		D69CB90E14DFAF9D0018119B /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = D69CB90D14DFAF9C0018119B /* icon2.png */; };
 		D6A22E2514C52A8D002848E2 /* AboutListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A22E2314C52A8D002848E2 /* AboutListViewController.m */; };
 		D6A22E2614C52A8D002848E2 /* AboutListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A22E2414C52A8D002848E2 /* AboutListViewController.xib */; };
 		D6A22E2D14C52C86002848E2 /* fruit_basket.png in Resources */ = {isa = PBXBuildFile; fileRef = D6A22E2C14C52C86002848E2 /* fruit_basket.png */; };
@@ -248,9 +248,9 @@
 		D6905C1B14CE6EBC008E74B3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D6905C2614CE7FB3008E74B3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D691B3FA14D1073F00409BCF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D6972ED61669AF83002FD2AB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		D6972ED81669AF8B002FD2AB /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		D69BB93014D513D00053F7AA /* Products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Products.plist; sourceTree = "<group>"; };
-		D69CB90B14DFAF950018119B /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
-		D69CB90D14DFAF9C0018119B /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		D6A22E2214C52A8D002848E2 /* AboutListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutListViewController.h; sourceTree = "<group>"; };
 		D6A22E2314C52A8D002848E2 /* AboutListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutListViewController.m; sourceTree = "<group>"; };
 		D6A22E2414C52A8D002848E2 /* AboutListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutListViewController.xib; sourceTree = "<group>"; };
@@ -491,11 +491,11 @@
 		D65BFBB414C348CA00B50263 = {
 			isa = PBXGroup;
 			children = (
+				D6972ED81669AF8B002FD2AB /* icon@2x.png */,
+				D6972ED61669AF83002FD2AB /* icon.png */,
 				D6B52BCB16658623002A339D /* Theme */,
 				D6B52B571665358C002A339D /* ThirdParty */,
 				D6E1511E165FE3EE003F8147 /* Default-568h@2x.png */,
-				D69CB90D14DFAF9C0018119B /* icon2.png */,
-				D69CB90B14DFAF950018119B /* icon1.png */,
 				D65BFBC914C348CA00B50263 /* HEBTest */,
 				D65BFBC214C348CA00B50263 /* Frameworks */,
 				D65BFBC014C348CA00B50263 /* Products */,
@@ -946,8 +946,6 @@
 				D6712AAD14D5BB3F0095C326 /* NoImage.png in Resources */,
 				D6C25FF514DE072700831E70 /* Default.png in Resources */,
 				D6C25FF714DE072E00831E70 /* Default@2x.png in Resources */,
-				D69CB90C14DFAF950018119B /* icon1.png in Resources */,
-				D69CB90E14DFAF9D0018119B /* icon2.png in Resources */,
 				D6E1511F165FE3EE003F8147 /* Default-568h@2x.png in Resources */,
 				D6B52B881665470F002A339D /* distance.png in Resources */,
 				D6B52B891665470F002A339D /* distance@2x.png in Resources */,
@@ -1080,6 +1078,8 @@
 				D6B52CC516658624002A339D /* topShadow.png in Resources */,
 				D6B52CC616658624002A339D /* topShadow@2x.png in Resources */,
 				D6B52CEB16666A46002A339D /* SVProgressHUD.bundle in Resources */,
+				D6972ED71669AF83002FD2AB /* icon.png in Resources */,
+				D6972ED91669AF8B002FD2AB /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
