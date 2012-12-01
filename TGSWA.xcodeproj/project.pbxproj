@@ -1166,7 +1166,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "7BACA096-4847-49F6-B736-84BB09BED8C7";
+				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7BACA096-4847-49F6-B736-84BB09BED8C7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1177,7 +1177,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1192,7 +1192,7 @@
 					"-ObjC-all_load",
 				);
 				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -1202,7 +1202,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Liangjun Jiang (NLHVYBKJKH)";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
@@ -1219,7 +1219,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47452A96-95AE-46D4-90A5-41C00FE6306E";
 				SDKROOT = iphoneos;
 			};
@@ -1241,7 +1241,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "7BACA096-4847-49F6-B736-84BB09BED8C7";
+				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1252,7 +1252,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
 				FRAMEWORK_SEARCH_PATHS = /usr/include/libxml2;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1270,7 +1270,7 @@
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC-all_load";
 				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1279,7 +1279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";
@@ -1295,7 +1295,7 @@
 					"-ObjC-all_load",
 				);
 				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
