@@ -1177,7 +1177,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1192,7 +1192,7 @@
 					"-ObjC-all_load",
 				);
 				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
-				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
@@ -1252,7 +1252,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = /usr/include/libxml2;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1270,7 +1270,7 @@
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC-all_load";
 				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
-				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1279,7 +1279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";
@@ -1295,7 +1295,7 @@
 					"-ObjC-all_load",
 				);
 				PRODUCT_NAME = "Texas Grocery Store Weekly Ads";
-				PROVISIONING_PROFILE = "651EE95D-A865-47C1-A1B8-E52BD6B4AF9D";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};

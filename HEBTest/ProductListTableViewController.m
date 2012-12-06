@@ -118,6 +118,23 @@
     }
     
 	[self configureCell:recipeCell atIndexPath:indexPath];
+    
+    NSDate *now = [NSDate date];
+    NSLog(@"the now date: %@",now);
+    
+    //The receiver, now, is later in time than anotherDate, NSOrderedDescending
+    static NSDateFormatter *dateFormatter = nil;
+    if (dateFormatter == nil) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+		[dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+		[dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    }
+    
+    // not the best solution, but just being lazy
+    if ([now compare:[dateFormatter dateFromString:recipeCell.product.eDate]] == NSOrderedDescending) {
+        recipeCell.userInteractionEnabled = NO;
+    }
+    
     return recipeCell;
 }
 

@@ -19,6 +19,8 @@
     NSString *psDate;
     NSString *eDate;
     NSString *desc;
+   
+    
 }
 @property(nonatomic,strong) NSString *category;
 @property(nonatomic,strong) NSString *name;

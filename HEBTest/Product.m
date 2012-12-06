@@ -12,7 +12,6 @@
 @synthesize name, price, imgLink, category, desc;
 @synthesize psDate, eDate;
 
-
 +(NSArray *)keys
 {
     return @[@"name", @"price", @"imgLink",@"desc", @"category", @"psDate", @"eDate"];
@@ -43,6 +42,7 @@
         category = [iCategory copy];
         psDate = [iDate copy];
         eDate = [endDate copy];
+      
         
     }
     return self;

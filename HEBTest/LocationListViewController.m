@@ -64,7 +64,6 @@
 @end
 
 @implementation LocationListViewController
-//@synthesize selectedPath=_selectedPath;
 @synthesize currentUserCoordiante=_currentUserCoordiante;
 @synthesize isSettingDefault;
 @synthesize locationManger = _locationManger;
@@ -127,7 +126,6 @@
     [super viewDidLoad];
 
     self.clearsSelectionOnViewWillAppear = YES;
- 
     
     msg = @"Searching for nearby H-E-B...";
     

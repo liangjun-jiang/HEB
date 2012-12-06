@@ -18,5 +18,4 @@
 @dynamic eDate;
 @dynamic psDate;
 @dynamic desc;
-
 @end
