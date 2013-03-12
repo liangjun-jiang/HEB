@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D623E1C416EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = D623E1C316EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.m */; };
 		D65BFBC414C348CA00B50263 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC314C348CA00B50263 /* UIKit.framework */; };
 		D65BFBC614C348CA00B50263 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC514C348CA00B50263 /* Foundation.framework */; };
 		D65BFBC814C348CA00B50263 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BFBC714C348CA00B50263 /* CoreGraphics.framework */; };
@@ -211,6 +212,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D623E1C216EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+ThreadSafe.h"; sourceTree = "<group>"; };
+		D623E1C316EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+ThreadSafe.m"; sourceTree = "<group>"; };
 		D65BFBBF14C348CA00B50263 /* Texas Grocery Store Weekly Ads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Texas Grocery Store Weekly Ads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65BFBC314C348CA00B50263 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D65BFBC514C348CA00B50263 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -608,6 +611,8 @@
 				D66F1DF714D3B698009C627A /* UIImage+Resizing.m */,
 				D67EC22F14C7C49D009A773B /* Product.h */,
 				D67EC23014C7C49D009A773B /* Product.m */,
+				D623E1C216EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.h */,
+				D623E1C316EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1133,6 +1138,7 @@
 				D6B52D0216667383002A339D /* ProductListTableViewController.m in Sources */,
 				D6B52D05166673E3002A339D /* ProductTableViewCell.m in Sources */,
 				D6B52D0816667A5A002A339D /* SavedProduct.m in Sources */,
+				D623E1C416EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

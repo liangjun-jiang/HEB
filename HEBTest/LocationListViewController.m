@@ -78,7 +78,7 @@
     self.nearbyHebs = json[@"results"];
 
     if ([self.nearbyHebs count] == 0) {
-        msg = @"Didn't find any H-E-B, but you can still test drive the app.";
+        msg = @"Your Heb is not in our database. Tap to see other HEB ads.";
         self.navigationItem.rightBarButtonItem.enabled = NO;
     } else
         self.navigationItem.rightBarButtonItem.enabled = YES;
@@ -254,6 +254,7 @@
         }
         cell.textLabel.text = queriedAddress;
     } else {
+        //TODO: WE SHOULD JUST GUAID THE USER TO THE DEFAULT PAGE
         cell.textLabel.text = msg;
          NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setBool:NO forKey:@"USE_DEFAULT_LOCATION"];
@@ -262,7 +263,7 @@
     
     cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
     cell.textLabel.numberOfLines = 0;
-    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
     return cell;
 }

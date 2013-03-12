@@ -1,12 +1,8 @@
 /*
-     File: RecipeListTableViewController.m 
- Abstract: Table view controller to manage an editable table view that displays a list of recipes.
- Recipes are displayed in a custom table view cell.
-  
-  Version: 1.4 
+     
   
    
- Copyright (C) 2010 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2013 LJApps. All Rights Reserved. 
   
  */
 
@@ -15,6 +11,7 @@
 #import "SavedProduct.h"
 #import "Product.h"
 #import "ProductTableViewCell.h"
+
 
 @implementation ProductListTableViewController
 
@@ -120,7 +117,7 @@
 	[self configureCell:recipeCell atIndexPath:indexPath];
     
     NSDate *now = [NSDate date];
-    NSLog(@"the now date: %@",now);
+//    NSLog(@"the now date: %@",now);
     
     //The receiver, now, is later in time than anotherDate, NSOrderedDescending
     static NSDateFormatter *dateFormatter = nil;
@@ -133,6 +130,14 @@
     // not the best solution, but just being lazy
     if ([now compare:[dateFormatter dateFromString:recipeCell.product.eDate]] == NSOrderedDescending) {
         recipeCell.userInteractionEnabled = NO;
+        
+        NSMutableAttributedString *attributedSring = [[NSMutableAttributedString alloc] initWithString:recipeCell.textLabel.text];
+        // we only need to add a strike through
+        [attributedSring addAttribute:NSStrikethroughStyleAttributeName
+                                value:[NSNumber numberWithInt:2]
+                                range:NSMakeRange(0, recipeCell.textLabel.text.length)];
+        [recipeCell.textLabel setAttributedText:attributedSring];
+        
     }
     
     return recipeCell;

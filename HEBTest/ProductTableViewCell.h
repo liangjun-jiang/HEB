@@ -4,7 +4,7 @@
  
   Version: 1.4
  
- Copyright (C) 2010 Apple Inc. All Rights Reserved.
+ Copyright (C) 2013 LJApps. All Rights Reserved.
  
  */
 

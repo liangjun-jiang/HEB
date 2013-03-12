@@ -18,6 +18,7 @@
 #import "GDataXMLElement-Extras.h"
 #import "SSTheme.h"
 #import "SVProgressHUD.h"
+#import "NSDateFormatter+ThreadSafe.h"
 
 @implementation ProductCategoryViewController
 @synthesize storeId = _storeId;
@@ -27,6 +28,11 @@
 @synthesize queue=_queue, allEntries=_allEntries, feeds=_feeds;
 
 - (void)refresh {
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
+//    NSDateFormatter *formatter = [[NSDateFormatter dateW];
+//    [formatter setDateFormat:@"MMM d, h:mm a"];
+    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",[[NSDateFormatter dateWriter] stringFromDate:[NSDate date]]];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     
     [SVProgressHUD showWithStatus:@"Loading..."];
     for (NSString *feed in _feeds) {
@@ -56,7 +62,13 @@
 -(void)updateTable
 {
     [self.tableView reloadData];
+    // end 
+    [self.refreshControl endRefreshing];
 }
+
+#pragma mark - Pull to Refresh
+
+
 
 #pragma mark - View lifecycle
 
@@ -93,6 +105,13 @@
     
     self.clearsSelectionOnViewWillAppear = YES;
     
+    // add pull to refresh
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    
+    // create a dummy product
     Product *product = [[Product alloc] initWithInfo:@"Wait a second ..." price:@"" image:@"" desc:@"" category:@"" psDate:@"" endingDate:@""];
     NSMutableArray *products = [NSMutableArray arrayWithObjects:product, nil];
     self.categories = [[NSMutableDictionary alloc] initWithObjectsAndKeys:

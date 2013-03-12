@@ -87,7 +87,7 @@
     nameLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
     nameLabel.textColor = [UIColor blueColor];
     nameLabel.numberOfLines = 0;
-    nameLabel.lineBreakMode = UILineBreakModeWordWrap;
+    nameLabel.lineBreakMode = NSLineBreakByWordWrapping;
     [self.view addSubview:nameLabel];
     
     UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 35, 271, 15)];
@@ -95,12 +95,12 @@
     priceLabel.font = [UIFont fontWithName:@"Baskerville-Bold" size:14];
     priceLabel.textColor = [UIColor redColor];
     priceLabel.numberOfLines = 0;
-    priceLabel.lineBreakMode = UILineBreakModeWordWrap;
+    priceLabel.lineBreakMode = NSLineBreakByWordWrapping;
     [self.view addSubview:priceLabel];
     
     UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 68, 271, 35)];
     descLabel.numberOfLines = 0;
-    descLabel.lineBreakMode = UILineBreakModeWordWrap;
+    descLabel.lineBreakMode = NSLineBreakByWordWrapping;
     descLabel.text = self.product.desc;
     descLabel.font = [UIFont fontWithName:@"ArialHebrew" size:10];
     [self.view addSubview:descLabel];
