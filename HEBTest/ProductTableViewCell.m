@@ -10,6 +10,8 @@
 
 #import "ProductTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+
+#import "UIColor+FlatUI.h"
 #pragma mark -
 #pragma mark SubviewFrames category
 
@@ -27,15 +29,40 @@
 	if (self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier]) {
 
         [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
-        [self.textLabel setFont:[UIFont boldSystemFontOfSize:14.0]];
-        [self.textLabel setTextColor:[UIColor blackColor]];
-        [self.textLabel setHighlightedTextColor:[UIColor whiteColor]];
+//        [self.textLabel setFont:[UIFont boldSystemFontOfSize:14.0]];
+//        [self.textLabel setTextColor:[UIColor blackColor]];
+//        [self.textLabel setHighlightedTextColor:[UIColor whiteColor]];
+//        
+//        [self.detailTextLabel setFont:[UIFont systemFontOfSize:12.0]];
+//        [self.detailTextLabel setTextColor:[UIColor blackColor]];
+//        [self.detailTextLabel setHighlightedTextColor:[UIColor whiteColor]];
+//        self.detailTextLabel.numberOfLines = 0;
+//        self.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
         
-        [self.detailTextLabel setFont:[UIFont systemFontOfSize:12.0]];
-        [self.detailTextLabel setTextColor:[UIColor blackColor]];
-        [self.detailTextLabel setHighlightedTextColor:[UIColor whiteColor]];
-        self.detailTextLabel.numberOfLines = 0;
-        self.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        UIColor *color= [UIColor greenSeaColor];
+        UIColor *selectedColor = [UIColor cloudsColor];
+        
+        FUICellBackgroundView* backgroundView = [FUICellBackgroundView new];
+        backgroundView.backgroundColor = color;
+        self.backgroundView = backgroundView;
+        
+        FUICellBackgroundView* selectedBackgroundView = [FUICellBackgroundView new];
+        selectedBackgroundView.backgroundColor = selectedColor;
+        self.selectedBackgroundView = selectedBackgroundView;
+        
+        //The labels need a clear background color or they will look very funky
+        self.textLabel.backgroundColor = [UIColor clearColor];
+        if ([self respondsToSelector:@selector(detailTextLabel)])
+            self.detailTextLabel.backgroundColor = [UIColor clearColor];
+        
+        //Guess some good text colors
+        self.textLabel.textColor = selectedColor;
+        self.textLabel.highlightedTextColor = color;
+        if ([self respondsToSelector:@selector(detailTextLabel)]) {
+            self.detailTextLabel.textColor = selectedColor;
+            self.detailTextLabel.highlightedTextColor = color;
+        }
+
         
         //http://blog.slaunchaman.com/2011/08/14/cocoa-touch-circumventing-uitableviewcell-redraw-issues-with-multithreading/
         if (self) {
@@ -94,5 +121,15 @@
         }
 }
 
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    [(FUICellBackgroundView*)self.backgroundView setCornerRadius:cornerRadius];
+    [(FUICellBackgroundView*)self.selectedBackgroundView setCornerRadius:cornerRadius];
+}
+
+- (void)setSeparatorHeight:(CGFloat)separatorHeight {
+    [(FUICellBackgroundView*)self.backgroundView setSeparatorHeight:separatorHeight];
+    [(FUICellBackgroundView*)self.selectedBackgroundView setSeparatorHeight:separatorHeight];
+}
 
 @end

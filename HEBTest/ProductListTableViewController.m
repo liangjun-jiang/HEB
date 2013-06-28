@@ -11,6 +11,9 @@
 #import "SavedProduct.h"
 #import "Product.h"
 #import "ProductTableViewCell.h"
+#import "UITableViewCell+FlatUI.h"
+#import "UIColor+FlatUI.h"
+
 
 
 @implementation ProductListTableViewController
@@ -34,6 +37,13 @@
 - (void)viewDidLoad {
     // Configure the navigation bar
     self.title = @"Shopping List";
+    
+    //Set the separator color
+    self.tableView.separatorColor = [UIColor cloudsColor];
+    
+    //Set the background color
+    self.tableView.backgroundColor = [UIColor cloudsColor];
+    self.tableView.backgroundView = nil;
 
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -112,6 +122,8 @@
     if (recipeCell == nil) {
         recipeCell = [[ProductTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier];
 		recipeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        [recipeCell setCornerRadius:5.0f];
+        [recipeCell setSeparatorHeight:2.0f];
     }
     
 	[self configureCell:recipeCell atIndexPath:indexPath];

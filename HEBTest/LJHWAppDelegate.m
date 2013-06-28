@@ -36,7 +36,7 @@
 		exit(-1);  // Fail
 	}
     
-    [SSThemeManager customizeAppAppearance];
+//    [SSThemeManager customizeAppAppearance];
     
     // Create location manager with filters set for battery efficiency.
 	locationManager = [[CLLocationManager alloc] init];
@@ -92,14 +92,14 @@
     
     [[self.tabBarController.tabBar.items objectAtIndex:2] setTitle:NSLocalizedString(@"Settings", @"")];
     
-    UITabBarItem *item1 = [navController1 tabBarItem];
-    [SSThemeManager customizeTabBarItem:item1 forTab:SSThemeTabPower];
-    
-    UITabBarItem *item2 = [navController2 tabBarItem];
-    [SSThemeManager customizeTabBarItem:item2 forTab:SSThemeTabDoor];
-    
-    UITabBarItem *item3 = [navController3 tabBarItem];
-    [SSThemeManager customizeTabBarItem:item3 forTab:SSThemeTabControls];
+//    UITabBarItem *item1 = [navController1 tabBarItem];
+//    [SSThemeManager customizeTabBarItem:item1 forTab:SSThemeTabPower];
+//    
+//    UITabBarItem *item2 = [navController2 tabBarItem];
+//    [SSThemeManager customizeTabBarItem:item2 forTab:SSThemeTabDoor];
+//    
+//    UITabBarItem *item3 = [navController3 tabBarItem];
+//    [SSThemeManager customizeTabBarItem:item3 forTab:SSThemeTabControls];
     
     self.window.rootViewController = self.tabBarController;
 

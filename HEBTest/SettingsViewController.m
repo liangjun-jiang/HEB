@@ -13,6 +13,9 @@
 #import  <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import "SSTheme.h"
+#import "UITableViewCell+FlatUI.h"
+#import "UIColor+FlatUI.h"
+
 
 #define REGION_SECTION 0
 #define ABOUT_SECTION 1
@@ -68,7 +71,16 @@
 
     self.title = NSLocalizedString(@"Settings", @"Settings");
     
-    [SSThemeManager customizeTableView:self.tableView];
+    //Set the separator color
+    self.tableView.separatorColor = [UIColor cloudsColor];
+    
+    //Set the background color
+    self.tableView.backgroundColor = [UIColor cloudsColor];
+    self.tableView.backgroundView = nil;
+    
+//    [SSThemeManager customizeTableView:self.tableView];
+    
+
  
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
     self.contentList = [NSDictionary dictionaryWithContentsOfFile:plistPath];
@@ -136,7 +148,8 @@
             SwitchTableCell *regionCell = (SwitchTableCell*)[tableView dequeueReusableCellWithIdentifier:RegionCellIdentifier];
             if (regionCell == nil) {
                 regionCell = [[SwitchTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:RegionCellIdentifier];
-                
+                regionCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
             }
             regionCell.textLabel.text = title;
             if (onOff && row == 0) {
@@ -175,7 +188,6 @@
                 radius = 1000;
             }
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f mile", radius*0.00062] ;
-//            cell.textLabel.font = [UIFont systemFontOfSize:14.0];
             UIControl *control = self.sliderCtl;
             control.enabled = onOff;
             [cell.contentView addSubview:control];
@@ -184,14 +196,17 @@
     } else {
         UITableViewCell *aboutCell = [tableView dequeueReusableCellWithIdentifier:AboutCellIdentifier];
         if (aboutCell == nil) {
-            aboutCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AboutCellIdentifier];
+            aboutCell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] style:UITableViewCellStyleDefault reuseIdentifier:AboutCellIdentifier];
             aboutCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+            aboutCell.cornerRadius = 5.f; //Optional
+            aboutCell.separatorHeight = 2.f; //Optional
         }
         aboutCell.textLabel.text = title;
         cell = aboutCell;
     }
     
-    cell.textLabel.font = kFont;
+//    cell.textLabel.font = kFont;
     return cell;
 }
 
@@ -258,14 +273,14 @@
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     picker.mailComposeDelegate = self;
     
-    [picker setSubject:@"My feedback"];
+    [picker setSubject:@"TGSW Feedback"];
     
     // Set up recipients
     NSArray *toRecipients = [NSArray arrayWithObject:@"2010.longhorn@gmail.com"];
     
     [picker setToRecipients:toRecipients];
     // Fill out the email body text
-    NSString *emailBody = @"Thank you for your feedback!";
+    NSString *emailBody = @"";
     [picker setMessageBody:emailBody isHTML:NO];
     
     [self presentViewController:picker animated:YES completion:nil];

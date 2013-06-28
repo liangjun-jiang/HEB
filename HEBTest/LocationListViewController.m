@@ -14,6 +14,13 @@
 #import "SSTheme.h"
 #import "SVProgressHUD.h"
 
+#import "UITableViewCell+FlatUI.h"
+#import "UIColor+FlatUI.h"
+
+
+#import "UITableViewCell+FlatUI.h"
+#import "UIColor+FlatUI.h"
+
 
 #pragma mark - Helper method
 @interface NSDictionary(JSONCategories)
@@ -127,6 +134,13 @@
 
     self.clearsSelectionOnViewWillAppear = YES;
     
+    //Set the separator color
+    self.tableView.separatorColor = [UIColor cloudsColor];
+    
+    //Set the background color
+    self.tableView.backgroundColor = [UIColor cloudsColor];
+    self.tableView.backgroundView = nil;
+    
     msg = @"Searching for nearby H-E-B...";
     
     self.navigationItem.title = @"Nearby H-E-Bs";
@@ -135,7 +149,7 @@
     
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    [SSThemeManager customizeTableView:self.tableView];
+//    [SSThemeManager customizeTableView:self.tableView];
     
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     [self startUpdatingCurrentLocation];
@@ -234,8 +248,12 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        UITableViewCellStyle style = UITableViewCellStyleDefault;
-        cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier];
+//        UITableViewCellStyle style = UITableViewCellStyleDefault;
+//        cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier];
+        cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] style:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.cornerRadius = 5.f; //Optional
+        cell.separatorHeight = 2.f; //Optional
+
         
     }
     if ([self.nearbyHebs count] > 0) {
@@ -340,7 +358,7 @@
         _locationManger = [[CLLocationManager alloc] init];
         [_locationManger setDelegate:self];
         _locationManger.distanceFilter = 100.0f; // we don't need to be more accurate than 100m
-        _locationManger.purpose = @"This is used to search your nearby H-E-B";
+//        _locationManger.purpose = @"This is used to search your nearby H-E-B";
     }
     [_locationManger startUpdatingLocation];
     

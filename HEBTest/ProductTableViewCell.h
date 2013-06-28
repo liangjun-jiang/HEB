@@ -10,12 +10,17 @@
 
 #import "SavedProduct.h"
 
+//#import "UITableViewCell+FlatUI.h"
+#import "FUICellBackgroundView.h"
+#import <objc/runtime.h>
+
 @interface ProductTableViewCell : UITableViewCell {
     SavedProduct *product;
     
 }
 
 @property (nonatomic, retain) SavedProduct *product;
-
+- (void)setCornerRadius:(CGFloat)cornerRadius;
+- (void)setSeparatorHeight:(CGFloat)separatorHeight;
 
 @end
