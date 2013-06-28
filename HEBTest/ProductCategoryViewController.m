@@ -31,7 +31,7 @@
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
 //    NSDateFormatter *formatter = [[NSDateFormatter dateW];
 //    [formatter setDateFormat:@"MMM d, h:mm a"];
-    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",[[NSDateFormatter dateWriter] stringFromDate:[NSDate date]]];
+    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",[[NSDateFormatter dateReader] stringFromDate:[NSDate date]]];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     
     [SVProgressHUD showWithStatus:@"Loading..."];
@@ -42,6 +42,8 @@
         [_queue addOperation:request];
     }
     
+    // end
+    [self.refreshControl endRefreshing];
 }
 
 
@@ -62,8 +64,7 @@
 -(void)updateTable
 {
     [self.tableView reloadData];
-    // end 
-    [self.refreshControl endRefreshing];
+    
 }
 
 #pragma mark - Pull to Refresh
@@ -389,7 +390,7 @@
     }
     customSectionHeaderView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.95];
     
-    titleLabel.textAlignment = UITextAlignmentLeft;
+    titleLabel.textAlignment = NSTextAlignmentLeft;
     [titleLabel setTextColor:[UIColor redColor]];
     [titleLabel setBackgroundColor:[UIColor clearColor]];
     titleLabel.font = labelFont;
