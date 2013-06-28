@@ -191,12 +191,6 @@
         // Otherwise, set the finished images
         UIImage *selectedImage = [theme finishedImageForTab:tab selected:YES];
         UIImage *unselectedImage = [theme finishedImageForTab:tab selected:NO];
-        // this is not good!
-//        UIColor *color = [UIColor greenSeaColor];
-//        UIColor *selectedColor = [UIColor cloudsColor];
-//        UIImage *selectedImage  = [UIImage imageWithColor:selectedColor cornerRadius:6.0];
-//        UIImage *unselectedImage = [UIImage imageWithColor:color cornerRadius:0];
-        
         [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:unselectedImage];
     }
 }

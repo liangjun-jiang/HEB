@@ -90,25 +90,15 @@
     _tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[navController1, navController2, navController3];
     
-//    UITabBarItem *locationItem = [self.tabBarController.tabBar.items objectAtIndex:0];
-//    
-//    [locationItem setTitle:NSLocalizedString(@"Locations", @"")];
-
-    //     locationItem.finishedUnselectedImage = [UIImage imageWithColor:color cornerRadius:0];
-//    locationItem.selectionIndicatorImage = [UIImage imageWithColor:selectedColor cornerRadius:6.0];
-//    [locationItem setFinishedSelectedImage:[UIImage imageWithColor:selectedColor cornerRadius:6.0] withFinishedUnselectedImage:[UIImage imageWithColor:color cornerRadius:0]];
+    UITabBar *tabBarAppearance = [UITabBar appearance];
+    UIColor *color = [UIColor midnightBlueColor];
+    [tabBarAppearance setBackgroundImage:[UIImage imageWithColor:color cornerRadius:0]];
     
-//    UITabBarItem *listItem = [self.tabBarController.tabBar.items objectAtIndex:1];
-//    
-//    [listItem setTitle:NSLocalizedString(@"List", @"")];
-//    [listItem setFinishedSelectedImage:[UIImage imageWithColor:selectedColor cornerRadius:6.0] withFinishedUnselectedImage:[UIImage imageWithColor:color cornerRadius:0]];
+    UIColor *selectedColor = [UIColor peterRiverColor];
+    UIImage *selectedImage  = [UIImage imageWithColor:selectedColor cornerRadius:6.0];
     
-//    UITabBarItem *settingItem = [self.tabBarController.tabBar.items objectAtIndex:2];
-//    [settingItem setTitle:NSLocalizedString(@"Settings", @"")];
-//    [settingItem setFinishedSelectedImage:[UIImage imageWithColor:selectedColor cornerRadius:6.0] withFinishedUnselectedImage:[UIImage imageWithColor:color cornerRadius:0]];
-    
-    
-    
+    [tabBarAppearance setSelectionIndicatorImage:selectedImage];
+   
     UITabBarItem *item1 = [navController1 tabBarItem];
     item1.title = @"Location";
     [SSThemeManager customizeTabBarItem:item1 forTab:SSThemeTabPower];

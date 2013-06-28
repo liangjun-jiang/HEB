@@ -8,6 +8,8 @@
  */
 
 #import "SSMetalTheme.h"
+#import "UIColor+FlatUI.h"
+#import "UIImage+FlatUI.h"
 
 @implementation SSMetalTheme
 
@@ -300,12 +302,21 @@
 
 - (UIImage *)tabBarBackground
 {
-    return [UIImage imageNamed:@"tabBarBackground"];
+//    return [UIImage imag]
+    
+    UIColor *color = [UIColor greenSeaColor];
+    
+    return [UIImage imageWithColor:color cornerRadius:0];
+
+//    return [UIImage imageNamed:@"tabBarBackground"];
 }
 
 - (UIImage *)tabBarSelectionIndicator
 {
-    return [UIImage imageNamed:@"tabBarSelectionIndicator"];
+    UIColor *selectedColor = [UIColor cloudsColor];
+    UIImage *selectedImage  = [UIImage imageWithColor:selectedColor cornerRadius:6.0];
+    return selectedImage;
+//    return [UIImage imageNamed:@"tabBarSelectionIndicator"];
 }
 
 - (UIImage *)imageForTab:(SSThemeTab)tab
