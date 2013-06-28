@@ -11,12 +11,16 @@
 #import "LJHWViewController.h"
 #import "PlacemarkViewController.h"
 #import "UIImage+Resizing.h"
-#import "SSTheme.h"
+
 #import "SVProgressHUD.h"
 
 #import "UITableViewCell+FlatUI.h"
-#import "UIColor+FlatUI.h"
-
+#import "UINavigationBar+FlatUI.h"
+#import "FUIButton.h"
+#import "FUISwitch.h"
+#import "UIFont+FlatUI.h"
+#import "FUIAlertView.h"
+#import "UIBarButtonItem+FlatUI.h"
 
 #import "UITableViewCell+FlatUI.h"
 #import "UIColor+FlatUI.h"
@@ -87,6 +91,13 @@
     if ([self.nearbyHebs count] == 0) {
         msg = @"Your Heb is not in our database. Tap to see other HEB ads.";
         self.navigationItem.rightBarButtonItem.enabled = NO;
+        
+        ProductCategoryViewController *productCategoryViewController = [[ProductCategoryViewController alloc] initWithNibName:@"ProductCategoryViewController" bundle:nil];
+        productCategoryViewController.storeId = @"202";
+        
+        
+        [self.navigationController pushViewController:productCategoryViewController animated:YES];
+        
     } else
         self.navigationItem.rightBarButtonItem.enabled = YES;
     
@@ -149,7 +160,14 @@
     
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-//    [SSThemeManager customizeTableView:self.tableView];
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
+                                  highlightedColor:[UIColor belizeHoleColor]
+                                      cornerRadius:3
+                                   whenContainedIn:[UINavigationBar class], nil];
+    [self.navigationItem.rightBarButtonItem removeTitleShadow];
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18]};
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     [self startUpdatingCurrentLocation];
@@ -252,7 +270,7 @@
 //        cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier];
         cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] style:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.cornerRadius = 5.f; //Optional
-        cell.separatorHeight = 2.f; //Optional
+//        cell.separatorHeight = 2.f; //Optional
 
         
     }
@@ -279,9 +297,10 @@
         [defaults synchronize];
     }
     
-    cell.textLabel.font = [UIFont fontWithName:@"Georgia-BoldItalic" size:14.0];
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.textLabel.font = [UIFont systemFontOfSize:16.0];
+
     
     return cell;
 }

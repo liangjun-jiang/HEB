@@ -13,8 +13,11 @@
 #import "ProductTableViewCell.h"
 #import "UITableViewCell+FlatUI.h"
 #import "UIColor+FlatUI.h"
+#import "UIBarButtonItem+FlatUI.h"
+#import "UIFont+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
 
-
+#import "TTTTimeIntervalFormatter.h"
 
 @implementation ProductListTableViewController
 
@@ -46,6 +49,15 @@
     self.tableView.backgroundView = nil;
 
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
+                                  highlightedColor:[UIColor belizeHoleColor]
+                                      cornerRadius:3
+                                   whenContainedIn:[UINavigationBar class], nil];
+    [self.navigationItem.rightBarButtonItem removeTitleShadow];
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18]};
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
     // Set the table view's row height
     self.tableView.rowHeight = 60.0;
@@ -274,6 +286,7 @@
 	// The fetch controller has sent all current change notifications, so tell the table view to process all updates.
 	[self.tableView endUpdates];
 }
+
 
 
 @end

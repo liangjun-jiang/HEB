@@ -15,7 +15,10 @@
 #import "SSTheme.h"
 #import "UITableViewCell+FlatUI.h"
 #import "UIColor+FlatUI.h"
-
+#import "UIColor+FlatUI.h"
+#import "UIBarButtonItem+FlatUI.h"
+#import "UIFont+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
 
 #define REGION_SECTION 0
 #define ABOUT_SECTION 1
@@ -79,7 +82,8 @@
     self.tableView.backgroundView = nil;
     
 //    [SSThemeManager customizeTableView:self.tableView];
-    
+    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18]};
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
 
  
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];

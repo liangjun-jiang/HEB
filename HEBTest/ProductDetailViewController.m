@@ -79,8 +79,10 @@
     
     self.title = @"Product Detail";
     
-    UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addIntoList:)];
-    self.navigationItem.rightBarButtonItem = shoppingListBarItem;
+//    UIBarButtonItem *shoppingListBarItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addIntoList:)];
+    
+    UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addIntoList:)];
+    self.navigationItem.rightBarButtonItem = addItem;
     
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(23, 5, 271, 30)];
     nameLabel.text = self.product.name;

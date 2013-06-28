@@ -15,7 +15,10 @@
 #import "Product.h"
 #import "UIImageView+AFNetworking.h"
 #import "ItemDetailViewController.h"
+#import "UITableViewCell+FlatUI.h"
 
+#import "UIFont+FlatUI.h"
+#import "UIColor+FlatUI.h"
 
 @implementation ProductCategoryCell_iphone
 
@@ -38,6 +41,12 @@
         
         self.productListTableView.dataSource = self;
         self.productListTableView.delegate = self;
+        self.productListTableView.separatorColor = [UIColor cloudsColor];
+        
+        //Set the background color
+        self.productListTableView.backgroundColor = [UIColor cloudsColor];
+        self.productListTableView.backgroundView = nil;
+        
         [self addSubview:self.productListTableView];
         
     }

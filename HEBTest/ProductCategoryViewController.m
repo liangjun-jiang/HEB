@@ -20,6 +20,13 @@
 #import "SVProgressHUD.h"
 #import "NSDateFormatter+ThreadSafe.h"
 
+#import "UITableViewCell+FlatUI.h"
+
+#import "UIFont+FlatUI.h"
+#import "UIColor+FlatUI.h"
+
+#import "UINavigationBar+FlatUI.h"
+
 @implementation ProductCategoryViewController
 @synthesize storeId = _storeId;
 @synthesize categories=_categories;
@@ -103,6 +110,9 @@
     [super viewDidLoad];
     
     self.title = @"Items";
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18]};
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
     self.clearsSelectionOnViewWillAppear = YES;
     

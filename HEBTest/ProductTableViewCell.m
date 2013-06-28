@@ -10,6 +10,8 @@
 
 #import "ProductTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "TTTTimeIntervalFormatter.h"
+#import "NSDateFormatter+ThreadSafe.h"
 
 #import "UIColor+FlatUI.h"
 #pragma mark -
@@ -57,10 +59,12 @@
         
         //Guess some good text colors
         self.textLabel.textColor = selectedColor;
+        self.textLabel.font = [UIFont systemFontOfSize:14.0];
         self.textLabel.highlightedTextColor = color;
         if ([self respondsToSelector:@selector(detailTextLabel)]) {
             self.detailTextLabel.textColor = selectedColor;
             self.detailTextLabel.highlightedTextColor = color;
+            self.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
         }
 
         
@@ -97,7 +101,11 @@
     [self.imageView setImageWithURL:[NSURL URLWithString:product.imgLink]];
 	
     self.textLabel.text = product.name;
-    self.detailTextLabel.text =  [NSString stringWithFormat:@"%@, expired on:%@", product.price, product.eDate];
+    
+    NSRange range = [product.eDate rangeOfString:@"23:59"];
+    NSString *trimmed = [product.eDate substringWithRange:NSMakeRange(0, range.location)];
+    
+    self.detailTextLabel.text =  [NSString stringWithFormat:@"%@, before:%@", product.price,trimmed];
     
     
 }
@@ -131,5 +139,6 @@
     [(FUICellBackgroundView*)self.backgroundView setSeparatorHeight:separatorHeight];
     [(FUICellBackgroundView*)self.selectedBackgroundView setSeparatorHeight:separatorHeight];
 }
+
 
 @end

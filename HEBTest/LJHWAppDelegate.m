@@ -13,6 +13,9 @@
 #import "ProductCategoryViewController.h"
 #import "SSTheme.h"
 #import <CoreData/CoreData.h>
+#import "UITabBar+FlatUI.h"
+#import "UIColor+FlatUI.h"
+#import "UIImage+FlatUI.h"
 
 @interface LJHWAppDelegate()<CLLocationManagerDelegate>
 
@@ -87,19 +90,36 @@
     _tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[navController1, navController2, navController3];
     
-    [[self.tabBarController.tabBar.items objectAtIndex:0] setTitle:NSLocalizedString(@"Locations", @"")];
-    [[self.tabBarController.tabBar.items objectAtIndex:1] setTitle:NSLocalizedString(@"List", @"")];
-    
-    [[self.tabBarController.tabBar.items objectAtIndex:2] setTitle:NSLocalizedString(@"Settings", @"")];
-    
-//    UITabBarItem *item1 = [navController1 tabBarItem];
-//    [SSThemeManager customizeTabBarItem:item1 forTab:SSThemeTabPower];
+//    UITabBarItem *locationItem = [self.tabBarController.tabBar.items objectAtIndex:0];
 //    
-//    UITabBarItem *item2 = [navController2 tabBarItem];
-//    [SSThemeManager customizeTabBarItem:item2 forTab:SSThemeTabDoor];
+//    [locationItem setTitle:NSLocalizedString(@"Locations", @"")];
+
+    //     locationItem.finishedUnselectedImage = [UIImage imageWithColor:color cornerRadius:0];
+//    locationItem.selectionIndicatorImage = [UIImage imageWithColor:selectedColor cornerRadius:6.0];
+//    [locationItem setFinishedSelectedImage:[UIImage imageWithColor:selectedColor cornerRadius:6.0] withFinishedUnselectedImage:[UIImage imageWithColor:color cornerRadius:0]];
+    
+//    UITabBarItem *listItem = [self.tabBarController.tabBar.items objectAtIndex:1];
 //    
-//    UITabBarItem *item3 = [navController3 tabBarItem];
-//    [SSThemeManager customizeTabBarItem:item3 forTab:SSThemeTabControls];
+//    [listItem setTitle:NSLocalizedString(@"List", @"")];
+//    [listItem setFinishedSelectedImage:[UIImage imageWithColor:selectedColor cornerRadius:6.0] withFinishedUnselectedImage:[UIImage imageWithColor:color cornerRadius:0]];
+    
+//    UITabBarItem *settingItem = [self.tabBarController.tabBar.items objectAtIndex:2];
+//    [settingItem setTitle:NSLocalizedString(@"Settings", @"")];
+//    [settingItem setFinishedSelectedImage:[UIImage imageWithColor:selectedColor cornerRadius:6.0] withFinishedUnselectedImage:[UIImage imageWithColor:color cornerRadius:0]];
+    
+    
+    
+    UITabBarItem *item1 = [navController1 tabBarItem];
+    item1.title = @"Location";
+    [SSThemeManager customizeTabBarItem:item1 forTab:SSThemeTabPower];
+
+    UITabBarItem *item2 = [navController2 tabBarItem];
+    item2.title = @"List";
+    [SSThemeManager customizeTabBarItem:item2 forTab:SSThemeTabDoor];
+    
+    UITabBarItem *item3 = [navController3 tabBarItem];
+    item3.title = @"Settings";
+    [SSThemeManager customizeTabBarItem:item3 forTab:SSThemeTabControls];
     
     self.window.rootViewController = self.tabBarController;
 

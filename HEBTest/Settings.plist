@@ -26,7 +26,7 @@
 			<key>default</key>
 			<integer>1000</integer>
 			<key>title</key>
-			<string>Geo-fencing Distance</string>
+			<string>Geo-fencing Dist.</string>
 		</dict>
 	</array>
 	<key>About</key>
