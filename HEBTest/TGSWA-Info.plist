@@ -19,7 +19,7 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>iTunesArtwork@2x,png</string>
+				<string>iTunesArtwork@2x.png</string>
 				<string>iTunesArtwork.png</string>
 				<string>Icon-Small-50@2x.png</string>
 				<string>Icon-Small-50.png</string>
