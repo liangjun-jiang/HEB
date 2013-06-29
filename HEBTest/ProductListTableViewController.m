@@ -17,7 +17,6 @@
 #import "UIFont+FlatUI.h"
 #import "UINavigationBar+FlatUI.h"
 
-#import "TTTTimeIntervalFormatter.h"
 
 @implementation ProductListTableViewController
 

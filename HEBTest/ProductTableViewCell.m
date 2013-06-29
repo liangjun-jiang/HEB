@@ -10,7 +10,6 @@
 
 #import "ProductTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
-#import "TTTTimeIntervalFormatter.h"
 #import "NSDateFormatter+ThreadSafe.h"
 
 #import "UIColor+FlatUI.h"
