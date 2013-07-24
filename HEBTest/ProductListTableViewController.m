@@ -40,6 +40,8 @@
     // Configure the navigation bar
     self.title = @"Shopping List";
     
+    self.tableView.allowsSelectionDuringEditing = YES;
+    
     //Set the separator color
     self.tableView.separatorColor = [UIColor cloudsColor];
     
@@ -47,13 +49,16 @@
     self.tableView.backgroundColor = [UIColor cloudsColor];
     self.tableView.backgroundView = nil;
 
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(onAdd:)];
+    self.navigationItem.rightBarButtonItem = addItem;
+    
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
                                   highlightedColor:[UIColor belizeHoleColor]
                                       cornerRadius:3
                                    whenContainedIn:[UINavigationBar class], nil];
-    [self.navigationItem.rightBarButtonItem removeTitleShadow];
+    [self.navigationItem.leftBarButtonItem removeTitleShadow];
     
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18]};
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
@@ -126,7 +131,21 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Dequeue or if necessary create a RecipeTableViewCell, then set its recipe to the recipe for the current row.
+//    // Dequeue or if necessary create a RecipeTableViewCell, then set its recipe to the recipe for the current row.
+//    if (indexPath.row == 0) {
+//		static NSString *InsertionCellIdentifier = @"InsertionCell";
+//		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:InsertionCellIdentifier];
+//        
+//        if (cell == nil) {
+//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:InsertionCellIdentifier];
+//        }
+//        
+//        
+//        
+//		return cell;
+//	}
+    
+    
     static NSString *RecipeCellIdentifier = @"RecipeCellIdentifier";
     
     ProductTableViewCell *recipeCell = (ProductTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
@@ -181,6 +200,15 @@
 }
 
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// The Add Tag row gets an insertion marker, the others a delete marker.
+	if (indexPath.row == 0) {
+		return UITableViewCellEditingStyleInsert;
+	}
+    return UITableViewCellEditingStyleDelete;
+}
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -199,8 +227,50 @@
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 			abort();
 		}
-	}   
+	}
+    
+//    if (editingStyle == UITableViewCellEditingStyleInsert) {
+//		[self insertListItemAnimated:YES];
+//		// Don't save yet because the user must set a name first.
+//	}
 }
+
+//- (void)insertListItemAnimated:(BOOL)animated
+//{
+//	/*
+//     Create a new instance of Tag, insert it into the tags array, and add a corresponding new row to the table view.
+//	 */
+//	SavedProduct *savedProduct = [NSEntityDescription insertNewObjectForEntityForName:@"SavedProduct" inManagedObjectContext:managedObjectContext];
+//	
+//	
+//	// Add the new tag to the tags array and to the table view.
+//	[self.tagsArray addObject:tag];
+//	
+//	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.tagsArray count]-1 inSection:0];
+//	[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//	
+//	// Start editing the tag's name.
+//	APLEditableTableViewCell *cell = (APLEditableTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+//	[cell.textField becomeFirstResponder];
+//}
+
+
+
+//- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+//{
+//    // Update the tag's name with the text in the text field.
+//    SavedProduct *product = (self.tagsArray)[textField.tag];
+//	product.name = textField.text;
+//	
+//	return YES;
+//}
+//
+//
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//	[textField resignFirstResponder];
+//	return YES;
+//}
 
 
 #pragma mark -
@@ -286,6 +356,45 @@
 	[self.tableView endUpdates];
 }
 
+#pragma mark - on ADD
+- (void)onAdd
+{
+    // open an alert with two custom buttons
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"UIAlertViewTitle", nil)
+                                                    message:NSLocalizedString(@"UIAlertViewMessage", nil)
+                                                   delegate:self
+                                          cancelButtonTitle:NSLocalizedString(@"CancelButtonTitle", nil)
+                                          otherButtonTitles:NSLocalizedString(@"OKButtonTitle", nil), nil];
+	alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+    
+}
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == alertView.cancelButtonIndex) {
+        [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+    } else{
+        SavedProduct *savedProduct = [NSEntityDescription insertNewObjectForEntityForName:@"SavedProduct" inManagedObjectContext:managedObjectContext];
+        savedProduct.name = [alertView textFieldAtIndex:0].text;
+        NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
+		[context insertObject:savedProduct];
+		
+		// Save the context.ß
+		NSError *error;
+		if (![context save:&error]) {
+			/*
+			 Replace this implementation with code to handle the error appropriately.
+			 
+			 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+			 */
+			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+			abort();
+		}
+        
+    }
+    
+}
 
 @end

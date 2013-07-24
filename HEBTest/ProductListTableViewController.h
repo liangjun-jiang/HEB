@@ -15,7 +15,7 @@
 @class SavedProduct;
 @class ProductTableViewCell;
 
-@interface ProductListTableViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
+@interface ProductListTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UIAlertViewDelegate> {
     @private
         NSFetchedResultsController *fetchedResultsController;
         NSManagedObjectContext *managedObjectContext;
