@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DC97E10179FF38300B1C493 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DC97E0E179FF38300B1C493 /* Localizable.strings */; };
 		D6114FC6177F25D600942D56 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D6114FBC177F25D600942D56 /* Icon-72.png */; };
 		D6114FC7177F25D600942D56 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6114FBD177F25D600942D56 /* Icon-72@2x.png */; };
 		D6114FC8177F25D600942D56 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D6114FBE177F25D600942D56 /* Icon-Small-50.png */; };
@@ -138,6 +139,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7DC97E0F179FF38300B1C493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D6114FBC177F25D600942D56 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		D6114FBD177F25D600942D56 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		D6114FBE177F25D600942D56 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -196,7 +198,6 @@
 		D6A22E2214C52A8D002848E2 /* AboutListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutListViewController.h; sourceTree = "<group>"; };
 		D6A22E2314C52A8D002848E2 /* AboutListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutListViewController.m; sourceTree = "<group>"; };
 		D6A22E2414C52A8D002848E2 /* AboutListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutListViewController.xib; sourceTree = "<group>"; };
-		D6A22E2C14C52C86002848E2 /* fruit_basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fruit_basket.png; sourceTree = "<group>"; };
 		D6A22E3614C5375A002848E2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D6A22E3814C53775002848E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D6A22E3A14C5B916002848E2 /* PlacemarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacemarkViewController.h; sourceTree = "<group>"; };
@@ -559,6 +560,7 @@
 				D65BFBCC14C348CA00B50263 /* InfoPlist.strings */,
 				D65BFBCF14C348CA00B50263 /* main.m */,
 				D65BFBD114C348CA00B50263 /* TGSWA-Prefix.pch */,
+				7DC97E0E179FF38300B1C493 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -599,7 +601,6 @@
 				D6B52B871665470F002A339D /* reverse@2x.png */,
 				D6C25FF614DE072E00831E70 /* Default@2x.png */,
 				D6C25FF414DE072700831E70 /* Default.png */,
-				D6A22E2C14C52C86002848E2 /* fruit_basket.png */,
 				D6712AAC14D5BB3F0095C326 /* NoImage.png */,
 			);
 			name = res;
@@ -1060,6 +1061,7 @@
 				D6114FCE177F25D600942D56 /* iTunesArtwork.png in Resources */,
 				D6114FCF177F25D600942D56 /* iTunesArtwork@2x.png in Resources */,
 				D6114FDF177F2CA300942D56 /* iRate.bundle in Resources */,
+				7DC97E10179FF38300B1C493 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1138,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7DC97E0E179FF38300B1C493 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DC97E0F179FF38300B1C493 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D65BFBCC14C348CA00B50263 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

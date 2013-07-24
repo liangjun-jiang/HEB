@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TGSWA
+
+  Created by Liangjun Jiang on 7/24/13.
+  Copyright (c) 2013 Harvard University Extension School. All rights reserved.
+*/
+"UIAlertViewTitle" = "Add a item";
+"UIAlertViewMessage" = "Item name";
+"UIAlertViewMessageGeneric" = "<Alert message>";
+
+"CancelButtonTitle" = "Cancel";
+"OKButtonTitle" = "OK";

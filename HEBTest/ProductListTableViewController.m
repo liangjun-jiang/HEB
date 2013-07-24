@@ -131,21 +131,6 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    // Dequeue or if necessary create a RecipeTableViewCell, then set its recipe to the recipe for the current row.
-//    if (indexPath.row == 0) {
-//		static NSString *InsertionCellIdentifier = @"InsertionCell";
-//		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:InsertionCellIdentifier];
-//        
-//        if (cell == nil) {
-//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:InsertionCellIdentifier];
-//        }
-//        
-//        
-//        
-//		return cell;
-//	}
-    
-    
     static NSString *RecipeCellIdentifier = @"RecipeCellIdentifier";
     
     ProductTableViewCell *recipeCell = (ProductTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
@@ -229,49 +214,8 @@
 		}
 	}
     
-//    if (editingStyle == UITableViewCellEditingStyleInsert) {
-//		[self insertListItemAnimated:YES];
-//		// Don't save yet because the user must set a name first.
-//	}
+
 }
-
-//- (void)insertListItemAnimated:(BOOL)animated
-//{
-//	/*
-//     Create a new instance of Tag, insert it into the tags array, and add a corresponding new row to the table view.
-//	 */
-//	SavedProduct *savedProduct = [NSEntityDescription insertNewObjectForEntityForName:@"SavedProduct" inManagedObjectContext:managedObjectContext];
-//	
-//	
-//	// Add the new tag to the tags array and to the table view.
-//	[self.tagsArray addObject:tag];
-//	
-//	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.tagsArray count]-1 inSection:0];
-//	[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//	
-//	// Start editing the tag's name.
-//	APLEditableTableViewCell *cell = (APLEditableTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-//	[cell.textField becomeFirstResponder];
-//}
-
-
-
-//- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
-//{
-//    // Update the tag's name with the text in the text field.
-//    SavedProduct *product = (self.tagsArray)[textField.tag];
-//	product.name = textField.text;
-//	
-//	return YES;
-//}
-//
-//
-//- (BOOL)textFieldShouldReturn:(UITextField *)textField
-//{
-//	[textField resignFirstResponder];
-//	return YES;
-//}
-
 
 #pragma mark -
 #pragma mark Fetched results controller
@@ -357,9 +301,9 @@
 }
 
 #pragma mark - on ADD
-- (void)onAdd
+- (void)onAdd:(id)sender
 {
-    // open an alert with two custom buttons
+    // open an alert witßh two custom buttons
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"UIAlertViewTitle", nil)
                                                     message:NSLocalizedString(@"UIAlertViewMessage", nil)
                                                    delegate:self
@@ -377,7 +321,16 @@
         [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
     } else{
         SavedProduct *savedProduct = [NSEntityDescription insertNewObjectForEntityForName:@"SavedProduct" inManagedObjectContext:managedObjectContext];
+        
+        static NSDateFormatter *dateFormatter = nil;
+        if (dateFormatter == nil) {
+            dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+            [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+        }
         savedProduct.name = [alertView textFieldAtIndex:0].text;
+        savedProduct.desc = @"self created item";
+        savedProduct.eDate = [dateFormatter stringFromDate:[NSDate date]];
         NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
 		[context insertObject:savedProduct];
 		
