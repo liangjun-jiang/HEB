@@ -30,16 +30,6 @@
 	if (self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier]) {
 
         [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
-//        [self.textLabel setFont:[UIFont boldSystemFontOfSize:14.0]];
-//        [self.textLabel setTextColor:[UIColor blackColor]];
-//        [self.textLabel setHighlightedTextColor:[UIColor whiteColor]];
-//        
-//        [self.detailTextLabel setFont:[UIFont systemFontOfSize:12.0]];
-//        [self.detailTextLabel setTextColor:[UIColor blackColor]];
-//        [self.detailTextLabel setHighlightedTextColor:[UIColor whiteColor]];
-//        self.detailTextLabel.numberOfLines = 0;
-//        self.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        
         UIColor *color= [UIColor greenSeaColor];
         UIColor *selectedColor = [UIColor cloudsColor];
         
@@ -102,9 +92,12 @@
     self.textLabel.text = product.name;
     
     NSRange range = [product.eDate rangeOfString:@"23:59"];
-    NSString *trimmed = [product.eDate substringWithRange:NSMakeRange(0, range.location)];
-    
-    self.detailTextLabel.text =  [NSString stringWithFormat:@"%@, before:%@", product.price,trimmed];
+    NSString *trimmed;
+    if (range.length >0) {
+        trimmed = [product.eDate substringWithRange:NSMakeRange(0, range.location)];
+        self.detailTextLabel.text =  [NSString stringWithFormat:@"%@, before:%@", product.price,trimmed];
+    }
+     
     
     
 }

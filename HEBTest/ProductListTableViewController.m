@@ -155,16 +155,18 @@
     }
     
     // not the best solution, but just being lazy
-    if ([now compare:[dateFormatter dateFromString:recipeCell.product.eDate]] == NSOrderedDescending) {
-        recipeCell.userInteractionEnabled = NO;
-        
-        NSMutableAttributedString *attributedSring = [[NSMutableAttributedString alloc] initWithString:recipeCell.textLabel.text];
-        // we only need to add a strike through
-        [attributedSring addAttribute:NSStrikethroughStyleAttributeName
-                                value:[NSNumber numberWithInt:2]
-                                range:NSMakeRange(0, recipeCell.textLabel.text.length)];
-        [recipeCell.textLabel setAttributedText:attributedSring];
-        
+    if (![recipeCell.product.desc isEqualToString:@"self created item"]) {
+        if ([now compare:[dateFormatter dateFromString:recipeCell.product.eDate]] == NSOrderedDescending) {
+            recipeCell.userInteractionEnabled = NO;
+            
+            NSMutableAttributedString *attributedSring = [[NSMutableAttributedString alloc] initWithString:recipeCell.textLabel.text];
+            // we only need to add a strike through
+            [attributedSring addAttribute:NSStrikethroughStyleAttributeName
+                                    value:[NSNumber numberWithInt:2]
+                                    range:NSMakeRange(0, recipeCell.textLabel.text.length)];
+            [recipeCell.textLabel setAttributedText:attributedSring];
+            
+        }
     }
     
     return recipeCell;
@@ -303,7 +305,7 @@
 #pragma mark - on ADD
 - (void)onAdd:(id)sender
 {
-    // open an alert witßh two custom buttons
+    // open an alert with two custom buttons
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"UIAlertViewTitle", nil)
                                                     message:NSLocalizedString(@"UIAlertViewMessage", nil)
                                                    delegate:self
@@ -331,20 +333,24 @@
         savedProduct.name = [alertView textFieldAtIndex:0].text;
         savedProduct.desc = @"self created item";
         savedProduct.eDate = [dateFormatter stringFromDate:[NSDate date]];
-        NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
-		[context insertObject:savedProduct];
+//        NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
 		
-		// Save the context.ß
-		NSError *error;
-		if (![context save:&error]) {
-			/*
-			 Replace this implementation with code to handle the error appropriately.
-			 
-			 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-			 */
-			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-			abort();
-		}
+        
+//        [context insertObject:savedProduct];
+		
+		// Save the context.
+            NSError *error;
+            if (![managedObjectContext save:&error]) {
+                /*
+                 Replace this implementation with code to handle the error appropriately.
+                 
+                 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+                 */
+                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+                abort();
+            } else {
+                [self.tableView reloadData];
+            }
         
     }
     
