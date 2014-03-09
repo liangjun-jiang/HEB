@@ -73,19 +73,6 @@
     [super viewDidLoad];
 
     self.title = NSLocalizedString(@"Settings", @"Settings");
-    
-    //Set the separator color
-//    self.tableView.separatorColor = [UIColor cloudsColor];
-    
-    //Set the background color
-//    self.tableView.backgroundColor = [UIColor cloudsColor];
-//    self.tableView.backgroundView = nil;
-    
-//    [SSThemeManager customizeTableView:self.tableView];
-//    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
-//    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
-//
- 
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
     self.contentList = [NSDictionary dictionaryWithContentsOfFile:plistPath];
 }
@@ -164,7 +151,7 @@
             regionCell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
             regionCell.detailTextLabel.numberOfLines = 2;
             regionCell.onOffSwitch.on = onOff;
-            regionCell.onOffSwitch.tag = 100 + row;
+//            regionCell.onOffSwitch.tag = 100 + row;
             [regionCell.onOffSwitch addTarget:self action:@selector(onSwitch:) forControlEvents:UIControlEventValueChanged];
             cell = regionCell;
         } else {
@@ -176,14 +163,7 @@
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
             else
-            {
-                // the cell is being recycled, remove old embedded controls
-                UIView *viewToRemove = nil;
-                viewToRemove = [cell.contentView viewWithTag:110];
-                if (viewToRemove)
-                    [viewToRemove removeFromSuperview];
-            }
-            
+                
             cell.textLabel.text = title;
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             double radius = [defaults doubleForKey:@"GEOFENCING_RADIUS"];
@@ -192,6 +172,8 @@
                 radius = 1000;
             }
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f mile", radius*0.00062] ;
+            cell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
             UIControl *control = self.sliderCtl;
             control.enabled = onOff;
             [cell.contentView addSubview:control];
@@ -200,19 +182,15 @@
     } else {
         UITableViewCell *aboutCell = [tableView dequeueReusableCellWithIdentifier:AboutCellIdentifier];
         if (aboutCell == nil) {
-//            aboutCell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] style:UITableViewCellStyleDefault reuseIdentifier:AboutCellIdentifier];
-//            aboutCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//
-//            aboutCell.cornerRadius = 5.f; //Optional
-//            aboutCell.separatorHeight = 2.f; //Optional
             aboutCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AboutCellIdentifier];
             aboutCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         aboutCell.textLabel.text = title;
+        aboutCell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
+        aboutCell.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
         cell = aboutCell;
     }
     
-//    cell.textLabel.font = kFont;
     return cell;
 }
 

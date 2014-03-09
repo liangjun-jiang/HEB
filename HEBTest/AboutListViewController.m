@@ -19,13 +19,6 @@
     return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
 
 #pragma mark - View lifecycle
 
@@ -45,28 +38,20 @@
     textLabel.lineBreakMode = NSLineBreakByWordWrapping;// UILineBreakModeWordWrap;
     textLabel.textAlignment = NSTextAlignmentRight;
     textLabel.font = [UIFont systemFontOfSize:14.0];
-//    textLabel.font = [UIFont fontWithName:@"Chalkduster" size:13];
     [self.view addSubview:textLabel];
     UILabel *textLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 350.0, 300, 60)];
     textLabel2.backgroundColor = [UIColor clearColor];
-//    textLabel2.textColor = [UIColor redColor];
     textLabel2.text = @"This app is created by LJSport Apps Ltd, not affiliated with the H-E-B.";
     textLabel2.numberOfLines = 0;
     textLabel2.lineBreakMode = NSLineBreakByWordWrapping;
     textLabel2.textAlignment = NSTextAlignmentRight;
     textLabel2.font = [UIFont systemFontOfSize:14.0];
-//    textLabel2.font = [UIFont fontWithName:@"Chalkduster" size:13];
     
     [self.view addSubview:textLabel2];
     [super viewDidLoad];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

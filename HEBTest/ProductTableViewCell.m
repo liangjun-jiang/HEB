@@ -30,29 +30,14 @@
 	if (self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier]) {
 
         [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
-        UIColor *color= [UIColor greenSeaColor];
-        UIColor *selectedColor = [UIColor cloudsColor];
-        
-//        FUICellBackgroundView* backgroundView = [FUICellBackgroundView new];
-//        backgroundView.backgroundColor = color;
-//        self.backgroundView = backgroundView;
-//        
-//        FUICellBackgroundView* selectedBackgroundView = [FUICellBackgroundView new];
-//        selectedBackgroundView.backgroundColor = selectedColor;
-//        self.selectedBackgroundView = selectedBackgroundView;
-        
         //The labels need a clear background color or they will look very funky
         self.textLabel.backgroundColor = [UIColor clearColor];
         if ([self respondsToSelector:@selector(detailTextLabel)])
             self.detailTextLabel.backgroundColor = [UIColor clearColor];
         
         //Guess some good text colors
-        self.textLabel.textColor = selectedColor;
         self.textLabel.font = [UIFont systemFontOfSize:14.0];
-        self.textLabel.highlightedTextColor = color;
         if ([self respondsToSelector:@selector(detailTextLabel)]) {
-            self.detailTextLabel.textColor = selectedColor;
-            self.detailTextLabel.highlightedTextColor = color;
             self.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
         }
 
@@ -120,17 +105,5 @@
             [self setNeedsLayout];
         }
 }
-
-
-//- (void)setCornerRadius:(CGFloat)cornerRadius {
-//    [(FUICellBackgroundView*)self.backgroundView setCornerRadius:cornerRadius];
-//    [(FUICellBackgroundView*)self.selectedBackgroundView setCornerRadius:cornerRadius];
-//}
-//
-//- (void)setSeparatorHeight:(CGFloat)separatorHeight {
-//    [(FUICellBackgroundView*)self.backgroundView setSeparatorHeight:separatorHeight];
-//    [(FUICellBackgroundView*)self.selectedBackgroundView setSeparatorHeight:separatorHeight];
-//}
-
 
 @end

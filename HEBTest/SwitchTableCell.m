@@ -20,7 +20,8 @@
         
         onOffSwitch.backgroundColor = [UIColor clearColor];
         self.accessoryView = onOffSwitch;
-//        self.textLabel.font = [UIFont systemFontOfSize:14];
+        self.textLabel.font = [UIFont systemFontOfSize:14];
+        self.detailTextLabel.font = [UIFont systemFontOfSize:12.0];
     }
     return self;
 }
@@ -39,10 +40,5 @@
     
 }
 
-- (void)onSwitch:(id)sender
-{
-    NSLog(@"switch on/off!");
-    
-}
 
 @end

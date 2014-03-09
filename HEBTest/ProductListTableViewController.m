@@ -11,11 +11,8 @@
 #import "SavedProduct.h"
 #import "Product.h"
 #import "ProductTableViewCell.h"
-//#import "UITableViewCell+FlatUI.h"
 #import "UIColor+FlatUI.h"
-//#import "UIBarButtonItem+FlatUI.h"
 #import "UIFont+FlatUI.h"
-//#import "UINavigationBar+FlatUI.h"
 
 
 @implementation ProductListTableViewController
@@ -43,27 +40,17 @@
     self.tableView.allowsSelectionDuringEditing = YES;
     
     //Set the separator color
-    self.tableView.separatorColor = [UIColor cloudsColor];
-    
-    //Set the background color
-    self.tableView.backgroundColor = [UIColor cloudsColor];
-    self.tableView.backgroundView = nil;
+//    self.tableView.separatorColor = [UIColor cloudsColor];
+//    
+//    //Set the background color
+//    self.tableView.backgroundColor = [UIColor cloudsColor];
+//    self.tableView.backgroundView = nil;
 
     UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(onAdd:)];
     self.navigationItem.rightBarButtonItem = addItem;
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-//    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
-//                                  highlightedColor:[UIColor belizeHoleColor]
-//                                      cornerRadius:3
-//                                   whenContainedIn:[UINavigationBar class], nil];
-//    [self.navigationItem.leftBarButtonItem removeTitleShadow];
-//    
-//    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
-//    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
-    
-    // Set the table view's row height
+
     self.tableView.rowHeight = 60.0;
 	
 	NSError *error = nil;
@@ -133,15 +120,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *RecipeCellIdentifier = @"RecipeCellIdentifier";
     
-    ProductTableViewCell *recipeCell = (ProductTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
-    if (recipeCell == nil) {
-        recipeCell = [[ProductTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier];
-		recipeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//        [recipeCell setCornerRadius:5.0f];
-//        [recipeCell setSeparatorHeight:2.0f];
+    ProductTableViewCell *itemCell = (ProductTableViewCell *)[tableView dequeueReusableCellWithIdentifier:RecipeCellIdentifier];
+    if (itemCell == nil) {
+        itemCell = [[ProductTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier];
+		itemCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-	[self configureCell:recipeCell atIndexPath:indexPath];
+	[self configureCell:itemCell atIndexPath:indexPath];
     
     NSDate *now = [NSDate date];
 //    NSLog(@"the now date: %@",now);
@@ -155,21 +140,21 @@
     }
     
     // not the best solution, but just being lazy
-    if (![recipeCell.product.desc isEqualToString:@"self created item"]) {
-        if ([now compare:[dateFormatter dateFromString:recipeCell.product.eDate]] == NSOrderedDescending) {
-            recipeCell.userInteractionEnabled = NO;
+    if (![itemCell.product.desc isEqualToString:@"self created item"]) {
+        if ([now compare:[dateFormatter dateFromString:itemCell.product.eDate]] == NSOrderedDescending) {
+            itemCell.userInteractionEnabled = NO;
             
-            NSMutableAttributedString *attributedSring = [[NSMutableAttributedString alloc] initWithString:recipeCell.textLabel.text];
+            NSMutableAttributedString *attributedSring = [[NSMutableAttributedString alloc] initWithString:itemCell.textLabel.text];
             // we only need to add a strike through
             [attributedSring addAttribute:NSStrikethroughStyleAttributeName
                                     value:[NSNumber numberWithInt:2]
-                                    range:NSMakeRange(0, recipeCell.textLabel.text.length)];
-            [recipeCell.textLabel setAttributedText:attributedSring];
+                                    range:NSMakeRange(0, itemCell.textLabel.text.length)];
+            [itemCell.textLabel setAttributedText:attributedSring];
             
         }
     }
     
-    return recipeCell;
+    return itemCell;
 }
 
 
