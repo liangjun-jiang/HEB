@@ -65,17 +65,17 @@
 		D6A22E3914C53775002848E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A22E3814C53775002848E2 /* MapKit.framework */; };
 		D6A22E3D14C5B916002848E2 /* PlacemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A22E3B14C5B916002848E2 /* PlacemarkViewController.m */; };
 		D6A22E3E14C5B916002848E2 /* PlacemarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A22E3C14C5B916002848E2 /* PlacemarkViewController.xib */; };
-		D6B52B751665358C002A339D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B5A1665358C002A339D /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B761665358C002A339D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B5D1665358C002A339D /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B771665358C002A339D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B5F1665358C002A339D /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B781665358C002A339D /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B611665358C002A339D /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B791665358C002A339D /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B631665358C002A339D /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B7A1665358C002A339D /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B651665358C002A339D /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B7B1665358C002A339D /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B691665358C002A339D /* ASIInputStream.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B7C1665358C002A339D /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B6B1665358C002A339D /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B7D1665358C002A339D /* GDataXMLElement-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B6F1665358C002A339D /* GDataXMLElement-Extras.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B7E1665358C002A339D /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B711665358C002A339D /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		D6B52B7F1665358C002A339D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B741665358C002A339D /* Reachability.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
+		D6B52B751665358C002A339D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B5A1665358C002A339D /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B761665358C002A339D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B5D1665358C002A339D /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B771665358C002A339D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B5F1665358C002A339D /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B781665358C002A339D /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B611665358C002A339D /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B791665358C002A339D /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B631665358C002A339D /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B7A1665358C002A339D /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B651665358C002A339D /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B7B1665358C002A339D /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B691665358C002A339D /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B7C1665358C002A339D /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B6B1665358C002A339D /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B7D1665358C002A339D /* GDataXMLElement-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B6F1665358C002A339D /* GDataXMLElement-Extras.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B7E1665358C002A339D /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B711665358C002A339D /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6B52B7F1665358C002A339D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B52B741665358C002A339D /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6B52B8116653616002A339D /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B52B8016653616002A339D /* libxml2.2.dylib */; };
 		D6B52B881665470F002A339D /* distance.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B821665470F002A339D /* distance.png */; };
 		D6B52B891665470F002A339D /* distance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6B52B831665470F002A339D /* distance@2x.png */; };
@@ -977,6 +977,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Harvard University Extension School";
+				TargetAttributes = {
+					D65BFBBE14C348CA00B50263 = {
+						DevelopmentTeam = 8ZMZWMEMPT;
+					};
+				};
 			};
 			buildConfigurationList = D65BFBB914C348CA00B50263 /* Build configuration list for PBXProject "TGSWA" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1189,7 +1194,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1301,7 +1306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HEBTest/TGSWA-Prefix.pch";

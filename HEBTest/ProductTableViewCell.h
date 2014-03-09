@@ -20,7 +20,7 @@
 }
 
 @property (nonatomic, retain) SavedProduct *product;
-- (void)setCornerRadius:(CGFloat)cornerRadius;
-- (void)setSeparatorHeight:(CGFloat)separatorHeight;
+//- (void)setCornerRadius:(CGFloat)cornerRadius;
+//- (void)setSeparatorHeight:(CGFloat)separatorHeight;
 
 @end

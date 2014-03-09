@@ -33,13 +33,13 @@
         UIColor *color= [UIColor greenSeaColor];
         UIColor *selectedColor = [UIColor cloudsColor];
         
-        FUICellBackgroundView* backgroundView = [FUICellBackgroundView new];
-        backgroundView.backgroundColor = color;
-        self.backgroundView = backgroundView;
-        
-        FUICellBackgroundView* selectedBackgroundView = [FUICellBackgroundView new];
-        selectedBackgroundView.backgroundColor = selectedColor;
-        self.selectedBackgroundView = selectedBackgroundView;
+//        FUICellBackgroundView* backgroundView = [FUICellBackgroundView new];
+//        backgroundView.backgroundColor = color;
+//        self.backgroundView = backgroundView;
+//        
+//        FUICellBackgroundView* selectedBackgroundView = [FUICellBackgroundView new];
+//        selectedBackgroundView.backgroundColor = selectedColor;
+//        self.selectedBackgroundView = selectedBackgroundView;
         
         //The labels need a clear background color or they will look very funky
         self.textLabel.backgroundColor = [UIColor clearColor];
@@ -122,15 +122,15 @@
 }
 
 
-- (void)setCornerRadius:(CGFloat)cornerRadius {
-    [(FUICellBackgroundView*)self.backgroundView setCornerRadius:cornerRadius];
-    [(FUICellBackgroundView*)self.selectedBackgroundView setCornerRadius:cornerRadius];
-}
-
-- (void)setSeparatorHeight:(CGFloat)separatorHeight {
-    [(FUICellBackgroundView*)self.backgroundView setSeparatorHeight:separatorHeight];
-    [(FUICellBackgroundView*)self.selectedBackgroundView setSeparatorHeight:separatorHeight];
-}
+//- (void)setCornerRadius:(CGFloat)cornerRadius {
+//    [(FUICellBackgroundView*)self.backgroundView setCornerRadius:cornerRadius];
+//    [(FUICellBackgroundView*)self.selectedBackgroundView setCornerRadius:cornerRadius];
+//}
+//
+//- (void)setSeparatorHeight:(CGFloat)separatorHeight {
+//    [(FUICellBackgroundView*)self.backgroundView setSeparatorHeight:separatorHeight];
+//    [(FUICellBackgroundView*)self.selectedBackgroundView setSeparatorHeight:separatorHeight];
+//}
 
 
 @end

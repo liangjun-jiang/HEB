@@ -137,7 +137,7 @@
     if (recipeCell == nil) {
         recipeCell = [[ProductTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier];
 		recipeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        [recipeCell setCornerRadius:5.0f];
+//        [recipeCell setCornerRadius:5.0f];
         [recipeCell setSeparatorHeight:2.0f];
     }
     

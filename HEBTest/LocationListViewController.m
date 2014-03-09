@@ -266,10 +266,10 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-//        UITableViewCellStyle style = UITableViewCellStyleDefault;
-//        cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier];
-        cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] style:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.cornerRadius = 5.f; //Optional
+        UITableViewCellStyle style = UITableViewCellStyleDefault;
+        cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier];
+//        cell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] style:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+//        cell.cornerRadius = 5.f; //Optional
 //        cell.separatorHeight = 2.f; //Optional
 
         
