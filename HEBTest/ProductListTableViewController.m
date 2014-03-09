@@ -60,7 +60,7 @@
                                    whenContainedIn:[UINavigationBar class], nil];
     [self.navigationItem.leftBarButtonItem removeTitleShadow];
     
-    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
     // Set the table view's row height
@@ -138,7 +138,7 @@
         recipeCell = [[ProductTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier];
 		recipeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 //        [recipeCell setCornerRadius:5.0f];
-        [recipeCell setSeparatorHeight:2.0f];
+//        [recipeCell setSeparatorHeight:2.0f];
     }
     
 	[self configureCell:recipeCell atIndexPath:indexPath];
@@ -190,9 +190,9 @@
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	// The Add Tag row gets an insertion marker, the others a delete marker.
-	if (indexPath.row == 0) {
-		return UITableViewCellEditingStyleInsert;
-	}
+//	if (indexPath.row == 0) {
+//		return UITableViewCellEditingStyleInsert;
+//	}
     return UITableViewCellEditingStyleDelete;
 }
 

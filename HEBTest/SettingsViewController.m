@@ -82,7 +82,7 @@
     self.tableView.backgroundView = nil;
     
 //    [SSThemeManager customizeTableView:self.tableView];
-    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
 
  
@@ -200,11 +200,13 @@
     } else {
         UITableViewCell *aboutCell = [tableView dequeueReusableCellWithIdentifier:AboutCellIdentifier];
         if (aboutCell == nil) {
-            aboutCell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] style:UITableViewCellStyleDefault reuseIdentifier:AboutCellIdentifier];
+//            aboutCell = [UITableViewCell configureFlatCellWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor] style:UITableViewCellStyleDefault reuseIdentifier:AboutCellIdentifier];
+//            aboutCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//
+//            aboutCell.cornerRadius = 5.f; //Optional
+//            aboutCell.separatorHeight = 2.f; //Optional
+            aboutCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AboutCellIdentifier];
             aboutCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
-            aboutCell.cornerRadius = 5.f; //Optional
-            aboutCell.separatorHeight = 2.f; //Optional
         }
         aboutCell.textLabel.text = title;
         cell = aboutCell;

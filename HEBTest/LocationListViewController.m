@@ -166,7 +166,7 @@
                                    whenContainedIn:[UINavigationBar class], nil];
     [self.navigationItem.rightBarButtonItem removeTitleShadow];
     
-    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
