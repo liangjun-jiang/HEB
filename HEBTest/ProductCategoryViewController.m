@@ -36,8 +36,6 @@
 
 - (void)refresh {
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
-//    NSDateFormatter *formatter = [[NSDateFormatter dateW];
-//    [formatter setDateFormat:@"MMM d, h:mm a"];
     NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",[[NSDateFormatter dateReader] stringFromDate:[NSDate date]]];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     
