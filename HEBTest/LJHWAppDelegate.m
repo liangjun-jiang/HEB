@@ -39,8 +39,6 @@
 		exit(-1);  // Fail
 	}
     
-//    [SSThemeManager customizeAppAppearance];
-    
     // Create location manager with filters set for battery efficiency.
 	locationManager = [[CLLocationManager alloc] init];
 	locationManager.delegate = self;
@@ -62,9 +60,9 @@
                 CLLocationCoordinate2D location = CLLocationCoordinate2DMake([geometry[@"location"][@"lat"] doubleValue], [geometry[@"location"][@"lng"] doubleValue]);
     //            NSLog(@"region this : %.3f, %.3f",location.latitude, location.longitude);
                 double radius = [defaults doubleForKey:@"GEOFENCING_RADIUS"];
-                
-                CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:radius identifier:heb[@"vicinity"]];
-                [locationManager startMonitoringForRegion:newRegion];
+//                CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:location radius:radius identifier:heb[@"vicinity"]];
+                CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:location radius:radius identifier:heb[@"vicinity"]];
+                [locationManager startMonitoringForRegion:region];
             }
             
         }
@@ -90,14 +88,14 @@
     _tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[navController1, navController2, navController3];
     
-    UITabBar *tabBarAppearance = [UITabBar appearance];
-    UIColor *color = [UIColor midnightBlueColor];
-    [tabBarAppearance setBackgroundImage:[UIImage imageWithColor:color cornerRadius:0]];
-    
-    UIColor *selectedColor = [UIColor peterRiverColor];
-    UIImage *selectedImage  = [UIImage imageWithColor:selectedColor cornerRadius:6.0];
-    
-    [tabBarAppearance setSelectionIndicatorImage:selectedImage];
+//    UITabBar *tabBarAppearance = [UITabBar appearance];
+//    UIColor *color = [UIColor midnightBlueColor];
+//    [tabBarAppearance setBackgroundImage:[UIImage imageWithColor:color cornerRadius:0]];
+//    
+//    UIColor *selectedColor = [UIColor peterRiverColor];
+//    UIImage *selectedImage  = [UIImage imageWithColor:selectedColor cornerRadius:6.0];
+//    
+//    [tabBarAppearance setSelectionIndicatorImage:selectedImage];
    
     UITabBarItem *item1 = [navController1 tabBarItem];
     item1.title = @"Location";

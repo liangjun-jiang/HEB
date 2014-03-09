@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D9D436D18CCD8B100D11DD1 /* lJSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9D436C18CCD8B100D11DD1 /* lJSettingsManager.m */; };
 		7DC97E10179FF38300B1C493 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DC97E0E179FF38300B1C493 /* Localizable.strings */; };
 		D6114FC6177F25D600942D56 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D6114FBC177F25D600942D56 /* Icon-72.png */; };
 		D6114FC7177F25D600942D56 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6114FBD177F25D600942D56 /* Icon-72@2x.png */; };
@@ -139,6 +140,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D9D436B18CCD8B100D11DD1 /* lJSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lJSettingsManager.h; sourceTree = "<group>"; };
+		7D9D436C18CCD8B100D11DD1 /* lJSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lJSettingsManager.m; sourceTree = "<group>"; };
 		7DC97E0F179FF38300B1C493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D6114FBC177F25D600942D56 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		D6114FBD177F25D600942D56 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
@@ -617,6 +620,8 @@
 				D67EC23014C7C49D009A773B /* Product.m */,
 				D623E1C216EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.h */,
 				D623E1C316EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.m */,
+				7D9D436B18CCD8B100D11DD1 /* lJSettingsManager.h */,
+				7D9D436C18CCD8B100D11DD1 /* lJSettingsManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1121,6 +1126,7 @@
 				D6B52D05166673E3002A339D /* ProductTableViewCell.m in Sources */,
 				D6B52D0816667A5A002A339D /* SavedProduct.m in Sources */,
 				D623E1C416EF8F2E0064F187 /* NSDateFormatter+ThreadSafe.m in Sources */,
+				7D9D436D18CCD8B100D11DD1 /* lJSettingsManager.m in Sources */,
 				D6F8EA11177E20EB0081413E /* FUIAlertView.m in Sources */,
 				D6F8EA12177E20EB0081413E /* FUIButton.m in Sources */,
 				D6F8EA13177E20EB0081413E /* FUICellBackgroundView.m in Sources */,

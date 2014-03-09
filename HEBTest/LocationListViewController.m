@@ -14,15 +14,14 @@
 
 #import "SVProgressHUD.h"
 
-#import "UITableViewCell+FlatUI.h"
-#import "UINavigationBar+FlatUI.h"
+//#import "UITableViewCell+FlatUI.h"
+//#import "UINavigationBar+FlatUI.h"
 #import "FUIButton.h"
 #import "FUISwitch.h"
 #import "UIFont+FlatUI.h"
 #import "FUIAlertView.h"
-#import "UIBarButtonItem+FlatUI.h"
-
-#import "UITableViewCell+FlatUI.h"
+//#import "UIBarButtonItem+FlatUI.h"
+//#import "UITableViewCell+FlatUI.h"
 #import "UIColor+FlatUI.h"
 
 
@@ -80,6 +79,8 @@
 @synthesize locationManger = _locationManger;
 @synthesize nearbyHebs;
 @synthesize msg;
+
+
 #pragma mark - Data Fetch
 -(void)fetchData:(NSData *)responseData
 {
@@ -146,11 +147,11 @@
     self.clearsSelectionOnViewWillAppear = YES;
     
     //Set the separator color
-    self.tableView.separatorColor = [UIColor cloudsColor];
-    
-    //Set the background color
-    self.tableView.backgroundColor = [UIColor cloudsColor];
-    self.tableView.backgroundView = nil;
+//    self.tableView.separatorColor = [UIColor cloudsColor];
+//    
+//    //Set the background color
+//    self.tableView.backgroundColor = [UIColor cloudsColor];
+//    self.tableView.backgroundView = nil;
     
     msg = @"Searching for nearby H-E-B...";
     
@@ -160,14 +161,14 @@
     
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
-                                  highlightedColor:[UIColor belizeHoleColor]
-                                      cornerRadius:3
-                                   whenContainedIn:[UINavigationBar class], nil];
-    [self.navigationItem.rightBarButtonItem removeTitleShadow];
-    
-    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
-    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
+//    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
+//                                  highlightedColor:[UIColor belizeHoleColor]
+//                                      cornerRadius:3
+//                                   whenContainedIn:[UINavigationBar class], nil];
+//    [self.navigationItem.rightBarButtonItem removeTitleShadow];
+//    
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
+//    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
     _currentUserCoordiante = kCLLocationCoordinate2DInvalid;
     [self startUpdatingCurrentLocation];

@@ -75,16 +75,16 @@
     self.title = NSLocalizedString(@"Settings", @"Settings");
     
     //Set the separator color
-    self.tableView.separatorColor = [UIColor cloudsColor];
+//    self.tableView.separatorColor = [UIColor cloudsColor];
     
     //Set the background color
-    self.tableView.backgroundColor = [UIColor cloudsColor];
-    self.tableView.backgroundView = nil;
+//    self.tableView.backgroundColor = [UIColor cloudsColor];
+//    self.tableView.backgroundView = nil;
     
 //    [SSThemeManager customizeTableView:self.tableView];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
-    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
-
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
+//    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
+//
  
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
     self.contentList = [NSDictionary dictionaryWithContentsOfFile:plistPath];

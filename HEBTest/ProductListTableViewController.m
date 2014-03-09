@@ -11,11 +11,11 @@
 #import "SavedProduct.h"
 #import "Product.h"
 #import "ProductTableViewCell.h"
-#import "UITableViewCell+FlatUI.h"
+//#import "UITableViewCell+FlatUI.h"
 #import "UIColor+FlatUI.h"
-#import "UIBarButtonItem+FlatUI.h"
+//#import "UIBarButtonItem+FlatUI.h"
 #import "UIFont+FlatUI.h"
-#import "UINavigationBar+FlatUI.h"
+//#import "UINavigationBar+FlatUI.h"
 
 
 @implementation ProductListTableViewController
@@ -54,14 +54,14 @@
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
-    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
-                                  highlightedColor:[UIColor belizeHoleColor]
-                                      cornerRadius:3
-                                   whenContainedIn:[UINavigationBar class], nil];
-    [self.navigationItem.leftBarButtonItem removeTitleShadow];
-    
-    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
-    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
+//    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor]
+//                                  highlightedColor:[UIColor belizeHoleColor]
+//                                      cornerRadius:3
+//                                   whenContainedIn:[UINavigationBar class], nil];
+//    [self.navigationItem.leftBarButtonItem removeTitleShadow];
+//    
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18]};
+//    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     
     // Set the table view's row height
     self.tableView.rowHeight = 60.0;
